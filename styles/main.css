@@ -1,4 +1,67 @@
 body {
     background-image: url(../img/fon.png);
-    background-size: 1920px 2400px;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
     }
+
+
+a { text-decoration: none; color: white; font-family: 'Roboto', sans-serif; font-size:34px;}
+a:active{color: white;}
+a:hover{color: white;}
+.moon{
+    margin-left: 30px;
+    width: 10%;
+}
+
+.logo{
+    width: 27%;
+}
+
+.logotype{
+    float: left;
+    margin-left: 50px;
+
+
+    
+}
+
+.navig{
+    float: right;
+    margin-right: 100px;
+    line-height: 153px;
+    word-spacing: 100px;
+
+}
+
+.mainnav::after{
+    content:'';
+    display:flex;
+    clear:both;
+}
+
+
+.mainnav{
+    background-color: #1B2433;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+.only{
+    word-spacing: 1px;
+}
+
+.hj{
+    display:inline-block;
+    
+
+    bottom: 100px;
+    height: 155px;
+    width: 300px;
+    background-color: #D82E2E;
+}
+
+.op{
+    position: relative;
+    margin-left: 70px;
+}
