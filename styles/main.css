@@ -14,6 +14,7 @@ body {
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
+    overflow-x: hidden;
 }
 
 a {
@@ -56,6 +57,17 @@ a:hover {
     margin: 0, auto;
     display: flex;
     align-items: center;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    overflow: hidden;
+
+}
+
+
+nav{
+    overflow: inherit;
+    width: 100%;
+    height: auto;
 }
 
 .HG{
@@ -172,8 +184,7 @@ input {
 .Anime{
     display: flex;
     flex-flow: row nowrap;
-
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     text-align: center;
     width: 100%;
@@ -190,6 +201,11 @@ input {
     border-radius: 40px;
 }
 
+.Space{
+    width: 100%;
+    max-width: 100px;
+    height: 100%;
+}
 
 .Anons{
     width: 100%;
