@@ -13,7 +13,14 @@
              * Для Сафари и Хрома
              */
     -webkit-user-select: none;
-    
+    margin: 0;
+}
+
+html
+{
+  margin: 0;
+  padding: 0;
+  display: block;
 }
 
 .buttonr{
@@ -74,10 +81,19 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
     margin-block-end: 0;
     margin-block-start: 0;
+    margin: 0;
 }
 
 body {
-    background-image: url('/FonRed.png');
+    background: url('/FonRed.png') center, no-repeat;
+    background-size: cover;
+    max-width: 1920px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  justify-content: space-between;
+    margin: 0;
+    padding: 0;
 }
 
 .PngLogo {
@@ -192,4 +208,10 @@ input,  input:active, input:focus {
     position: absolute;
     bottom: 0px;
     border-radius: 30px;
+}
+
+.Intro_sto{
+    
+    height: 100vh;
+    margin: 0, auto;
 }
