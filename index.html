@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AnimeStore</title>
     <link href="styles/dmain.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,34 +17,62 @@
 
     <header>
         <nav>
-            <div class="Container">
-
-
-                <div class="logotype">
-                    <img class="PngLogo" src="img/logo/NowLogo.png" alt="месяц"><br>
-
+            
+                <div class="Container">
+                
+                
+                    <div class="logotype">
+                        <img class="PngLogo" src="img/logo/NowLogo.png" alt="месяц"><br>
+                
+                    </div>
+                    <h3><a class="op" href="index.html">Главная</a></h3>
+                    <h3><a href="genres.html">Избранные</a></h3>
+                    <h3><a href="favorites.html">Рекомендации</a></h3>
+                    <h3><a class="only" href="mostpop.html">Темы</a></h3>
+                
+                
+                    <form class="Serch">
+                        <input class="sserch" type="serch">
+                        <img class="Luppa" src="img/NewLupa.png" alt="">
+                    </form>
                 </div>
-                <h3><a class="op" href="index.html">Главная</a></h3>
-                <h3><a href="genres.html">Избранные</a></h3>
-                <h3><a href="favorites.html">Рекомендации</a></h3>
-                <h3><a class="only" href="mostpop.html">Темы</a></h3>
-
-
-                <form class="Serch">
-                    <h3><a>Поиск</a></h3>
-                    <input class="Luppa" type="image" src="img/NewLupa.png" alt="Кнопка «input»">
-                </form>
-
-
-
-
-
-            </div>
+           
         </nav>
     </header>
 
+    <div class="Intro">
+        <div class="Inf_container">
+            <div class="News g">
+                <div> <h3>Анонсы</h3> </div>
+                <div class="Blog">
 
+                </div>
+            </div>
+            <div class="News">
+                <div> <h3>Новости</h3></div>
+                <div class="Blog">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="Mango_News">
+            <div> <h3>Новости</h3> </div>
+                <div class="Blog_two">
+
+                </div>
+        </div>
+    </div>
+
+    <button class="buttonr buttonc" onclick="changeColorRed();"></button>
+    <button class="buttonp buttonc" onclick="changeColorPink();"></button>
+    <button class="buttong buttonc" onclick="changeColorGreen();"></button>
+    <button class="buttonb buttonc" onclick="changeColorBlue();"></button>
+
+
+    <script src="app.js"></script>
 
 </body>
 
 </html
+
