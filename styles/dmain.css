@@ -69,12 +69,13 @@ h1, h2, h3, h4 {
 }
 
 body {
-    background: url('/FonRed.png') center, no-repeat;
-    background-size: cover;
-    margin: 0;
-    height: 100%;
+    background: url('/FonRed.png') center no-repeat;
+    background-size: auto;
+    background-attachment: fixed;
     margin: 0;
     padding: 0;
+    background-color: #f46553;
+    background-position: top;
 }
 
 .PngLogo {
@@ -187,10 +188,13 @@ input, input:active, input:focus {
 }
 
 .Intro_sto {
-    
-    height: 1232px;
-    min-height: 1232px;
     margin: 0, auto;
+    content: "";
+    height: 936px;
+    width: 100%;
+    max-width: 1486px;
+    margin: 30px auto;
+    position: relative;
 }
 
 .cont_anime {
@@ -245,12 +249,31 @@ input, input:active, input:focus {
 
 .inst {
     position: absolute;
-    z-index: 99;
+    z-index: 999;
+    width: 50px;
+    height: 50px;
+ 
+    top: 58px;
+    left: 57px;
+    
+    
+    
+    opacity: 0;
+    transition: top 0.3s, left 0.3s, width 0.3s, height 0.3s, opacity 0.3s, visibility 0s, linear 0.3s;
+}
+
+.ghhg:hover .inst {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
     width: 166px;
     height: 164px;
-    left: 0;
-    display: none;
+    top: 0px;
+    left: 0px;
 }
+
+
+
 
 .insto {
     position: absolute;
