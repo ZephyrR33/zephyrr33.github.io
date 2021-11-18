@@ -74,18 +74,18 @@
 
 
 
-                        <input class="place_for_search sserch" type="text" id="text-to-find" value="" placeholder=""
-                            autocomplete="off" onfocus="chpok('text')" onblur="chpoks('text')">
+                        <input class="place_for_search sserch" type="text" id="inp" value="" placeholder=""
+                            autocomplete="off" onfocus="chpok('text')">
 
 
                         <input class="button_for_search Luppa" type="image" src="/img/NewLupa.png" border="0"
-                            alt="Submit" onclick="javascript: FindOnPage('text-to-find',true); return false;" value=" "
+                            alt="Submit" value=" "
                             title="Начать поиск" />
                         <br>
                         <div class="cont_anime" id="text">
-                            <div class="anime_cont">
+                            <div class="anime_cont" id="parent">
                                 <div class="name_img_anime">
-                                    <h6 class="name_anime"><a class="fd" href="">Черный клевер</a></h6>
+                                    <h6 class="name_anime"><a class="fd" href="/mostpop.html">Черный клевер</a></h6>
                                 </div>
                                 <div class="name_img_anime">
                                     <h6 class="name_anime"><a class="fd" href="">Тетрадь смерти</a></h6>
@@ -103,7 +103,7 @@
                                     <h6 class="name_anime"><a class="fd" href="">Драконий жемчуг</a></h6>
                                 </div>
                                 <div class="name_img_anime">
-                                    <h6 class="name_anime"><a class="fd" href="">Ранма ½</a></h6>
+                                    <h6 class="name_anime"><a class="fd" href="">Ранма</a></h6>
                                 </div>
                                 <div class="name_img_anime">
                                     <h6 class="name_anime"><a class="fd" href="">Наруто</a></h6>
@@ -150,6 +150,35 @@
 
                             </div>
                         </div>
+
+
+                        <script>
+                            window.onload = function () {//onload begin
+                                var inp = document.getElementById('inp');
+
+                                var find = function () {//find begin
+                                    var parent = document.getElementById('parent');
+                                    var divs = parent.getElementsByTagName('a');
+                                    var divsa = parent.getElementsByTagName('div');
+                                    len = divs.length;
+
+                                    for (var i = 0; i < len; i++) {//for begin
+                                        if (divs[i].childNodes.length == 1 && inp.value != divs[i].innerHTML && inp.value != '') {
+                                            divsa[i].style.display = 'none';
+                                        } else if (divs[i].style.display != 'block') {
+                                            divsa[i].style.display = 'block';
+                                        }
+                                    }//for end
+
+                                }//find end
+
+                                inp.onkeyup = function () {
+                                    find();
+                                }
+
+                            }//onload end
+                        </script>
+
                         <script>
                             function chpok(id) {
                                 elem = document.getElementById(id); //находим блок div по его id, который передали в функцию
