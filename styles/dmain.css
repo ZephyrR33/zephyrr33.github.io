@@ -116,6 +116,9 @@ body {
     cursor: pointer;
 }
 
+
+anime_cont
+
 .sserch {
     border-radius: 10px;
     width: 100%;
@@ -128,6 +131,7 @@ input, input:active, input:focus {
     outline: none;
     border: none;
     background-color: none;
+    
 }
 
 .Inf_container {
@@ -199,8 +203,9 @@ input, input:active, input:focus {
 
 .cont_anime {
     width: 100%;
-    height: 100%;
+    overflow: auto;
     z-index: 9999999;
+    min-height: 55px;
     max-width: 173px;
     max-height: 350px;
     position: absolute;
@@ -211,7 +216,7 @@ input, input:active, input:focus {
 }
 
 .anime_cont {
-    overflow: auto;
+    
     width: 90%;
     height: 100%;
     float: right;
@@ -269,6 +274,49 @@ input, input:active, input:focus {
     
     
 }
+
+.hhhhhhj{
+    position: absolute;
+    width: 41px;
+    height: 27px;
+    left: 1500px;
+    top: 84px;
+    
+    border: 3px solid #E0E1E3
+}
+.hhhhhhjj{
+    /* Vector 2 */
+
+
+position: absolute;
+width: 5px;
+height: 6px;
+left: 1509px;
+top: 93px;
+
+border: 3px solid #E0E1E3;
+}
+.hhhhhhjjj{
+/* Vector 3 */
+
+
+position: absolute;
+width: 5px;
+height: 6px;
+left: 1527px;
+top: 93px;
+
+border: 3px solid #E0E1E3;
+}
+
+
+
+
+
+
+
+
+
 
 .instogramm{
     position: absolute;
