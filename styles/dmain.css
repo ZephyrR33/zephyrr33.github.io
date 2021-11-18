@@ -42,6 +42,19 @@
     position: relative;
 }
 
+.d.op::after{
+    content: "";
+    position: absolute;
+    margin-top: 10px;
+    display: block;
+    background: none repeat scroll 0 0 transparent;
+    height: 2px;
+    background: #442229;
+    width: 100%;
+    left: 0;
+    
+}
+
 .d::after {
     content: "";
     position: absolute;
