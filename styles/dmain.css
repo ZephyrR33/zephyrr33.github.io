@@ -82,12 +82,12 @@ h1, h2, h3, h4 {
 }
 
 body {
-    background: url('/FonRed.png') center no-repeat;
+    background: url('/FonSaske.png') center no-repeat;
     background-size: auto;
     background-attachment: fixed;
     margin: 0;
     padding: 0;
-    background-color: #f46553;
+    background-color: #000033;
     background-position: top;
 }
 
@@ -232,8 +232,8 @@ input, input:active, input:focus {
     
     width: 90%;
     height: 100%;
-    float: right;
     display: flex;
+    margin-left: 10px;
     flex-direction: column;
 }
 
