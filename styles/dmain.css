@@ -73,9 +73,42 @@
     left: 0;
 }
 
-h1, h2, h3, h4 {
+h1 {
     font-family: 'Roboto', sans-serif;
     font-size: 29px;
+    color: white;
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+
+h4{
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    color: white;
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+
+
+h6{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: white;
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+
+h2{
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    color: white;
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+
+h3{
+    font-family: 'Roboto', sans-serif;
+    font-size: 48px;
     color: white;
     margin-block-end: 0;
     margin-block-start: 0;
@@ -366,4 +399,99 @@ border: 3px solid #E0E1E3;
 
 .chchange_colorj{
     margin-top: 10px;
+}
+
+.Name{
+    position: absolute;
+    width: 292px;
+    height: 41px;
+    left: 130px;
+    top: 340px;;
+    line-height: 29px;
+
+    color: #FFFFFF;
+}
+
+.Anime_phots{
+    position: absolute;
+    width: 247.67px;
+    height: 354px;
+    left: 120px;
+    top: 394px; 
+}
+
+.Width_anime{
+    width: 247.67px;
+    height: 354px;
+}
+
+.inform_cont{
+    position: absolute;
+    left: 450px;
+    height: 354px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 700px;
+    height: 300px;
+    top: 420px
+}
+
+.informg_cont{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 300px;
+    justify-content: space-between;
+    margin-left: 30px;
+}
+
+.jz_p{
+    border-radius: 50%;
+    background-color: #6666ff;
+    width: 20px;
+    height: 20px;
+}
+
+.informc_cont{
+    display: flex;
+    flex-direction: column;
+    width: 15px;
+    height: 300px;
+    justify-content: space-between;
+    
+}
+
+.kjkj{
+    position: absolute;
+width: 1144px;
+height: 306px;
+left: 120px;
+top: 873px;
+
+}
+
+.kjkjj{
+    position: absolute;
+width: 1144px;
+height: 306px;
+left: 120px;
+top: 800px;
+
+}
+
+.stas{
+    position: absolute;
+width: 352px;
+height: 54px;
+left: 551px;
+top: 1256px;
+}
+
+.stat{
+    position: absolute;
+width: 352px;
+height: 54px;
+left: 120px;
+top: 1256px;
 }
