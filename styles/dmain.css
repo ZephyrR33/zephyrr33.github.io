@@ -74,15 +74,15 @@
 }
 
 h1 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 29px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
     color: white;
     margin-block-end: 0;
     margin-block-start: 0;
 }
 
 h4{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     color: white;
     margin-block-end: 0;
@@ -91,7 +91,7 @@ h4{
 
 
 h6{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     color: white;
     margin-block-end: 0;
@@ -99,7 +99,7 @@ h6{
 }
 
 h2{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 36px;
     color: white;
     margin-block-end: 0;
@@ -107,7 +107,7 @@ h2{
 }
 
 h3{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 48px;
     color: white;
     margin-block-end: 0;
@@ -131,9 +131,13 @@ body {
     max-height: 104px;
 }
 
+
+
 .Luppa {
-    max-width: 21px;
-    max-height: 26px;
+    position: absolute;
+    left: 640px;
+    max-width: 10.5px;
+    max-height: 13px;
     width: 100%;
     height: 100%;
     margin-left: 5px;
@@ -163,11 +167,12 @@ body {
 }
 
 
-anime_cont
+
 
 .sserch {
     border-radius: 10px;
-    width: 100%;
+    width: 680px;
+
     height: 100%;
     height: 20px;
     position: relative;
@@ -176,7 +181,8 @@ anime_cont
 input, input:active, input:focus {
     outline: none;
     border: none;
-    background-color: none;
+    
+   
     
 }
 
@@ -191,10 +197,10 @@ input, input:active, input:focus {
 
 .Intro {
     content: "";
-    height: 736px;
+    height: 836px;
     width: 100%;
     max-width: 1286px;
-    margin: 30px auto;
+    margin: 80px auto;
     position: relative;
 }
 
@@ -221,7 +227,7 @@ input, input:active, input:focus {
     width: 100%;
     height: 100%;
     max-height: 301px;
-    border: 5px solid white;
+    border: 5px solid rgba(93, 95, 239, 1);
     position: absolute;
     bottom: 0px;
     border-radius: 30px;
@@ -231,11 +237,12 @@ input, input:active, input:focus {
     width: 100%;
     height: 100%;
     max-height: 233px;
-    border: 5px solid white;
+    border: 5px solid rgba(93, 95, 239, 1);
     position: absolute;
     bottom: 0px;
     border-radius: 30px;
 }
+
 
 .Intro_sto {
     margin: 0, auto;
@@ -470,7 +477,7 @@ left: 120px;
 top: 873px;
 
 }
-
+News
 .kjkjj{
     position: absolute;
 width: 1144px;
