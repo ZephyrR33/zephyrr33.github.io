@@ -28,11 +28,10 @@ function changeColor() {
     let t = document.getElementById("t");
     let p = document.getElementById("p");
     let inp = document.getElementById("inp");
-    let int = document.getElementById("int");
     var a = parseInt(localStorage.getItem("anumber"));
     if (a == 1) {
         //document.body.style.background = colorArray[i];
-        document.body.style.background = "url('/FonDark.png') center  no-repeat"; //Если файл в корне, если путь другой, укажите путь перед t.png
+        document.body.style.background = "url('/FonDark.png') center no-repeat"; //Если файл в корне, если путь другой, укажите путь перед t.png
 
 
 
@@ -53,7 +52,7 @@ function changeColor() {
     }
 
     if (a == 2) {
-        document.body.style.background = "url('/FonObloko.png') no-repeat"; //Если файл в корне, если путь другой, укажите путь перед t.png
+        document.body.style.background = "url('/FonObloko.png') center no-repeat"; //Если файл в корне, если путь другой, укажите путь перед t.png
 
 
 
@@ -64,7 +63,7 @@ function changeColor() {
 
         document.body.style.backgroundSize = "auto";
         document.body.style.backgroundAttachment = "fixed";
-        document.body.style.backgroundColor = "#330000";
+        document.body.style.backgroundColor = "rgba(22, 6, 10, 1)";
         r.style.border= "5px solid rgba(120, 39, 62, 1)";
         t.style.border= "5px solid rgba(120, 39, 62, 1)";
         p.style.border= "5px solid rgba(120, 39, 62, 1)";
@@ -81,7 +80,7 @@ function changeColor() {
 
         document.body.style.backgroundSize = "auto";
         document.body.style.backgroundAttachment = "fixed";
-        document.body.style.backgroundColor = "#003300";
+        document.body.style.backgroundColor = "rgba(19, 37, 21, 1)";
         r.style.border= "5px solid rgba(93, 239, 151, 1)";
         t.style.border= "5px solid rgba(93, 239, 151, 1)";
         p.style.border= "5px solid rgba(93, 239, 151, 1)";
@@ -91,7 +90,6 @@ function changeColor() {
 
     if (a == 4) {
         document.body.style.background = "url('/FonSaske.png') center no-repeat"; //Если файл в корне, если путь другой, укажите путь перед t.png
-        document.body.style.margin = "0";
         document.body.style.margin = "0";
         document.body.style.backgroundColor = "rgba(12, 16, 34, 1)";
         document.body.style.padding = "0";

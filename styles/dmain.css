@@ -48,13 +48,12 @@
     margin-top: 10px;
     display: block;
     background: none repeat scroll 0 0 transparent;
-    height: 2px;
-    background: #442229;
+    height: 5px;
+    background: rgba(93, 95, 239, 1);
     width: 100%;
     left: 0;
     
 }
-
 .d::after {
     content: "";
     position: absolute;
@@ -62,9 +61,9 @@
     left: 50%;
     display: block;
     background: none repeat scroll 0 0 transparent;
-    height: 2px;
+    height: 5px;
     width: 0;
-    background: #442229;
+    background: rgba(93, 95, 239, 1);
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
 }
 
@@ -151,13 +150,49 @@ body {
 }
 
 .Container {
-    min-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    max-height: 40px;
+    width: 100%;
+    max-width: 1057px;
+    margin-right: 610px;
+    margin: 45px auto;
+    align-items: center;
+}
+
+.Container_two {
+    
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 1286px;
-    margin: 30px auto;
-    align-items: center;
+    height: 100%;
+    max-width: 752px;
+    max-height: 29px;
+}
+
+.VSe{
+    width: 84px;
+}
+
+.ool{
+    width: 134px;
+}
+
+.Premka{
+    display: flex;
+    justify-content: end;
+
+    align-items: flex-end;
+
+    width: 300px;
+}
+
+.Ppp{
+    width: 41px;
+    height: 27px;
+    margin-bottom: 5px;
+    margin-right: 10px;
 }
 
 .Serch {
@@ -166,7 +201,9 @@ body {
     cursor: pointer;
 }
 
-
+.NANA{
+    font-size: 24px;
+}
 
 
 .sserch {
@@ -200,7 +237,7 @@ input, input:active, input:focus {
     height: 836px;
     width: 100%;
     max-width: 1286px;
-    margin: 80px auto;
+    margin: 201px auto;
     position: relative;
 }
 
@@ -477,7 +514,7 @@ left: 120px;
 top: 873px;
 
 }
-News
+
 .kjkjj{
     position: absolute;
 width: 1144px;
