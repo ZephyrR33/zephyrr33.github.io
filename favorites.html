@@ -1,40 +1,89 @@
-<!doctype html>
-<html lang="ru">
+<!DOCTYPE html>
+<html>
 
 <head>
-  <meta charset="utf-8">
-  <title>AnimeStoreFavorites</title>
-  <base href="/">
+  <meta charset="utf-8" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="styles/main.css" rel="stylesheet" type="text/css">
+  <title>AnimeStore</title>
+  <link href="styles/gmain.css" rel="stylesheet" type="text/css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="16x16" href="f/favicon.ico">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGWYRJ9WHK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-NGWYRJ9WHK');
+  </script>
+
 </head>
 
+
 <body>
-  <header>
-    <div class="Container">
-      <div class="mainnav">
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+      m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+      m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })
+      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-        <div class="logotype">
-          <img class="moon" src="img/logo/Moon.png" alt="месяц"><br>
-          <img class="logo" src="img/logo/Logotype.png" alt="лого">
+    ym(86375286, "init", {
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true,
+      webvisor: true
+    });
+  </script>
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/86375286" style="position:absolute; left:-9999px;" alt="" /></div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
+
+  <div class="container">
+    <div class="panel">
+      <div><img class="logo" src="/img/Igle_logo.png" alt=""></div>
+      <div class="otstup">
+        <div class="poloska"></div>
+        <h4>
+          <div class="menu_name">Меню</div>
+        </h4>
+
+        <div class="name_nemenu">
+          <div><img src="/img/home.png" alt=""></div>
+          <div class="pustota"></div>
+          <h4><a class="osnpg" href="/index.html">Главная</a></h4>
         </div>
 
-        <div class="navig">
-          <nav>
-            <div class="hj">
-              <a class="op" href="index.html">ГЛАВНАЯ</a>
-            </div>
-
-            <a href="genres.html">ЖАНРЫ</a>
-            <a href="favorites.html">ИЗБРАННЫЕ</a>
-            <a class="only" href="mostpop.html">ТОП 100</a>
-          </nav>
+        <div class="name_nemenu">
+          <div><img src="/img/movie.png" alt=""></div>
+          <div class="pustota"></div>
+          <h4><a class="gender_pg" href="/genres.html">Жанры</a></h4>
         </div>
-  </header>
 
+        <div class="name_nemenu">
+          <div><img src="/img/heart_aktive.png"alt=""></div>
+          <div class="pustota"></div>
+          <h4><a class="favorite_pg" href="/favorites.html">Избранное</a></h4>
+        </div>
+
+        <div class="name_nemenu">
+          <div><img src="/img/Group.png" alt=""></div>
+          <div class="pustota"></div>
+          <h4><a class="premium_page" href="/mostpop.html">Премиум</a></h4>
+        </div>
+      </div>
+    </div>
+    <div class="main_item">
+      <div class="headerr"></div>
+    </div>
+  </div>
 </body>
 
 </html>
