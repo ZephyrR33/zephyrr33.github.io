@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AnimeStore</title>
-    <link href="styles/dmain.css" rel="stylesheet" type="text/css">
+    <link href="styles/gmain.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
 
     <link rel="icon" type="image/png" sizes="16x16" href="f/favicon.ico">
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -25,7 +25,7 @@
 </head>
 
 
-<body onmousemove="changeColor();">
+<body>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         (function (m, e, t, r, i, k, a) {
@@ -46,242 +46,46 @@
     </noscript>
     <!-- /Yandex.Metrika counter -->
 
-
-
-
-
-
-    
-        <header>
-
-            <nav>
-
-                <div class="Container">
-
-<!--
-                    <div class="logotype">
-                        <img class="PngLogo" src="img/logo/NowLogo.png" alt="месяц"><br>
-
-                    </div>-->
-                    <div class="Container_two">
-                        <h1><a class="d op" onlclick="changeColor();" href="index.html">Главная</a></h1>
-                        <div class="VSe"></div>
-                        <h1><a class="d" href="genres.html">Избранные</a></h1>
-                        <div class="VSe"></div>
-                        <h1><a class="d" href="favorites.html">Рекомендации</a></h1>
-                        <div class="VSe"></div>
-                        <h1><a class="d" href="mostpop.html">Темы</a></h1>
-                    </div>
-
-                    <div class="Premka">
-                        <div class="ool"></div>
-                        <img class="Ppp" src="/img/Premium.png" alt="prem">
-                        <h1><a class="d" href="">Premium</a></h1>
-                    </div>
-
-                    
-
+    <div class="container">
+        <div class="panel">
+            <div><img class="logo" src="/img/Igle_logo.png" alt=""></div>
+            <div class="otstup">
+                <div class="poloska"></div>
+                <h4>
+                    <div class="menu_name">Меню</div>
+                </h4>
+                
+                <div class="name_nemenu">
+                    <div><img src="/img/home_aktive.png" alt=""></div>
+                    <div class="pustota"></div>
+                    <h4><a class="osnpg" href="">Главная</a></h4>
                 </div>
-
-            </nav>
-
-        </header>
-
-
-        <div class="Intro">
-
-            <form class="Serch">
-
-
-
-                <input class="place_for_search sserch" type="text" id="inp" value="" placeholder=""
-                    autocomplete="off" onfocus="chpok('text')">
-
-
-                <input id="int" class="button_for_search Luppa" type="image" src="/img/NewLupa.png" border="0"
-                    alt="Submit" value=" " title="Начать поиск" />
-                <br>
-                <div class="cont_anime" id="text">
-                    <div class="anime_cont" id="parent">
-                        <div class="name_img_anime">
-                            <h6 class="name_anime"><a class="fd" href="/htmlAnime/darkclever.html">Черный клевер</a></h6>
-                        </div>
-                        <div class="name_img_anime">
-                            <h6 class="name_anime"><a class="fd" href="">Тетрадь смерти</a></h6>
-                        </div>
-                        <div class="name_img_anime">
-                            <h6 class="name_anime"><a class="fd" href="">Мой сосед Тоторо</a></h6>
-                        </div>
-                        <div class="name_img_anime">
-                            <h6 class="name_anime"><a class="fd" href="">Красавица-воин Сейлормун</a></h6>
-                        </div>
-                        <div class="name_img_anime">
-                            <h6 class="name_anime"><a class="fd" href="">Темный дворецкий</a></h6>
-                        </div>
-                        <div class="name_img_anime">
-                            <h6 class="name_anime"><a class="fd" href="">Драконий жемчуг</a></h6>
-                        </div>
-                        <div class="name_img_anime">
-                            <h6 class="name_anime"><a class="fd" href="">Ранма</a></h6>
-                        </div>
-                        <div class="name_img_anime">
-                            <h6 class="name_anime"><a class="fd" href="">Наруто</a></h6>
-                        </div>
-                        <div class="name_img_anime">
-                            <h6 class="name_anime"><a class="fd" href="">Ковбой Бибоп</a></h6>
-                        </div>
-                        <div class="name_img_anime">
-                            <h6 class="name_anime"><a class="fd" href="">Моя геройская академия</a></h6>
-                        </div>
-                        <div class="name_img_anime">
-                            <h6 class="name_anime"><a class="fd" href="">Код Гиас: Восставший Лелуш</a></h6>
-                        </div>
-                        <div class="name_img_anime">
-                            <h6 class="name_anime"><a class="fd" href="">Дороро</a></h6>
-                        </div>
-                        <div class="name_img_anime">
-                            <h6 class="name_anime"><a class="fd" href="">Евангелион</a></h6>
-                        </div>
-                        <div class="name_img_anime">
-                            <h6 class="name_anime"><a class="fd" href="">Моб Психо 100</a></h6>
-                        </div>
-                        <div class="name_img_anime">
-                            <h6 class="name_anime"><a class="fd" href="">Ван Пис</a></h6>
-                        </div>
-                        <div class="name_img_anime">
-                            <h6 class="name_anime"><a class="fd" href="">Стальной алхимик: Братство</a></h6>
-                        </div>
-                        <div class="name_img_anime">
-                            <h6 class="name_anime"><a class="fd" href="">Призрак в доспехах</a></h6>
-                        </div>
-                        <div class="name_img_anime">
-                            <h6 class="name_anime"><a class="fd" href="">Ходячий замок</a></h6>
-                        </div>
-                        <div class="name_img_anime">
-                            <h6 class="name_anime"><a class="fd" href="">Покемон</a></h6>
-                        </div>
-                        <div class="name_img_anime">
-                            <h6 class="name_anime"><a class="fd" href="">Клинок, рассекающий демонов/</a></h6>
-                        </div>
-                        <div class="name_img_anime">
-                            <h6 class="name_anime"><a class="fd" href="">Атака титанов</a></h6>
-                        </div>
-
-                    </div>
-                </div>
-
-
-                <script>
-                    window.onload = function () {//onload begin
-                        var inp = document.getElementById('inp');
-
-                        var find = function () {//find begin
-                            var parent = document.getElementById('parent');
-                            var divs = parent.getElementsByTagName('a');
-                            var divsa = parent.getElementsByTagName('div');
-                            len = divs.length;
-
-                            for (var i = 0; i < len; i++) {//for begin
-                                if (divs[i].childNodes.length == 1 && inp.value != divs[i].innerHTML && inp.value != '') {
-                                    divsa[i].style.display = 'none';
-                                } else if (divs[i].style.display != 'block') {
-                                    divsa[i].style.display = 'block';
-                                }
-                            }//for end
-
-                        }//find end
-
-                        inp.onkeyup = function () {
-                            find();
-                        }
-
-                    }//onload end
-                </script>
-
-                <script>
-                    function chpok(id) {
-                        elem = document.getElementById(id); //находим блок div по его id, который передали в функцию
-                        state = elem.style.display; //смотрим, включен ли сейчас элемент
-                        elem.style.display = 'block'; //если включен, то выключаем
-
-                    }
-                </script>
-
-                <script>
-                    function chpoks(id) {
-                        elem = document.getElementById(id); //находим блок div по его id, который передали в функцию
-
-                        elem.style.display = 'none'; //если включен, то выключаем
-
-                    }
-                </script>
-            </form>
-            <br><br><br>
-            <div class="Inf_container">
-                <div class="News g">
-                    <div>
-                        <h1>Анонсы</h1>
-                    </div>
-                    <div class="Blog" id="r">
-
-                    </div>
-                </div>
-                <div class="News">
-                    <div>
-                        <h1>Новости</h1>
-                    </div>
-                    <div class="Blog" id="t">
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="Mango_News">
-
-                <div>
-                    <h1>Новости</h1>
-                </div>
-
-                <div class="Blog_two" id="p">
-                    <div class="Message">
-
-
-
-
-                        <div class="ghhg">
-                            <img class="insto" src="/img/Inst_o.png" alt="">
-
-
-                            <img class="inst img--cut" id="f" src="/img/ints.png" alt="">
-
-                        </div>
-
-
-
-
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-
-
-
-
-
-
-        <script src="app.js"></script>
-
-
         
-        <script src="fg.js"></script>
+                <div class="name_nemenu">
+                    <div><img src="/img/movie.png" alt=""></div>
+                    <div class="pustota"></div>
+                    <h4><a class="gender_pg" href="">Жанры</a></h4>
+                </div>
+        
+                <div class="name_nemenu">
+                    <div><img src="/img/heart.png" alt=""></div>
+                    <div class="pustota"></div>
+                    <h4><a class="favorite_pg" href="">Избранное</a></h4>
+                </div>
+        
+                <div class="name_nemenu">
+                    <div><img src="/img/Group.png" alt=""></div>
+                    <div class="pustota"></div>
+                    <h4><a class="premium_page" href="">Премиум</a></h4>
+                </div>
+            </div>
+        </div>
+        <div class="main_item">
+            <div class="headerr"></div>
+        </div>
+    </div>
     
+
 </body>
 
-</html
+</html>
