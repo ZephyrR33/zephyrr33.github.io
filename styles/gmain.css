@@ -113,6 +113,11 @@ a {
     margin-top: 35px;
 }
 
+.onst{
+    position: fixed;
+    left: 360px;
+}
+
 .search input[type=text] {
     padding-left: 81px;
     color: rgba(28, 29, 29, 1);
@@ -123,6 +128,126 @@ a {
     font-weight: 600;
 }
 
+.osn_cont{
+ 
+}
+
+.main_name_inf{
+    position: absolute;
+width: 1395px;
+height: 641px;
+left: 475px;
+top: 128px;
+
+background: url(/img/sasuke-naruto-uhdpaper.png);
+border-radius: 5px;
+}
+
+.img_play{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 494px;
+    top: 370px;
+}
+
+.img_clock{
+    position: absolute;
+    left: 577px;
+    top: 368px;
+
+}
+
+.mini_inf_name{
+    position: absolute;
+    width: 43px;
+    height: 15px;
+    left: 521px;
+    top: 372px;
+
+    /* R11 */
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+
+    /* Белые детали */
+
+    color: #FFFFFF;
+}
+
+.mini_inf_weight{
+    position: absolute;
+    width: 66px;
+    height: 15px;
+    left: 607px;
+    top: 372px;
+
+    /* R11 */
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+    
+    /* Белые детали */
+
+    color: #FFFFFF;
+}
+
+.mini_inf_data{
+    position: absolute;
+    width: 84px;
+    height: 15px;
+    left: 716px;
+    top: 372px;
+
+    /* R11 */
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+
+    /* Белые детали */
+
+    color: #FFFFFF;
+}
+
+.img_date{
+    position: absolute;
+    Top:366px;
+    Left: 686px;
+}
+.fututure{
+    position: absolute;
+    width: 322px;
+    height: 59px;
+    left: 475px;
+    top: 852px;
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 59px;
+    /* identical to box height */
+    
+    
+    color: #FFFFFF;
+    
+
+}
 input.poisk::placeholder {
     color: rgba(28, 29, 29, 1);
     font-size: 24px;
@@ -135,4 +260,56 @@ input.poisk::placeholder {
 input, input:active, input:focus {
     outline: none;
     border: none;
+}
+
+.Name_mane{
+    z-index: 99999;
+    color: white;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 59px;
+    position: absolute;
+    width: 187px;
+    height: 59px;
+    left: 494px;
+    top: 251px;
+}
+
+.text_mane{
+    position: absolute;
+    width: 595px;
+    height: 228px;
+    left: 494px;
+    top: 422px;
+
+    /* H4 */
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    color: white;
+}
+
+.seezon{
+    position: absolute;
+width: 95px;
+height: 29px;
+left: 494px;
+top: 322px;
+
+/* H2 */
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 29px;
+
+/* Белые детали */
+
+color: #FFFFFF;
 }
