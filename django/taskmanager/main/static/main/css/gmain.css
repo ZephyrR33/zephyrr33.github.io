@@ -1,3 +1,5 @@
+{% load static %}
+
 * {
     box-sizing: border-box;
     -ms-user-select: none;
@@ -139,7 +141,7 @@ height: 641px;
 left: 475px;
 top: 128px;
 
-background: url(/images/sasuke-naruto-uhdpaper.png);
+background: url('{% static "main/images/sasuke-naruto-uhdpaper.png" %}');
 border-radius: 5px;
 }
 
