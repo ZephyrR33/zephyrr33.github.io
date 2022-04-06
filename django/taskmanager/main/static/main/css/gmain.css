@@ -53,10 +53,91 @@ h4 {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
-    background-color: #FFFFFF;
+    width: 1395px;
+}
+.container_play_one{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
     width: 1395px;
 }
 
+.wee_more{
+    position: absolute;
+width: 236px;
+height: 68px;
+left: 1022px;
+top: 2111px;
+
+}
+
+.end{
+    position: absolute;
+width: 1560px;
+height: 344px;
+left: 360px;
+top: 2356px;
+
+}
+
+.end_text{
+    position: absolute;
+left: 21.92%;
+right: 21.92%;
+top: 37.21%;
+bottom: 20.93%;
+
+/* R20 */
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+
+/* Вторичный текст */
+
+color: #B6B6B6;
+
+}
+
+.soc_seti{
+    margin:0 auto;
+    display: flex;
+    width: 255px;
+    justify-content: space-between;
+}
+
+.container_play_two{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 1395px;
+}
+
+.play_pros{
+    position: absolute;
+width: 588px;
+height: 59px;
+left: 475px;
+top: 1421px;
+
+/* H1 */
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 59px;
+/* identical to box height */
+
+
+/* Белые детали */
+
+color: #FFFFFF;
+
+}
 
 a {
     text-decoration: none;
