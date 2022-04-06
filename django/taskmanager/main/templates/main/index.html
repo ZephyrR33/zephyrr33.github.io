@@ -66,19 +66,19 @@
                 <div class="name_nemenu">
                     <div><img src="{% static 'main/images/movie.png' %}" alt=""></div>
                     <div class="pustota"></div>
-                    <h4><a class="gender_pg" href="/genres.html">Жанры</a></h4>
+                    <h4><a class="gender_pg" href="{% url 'genres' %}">Жанры</a></h4>
                 </div>
         
                 <div class="name_nemenu">
                     <div><img src="{% static 'main/images/heart.png' %}" alt=""></div>
                     <div class="pustota"></div>
-                    <h4><a class="favorite_pg" href="/favorites.html">Избранное</a></h4>
+                    <h4><a class="favorite_pg" href="{% url 'favorites' %}">Избранное</a></h4>
                 </div>
         
                 <div class="name_nemenu">
                     <div><img src="{% static 'main/images/Group.png' %}" alt=""></div>
                     <div class="pustota"></div>
-                    <h4><a class="premium_page" href="/mostpop.html">Премиум</a></h4>
+                    <h4><a class="premium_page" href="{% url 'premium' %}">Премиум</a></h4>
                 </div>
             </div>
         </div>

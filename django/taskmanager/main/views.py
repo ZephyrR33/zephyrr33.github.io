@@ -7,6 +7,20 @@ def index(request):
     return render(request, 'main/index.html')
 
 
-
 def index_css(request):
     return render(request, 'main/gmain.css')
+    
+
+def genres(request):
+    return render(request, 'main/genres.html')
+
+
+def favorites(request):
+    return render(request, 'main/favorites.html')
+
+
+def premium(request):
+    return render(request, 'main/premium.html')
+
+
+
