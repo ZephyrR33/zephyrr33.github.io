@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">    
     <title>AnimeStore</title>
     <link href="{% static 'main/css/gmain.css' %}" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,6 +58,7 @@
 
                 <div class="name_nemenu">
                     <div><img src="{% static 'main/images/home_aktive.png' %}" alt=""></div>
+                    <div class="pustota"></div>
                     <div class="rec7"><img src="{% static 'main/images/Rectangle 7.png' %}"></div>
                     <div class="onst"><img src="{% static 'main/images/onst.png' %}" alt=""></div>
                     <h4><a class="osnpg aktive" href="/index.html">Главная</a></h4>
@@ -133,15 +134,11 @@
                 <div class="future">Популярное</div>
             </h4>
             <div class="container_future">
-                <div class="vanpise_future"><img src="{% static 'main/images/vanpise_future.png' %}" alt=""></div>
-                <div class="hanterxhanter_future"><img src="{% static 'main/images/hanterXhanter_future.png' %}" alt="">
-                </div>
-                <div class="mastermech_future"><img src="{% static 'main/images/swordmasteronline_future.png' %}"
-                        alt=""></div>
-                <div class="myheroes_future"><img src="{% static 'main/images/myheroaccademy_future.png' %}" alt="">
-                </div>
-                <div class="attacktitanov_future"><img src="{% static 'main/images/atackatitanov_future.png' %}" alt="">
-                </div>
+                <div class="vanpise_future"><a href=""><img src="{% static 'main/images/vanpise_future.png' %}" alt=""></a></div>
+                <div class="hanterxhanter_future"><a href=""><img src="{% static 'main/images/hanterXhanter_future.png' %}" alt=""></a></div>
+                <div class="mastermech_future"><a href=""><img src="{% static 'main/images/swordmasteronline_future.png' %}" alt=""></a></div>
+                <div class="myheroes_future"><a href=""><img src="{% static 'main/images/myheroaccademy_future.png' %}" alt=""></a></div>
+                <div class="attacktitanov_future"><a href=""><img src="{% static 'main/images/atackatitanov_future.png' %}" alt=""></a></div>
             </div>
         </div>
 
@@ -150,31 +147,33 @@
                 <div class="play">Продолжить просмотр</div>
             </h4>
             <div class="container_play_one">
-                <div class="attak_proc"><img src="{% static 'main/images/play_pros_attak.png' %}" alt=""></div>
-                <div class="attak_proc"><img src="{% static 'main/images/play_pros_attak2.png' %}" alt=""></div>
-                <div class="attak_proc"><img src="{% static 'main/images/play_pros_attak3.png' %}" alt=""></div>
+                <div class="attak_proc"><a href=""><img src="{% static 'main/images/play_pros_attak.png' %}" alt=""></a></div>
+                <div class="attak_proc"><a href=""><img src="{% static 'main/images/play_pros_attak2.png' %}" alt=""></a></div>
+                <div class="attak_proc"><a href=""><img src="{% static 'main/images/play_pros_attak3.png' %}" alt=""></a></div>
             </div>
             <div class="container_play_two">
-                <div class="attak_proc"><img src="{% static 'main/images/play_pros_attak4.png' %}" alt=""></div>
-                <div class="attak_proc"><img src="{% static 'main/images/play_pros_attak5.png' %}" alt=""></div>
-                <div class="attak_proc"><img src="{% static 'main/images/play_pros_attak6.png' %}" alt=""></div>
+                <div class="attak_proc"><a href=""><img src="{% static 'main/images/play_pros_attak4.png' %}" alt=""></a></div>
+                <div class="attak_proc"><a href=""><img src="{% static 'main/images/play_pros_attak5.png' %}" alt=""></a></div>
+                <div class="attak_proc"><a href=""><img src="{% static 'main/images/play_pros_attak6.png' %}" alt=""></a></div>
             </div>
         </div>
 
         <div class="wee_more"><img src="{% static 'main/images/wee_more.png' %}" alt=""></div>
         <div class="end">
-            <img src="{% static 'main/images/the_end.png' %}" alt="">
+            <img class="endend" src="{% static 'main/images/the_end.png' %}" alt="">
             <h4>
                 <div class="end_text">Рыбатекст используется дизайнерами, проектировщиками и фронтендерами, когда нужно
                     быстро заполнить макеты или прототипы содержимым. Это тестовый контент, который не должен нести
                     никакого смысла, лишь показать наличие самого текста или продемонстрировать типографику в деле.
                 </div>
             </h4>
-            <div class="soc_seti">
-                <div class="telegramm"><img src="{% static 'main/images/telegram.png' %}" alt=""></div>
-                <div class="twitter"><img src="{% static 'main/images/twitter.png' %}" alt=""></div>
-                <div class="vk"><img src="{% static 'main/images/vk.png' %}" alt=""></div>
-                <div class="instagramm"><img src="{% static 'main/images/instagram.png' %}" alt=""></div>
+            <div class="socsoc">
+                <div class="soc_seti">
+                    <div class="telegramm"><a href=""><img src="{% static 'main/images/telegram.png' %}" alt=""></a></div>
+                    <div class="twitter"><a href=""><img src="{% static 'main/images/twitter.png' %}" alt=""></a></div>
+                    <div class="vk"><a href=""><img src="{% static 'main/images/vk.png' %}" alt=""></a></div>
+                    <div class="instagramm"><a href=""><img src="{% static 'main/images/instagram.png' %}" alt=""></a></div>
+                </div>
             </div>
         </div>
     </div>
