@@ -207,9 +207,76 @@ a {
     margin-top: 35px;
 }
 
+.images_registr{
+    width: 1026px;
+    height: 504px;
+    display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.Sorry_login{
+    position: absolute;
+    width: 419px;
+    height: 320px;
+    left: 932px;
+    top: 230px;
+}
+
+.logo_registr{
+    width: 518px;
+    height: 485px;
+
+}
+
+.checkbox_parol{
+    display: flex;
+    align-items: center;
+}
+
+.text_registr_dva{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+
+/* Белые детали */
+
+color: #FFFFFF;
+
+}
+
+.container_place_registr{
+    width: 1026px;
+    height: 161px;
+}
+
+.text_registr{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 36px;
+line-height: 44px;
+/* identical to box height */
+
+
+color: #FFFFFF;
+
+}
+
+.register_container{
+    width: 1026px;
+    height: 1376px;
+    margin: 0 auto;
+}
+
 .onst{
     position: fixed;
     left: 360px;
+    z-index: 99999;
 }
 
 .search input[type=text] {

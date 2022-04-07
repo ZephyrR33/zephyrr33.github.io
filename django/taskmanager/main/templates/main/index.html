@@ -55,26 +55,26 @@
                 <h4>
                     <div class="menu_name">Меню</div>
                 </h4>
-                
+
                 <div class="name_nemenu">
                     <div><img src="{% static 'main/images/home_aktive.png' %}" alt=""></div>
                     <div class="rec7"><img src="{% static 'main/images/Rectangle 7.png' %}"></div>
                     <div class="onst"><img src="{% static 'main/images/onst.png' %}" alt=""></div>
                     <h4><a class="osnpg aktive" href="/index.html">Главная</a></h4>
                 </div>
-        
+
                 <div class="name_nemenu">
                     <div><img src="{% static 'main/images/movie.png' %}" alt=""></div>
                     <div class="pustota"></div>
                     <h4><a class="gender_pg" href="{% url 'genres' %}">Жанры</a></h4>
                 </div>
-        
+
                 <div class="name_nemenu">
                     <div><img src="{% static 'main/images/heart.png' %}" alt=""></div>
                     <div class="pustota"></div>
                     <h4><a class="favorite_pg" href="{% url 'favorites' %}">Избранное</a></h4>
                 </div>
-        
+
                 <div class="name_nemenu">
                     <div><img src="{% static 'main/images/Group.png' %}" alt=""></div>
                     <div class="pustota"></div>
@@ -86,38 +86,69 @@
             <div class="headerr">
                 <div class="search">
                     <img class="img_search" src="{% static 'main/images/search.png' %}" alt="">
-                    <input  class="poisk" type="text" placeholder="Поиск">
+                    <input class="poisk" type="text" placeholder="Поиск">
                 </div>
             </div>
         </div>
-        
+
         <div class="osn_cont">
-            
+
             <img class="main_name_inf" src="{% static 'main/images/sasuke-naruto-uhdpaper.png' %}" alt="">
-            <h4><nobr><div class="Name_mane">Атака титанов</div></nobr></h4>
-            <h4><div class="text_mane">В прошлом столетии человечество страдало из-за нашествия гигантов. Они были очень похожи внешностью на простых людей, но также имели несколько отличий. Разница состояла в слишком больших размерах созданий и в их абсолютной глупости. Те, кому повезло остаться в живых, приняли решение объединиться и приступить к самозащите.</div></h4>
-            <h4><nobr><div class="seezon">4 сезон</div></nobr></h4>
+            <h4>
+                <nobr>
+                    <div class="Name_mane">Атака титанов</div>
+                </nobr>
+            </h4>
+            <h4>
+                <div class="text_mane">В прошлом столетии человечество страдало из-за нашествия гигантов. Они были очень
+                    похожи внешностью на простых людей, но также имели несколько отличий. Разница состояла в слишком
+                    больших размерах созданий и в их абсолютной глупости. Те, кому повезло остаться в живых, приняли
+                    решение объединиться и приступить к самозащите.</div>
+            </h4>
+            <h4>
+                <nobr>
+                    <div class="seezon">4 сезон</div>
+                </nobr>
+            </h4>
             <img class="img_play" src="{% static 'main/images/Subtract.png' %}" alt="">
             <img class="img_clock" src="{% static 'main/images/clock.png' %}" alt="">
             <img class="img_date" src="{% static 'main/images/calendar-event.png' %}" alt="">
-            <h4><div class="mini_inf_name">Аниме</div></h4>
-            <h4><nobr><div class="mini_inf_weight">23 Мин/Эп</div></nobr></h4>
-            <h4><nobr><div class="mini_inf_data">28 марта 2021</div></nobr></h4>
+            <h4>
+                <div class="mini_inf_name">Аниме</div>
+            </h4>
+            <h4>
+                <nobr>
+                    <div class="mini_inf_weight">23 Мин/Эп</div>
+                </nobr>
+            </h4>
+            <h4>
+                <nobr>
+                    <div class="mini_inf_data">28 марта 2021</div>
+                </nobr>
+            </h4>
         </div>
 
         <div class="fututure">
-            <h4><div class="future">Популярное</div></h4>
+            <h4>
+                <div class="future">Популярное</div>
+            </h4>
             <div class="container_future">
                 <div class="vanpise_future"><img src="{% static 'main/images/vanpise_future.png' %}" alt=""></div>
-                <div class="hanterxhanter_future"><img src="{% static 'main/images/hanterXhanter_future.png' %}" alt=""></div>
-                <div class="mastermech_future"><img src="{% static 'main/images/swordmasteronline_future.png' %}" alt=""></div>
-                <div class="myheroes_future"><img src="{% static 'main/images/myheroaccademy_future.png' %}" alt=""></div>
-                <div class="attacktitanov_future"><img src="{% static 'main/images/atackatitanov_future.png' %}" alt=""></div>
+                <div class="hanterxhanter_future"><img src="{% static 'main/images/hanterXhanter_future.png' %}" alt="">
+                </div>
+                <div class="mastermech_future"><img src="{% static 'main/images/swordmasteronline_future.png' %}"
+                        alt=""></div>
+                <div class="myheroes_future"><img src="{% static 'main/images/myheroaccademy_future.png' %}" alt="">
+                </div>
+                <div class="attacktitanov_future"><img src="{% static 'main/images/atackatitanov_future.png' %}" alt="">
+                </div>
             </div>
         </div>
 
         <div class="play_pros">
-            <h4><div class="play">Продолжить просмотр</div></h4>
+            <h4>
+                <div class="play">Продолжить просмотр</div>
+            </h4>
             <div class="container_play_one">
                 <div class="attak_proc"><img src="{% static 'main/images/play_pros_attak.png' %}" alt=""></div>
                 <div class="attak_proc"><img src="{% static 'main/images/play_pros_attak2.png' %}" alt=""></div>
@@ -133,7 +164,12 @@
         <div class="wee_more"><img src="{% static 'main/images/wee_more.png' %}" alt=""></div>
         <div class="end">
             <img src="{% static 'main/images/the_end.png' %}" alt="">
-            <h4><div class="end_text">Рыбатекст используется дизайнерами, проектировщиками и фронтендерами, когда нужно быстро заполнить макеты или прототипы содержимым. Это тестовый контент, который не должен нести никакого смысла, лишь показать наличие самого текста или продемонстрировать типографику в деле.</div></h4>
+            <h4>
+                <div class="end_text">Рыбатекст используется дизайнерами, проектировщиками и фронтендерами, когда нужно
+                    быстро заполнить макеты или прототипы содержимым. Это тестовый контент, который не должен нести
+                    никакого смысла, лишь показать наличие самого текста или продемонстрировать типографику в деле.
+                </div>
+            </h4>
             <div class="soc_seti">
                 <div class="telegramm"><img src="{% static 'main/images/telegram.png' %}" alt=""></div>
                 <div class="twitter"><img src="{% static 'main/images/twitter.png' %}" alt=""></div>
@@ -142,7 +178,7 @@
             </div>
         </div>
     </div>
-    
+
 
 </body>
 
