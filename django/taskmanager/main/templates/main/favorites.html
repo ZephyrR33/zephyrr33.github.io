@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
 
-    <link rel="icon" type="image/png" sizes="16x16" href="zephyrr33.github.io/logo_title(f)/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'main/images/favicon.ico' %}">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGWYRJ9WHK"></script>
     <script>
@@ -98,18 +98,20 @@
 
 
         <div class="end">
-            <img src="{% static 'main/images/the_end.png' %}" alt="">
+            <img class="endend" src="{% static 'main/images/the_end.png' %}" alt="">
             <h4>
                 <div class="end_text">Рыбатекст используется дизайнерами, проектировщиками и фронтендерами, когда нужно
                     быстро заполнить макеты или прототипы содержимым. Это тестовый контент, который не должен нести
                     никакого смысла, лишь показать наличие самого текста или продемонстрировать типографику в деле.
                 </div>
             </h4>
-            <div class="soc_seti">
-                <div class="telegramm"><img src="{% static 'main/images/telegram.png' %}" alt=""></div>
-                <div class="twitter"><img src="{% static 'main/images/twitter.png' %}" alt=""></div>
-                <div class="vk"><img src="{% static 'main/images/vk.png' %}" alt=""></div>
-                <div class="instagramm"><img src="{% static 'main/images/instagram.png' %}" alt=""></div>
+            <div class="socsoc">
+                <div class="soc_seti">
+                    <div class="telegramm"><a href=""><img src="{% static 'main/images/telegram.png' %}" alt=""></a></div>
+                    <div class="twitter"><a href=""><img src="{% static 'main/images/twitter.png' %}" alt=""></a></div>
+                    <div class="vk"><a href=""><img src="{% static 'main/images/vk.png' %}" alt=""></a></div>
+                    <div class="instagramm"><a href=""><img src="{% static 'main/images/instagram.png' %}" alt=""></a></div>
+                </div>
             </div>
         </div>
     </div>

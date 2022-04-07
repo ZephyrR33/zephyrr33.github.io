@@ -13,16 +13,51 @@
              * Для Сафари и Хрома
              */
     -webkit-user-select: none;
+    
+  
 
 }
+
+::-webkit-scrollbar {
+    width: 0;
+  }
 
 .otstup {
     margin-left: 50px;
 }
 
+.kolonka{
+    position: relative;
+}
+
+.stril_l{
+    display: flex;
+    align-items: center;
+}
+
+.stril_ll{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 328px;
+    height: 1160px;
+}
+
+.stril{
+    width: 328px;
+    height: 1145px;
+    position:absolute; 
+    left:84px;
+    top:25px;
+    z-index: 2;
+}
+
 body {
+    width: 100%;
     margin: 0;
+    overflow-x:hidden;
     background: rgba(26, 26, 29, 1);
+    
 }
 
 h4 {
@@ -102,7 +137,15 @@ color: #B6B6B6;
 
 }
 
+.socsoc{
+    position: absolute;
+    left:653px;
+    top:269px;
+    z-index: 2;
+}
+
 .soc_seti{
+
     margin:0 auto;
     display: flex;
     width: 255px;
@@ -168,6 +211,11 @@ a {
 
 }
 
+.geners_heat{
+    width: 816px;
+    height: 127px;
+}
+
 .name_nemenu {
     display: flex;
     align-items: center;
@@ -175,7 +223,64 @@ a {
     
 }
 
+.sort_in_poisk{
+    display: flex;
+    justify-content: space-between;
+    align-self:center;
+    align-items: center;
+    float: right;
+    width: 288px;
+    height: 29px;
+}
 
+.Sort_text{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+
+color: #FFFFFF;
+
+}
+
+.block_generes{
+    width: 100%;
+    height: 2095px;
+}
+
+.selve_generes{
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    align-items: center;
+    height: 400px;
+}
+
+.genres_name{
+
+/* H1 */
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 59px;
+/* identical to box height */
+
+
+/* Белые детали */
+
+color: #FFFFFF;
+
+
+}
+
+.wert{
+    width: 816px;
+    height: 2325px;
+    margin-left: 115px;
+}
 
 .pustota {
     width: 10px;
@@ -190,9 +295,40 @@ a {
     z-index: 99999999999;
 }
 
-.main_item {}
+.main_item {
 
+}
 
+.big_cont{
+    display: flex;
+    float: right;
+    width: 1555px;
+    justify-content: space-between;
+}
+
+.haha_popalsya{
+    display: flex;
+}
+
+.smsmsmsm{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 29px;
+
+/* Белые детали */
+
+color: #FFFFFF;
+}
+
+.sort_container{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 2074px;
+}
 .poisk {
     width: 752px;
     height: 67px;
@@ -207,12 +343,46 @@ a {
     margin-top: 35px;
 }
 
+.most_prosm{
+    margin-right: 50px;
+}
+
 .images_registr{
     width: 1026px;
     height: 504px;
     display: flex;
    align-items: center;
    justify-content: center;
+}
+
+.vib_gener{
+    width: 495px;
+    height: 275px;
+}
+
+.dart{
+    position: relative;
+}
+
+.fv{
+    color: #FFFFFF;
+}
+
+.fv:focus{
+    color: #C3079A;
+}
+
+.ganr{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    background-color: transparent;
 }
 
 .Sorry_login{
@@ -421,8 +591,11 @@ input, input:active, input:focus {
     border: none;
 }
 
+.endend{
+    position: relative;
+}
+
 .Name_mane{
-    display: none;
     position: absolute;
     width: 373px;
     height: 59px;
