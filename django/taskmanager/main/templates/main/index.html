@@ -49,7 +49,7 @@
 
     <div class="container">
         <div class="panel">
-            <div><img class="logo" src="{% static 'main/images/Igle_logo.png' %}" alt=""></div>
+            <div><a href=""><img class="logo" src="{% static 'main/images/Igle_logo.png' %}" alt=""></a></div>
             <div class="otstup">
                 <div class="poloska"></div>
                 <h4>
@@ -57,30 +57,116 @@
                 </h4>
 
                 <div class="name_nemenu">
-                    <div><img src="{% static 'main/images/home_aktive.png' %}" alt=""></div>
+                    <div><img id="ff" src="{% static 'main/images/home_aktive.png' %}" alt=""></div>
+                    <div><img style="display: none;" id="jj" src="{% static 'main/images/home.png' %}" alt=""></div>
                     <div class="pustota"></div>
-                    <div class="rec7"><img src="{% static 'main/images/Rectangle 7.png' %}"></div>
-                    <div class="onst"><img src="{% static 'main/images/onst.png' %}" alt=""></div>
-                    <h4><a class="osnpg aktive" href="/index.html">Главная</a></h4>
+                    <div class="rec7" id="gh"><img src="{% static 'main/images/Rectangle 7.png' %}"></div>
+                    <div class="onst" id="sl"><img src="{% static 'main/images/onst.png' %}" alt=""></div>
+                    <h4><a class="osnpg" href="/index.html" style="color: #C3079A;" id="kk">Главная</a></h4>
                 </div>
 
                 <div class="name_nemenu">
-                    <div><img src="{% static 'main/images/movie.png' %}" alt=""></div>
+                    <div><img id="aa" src="{% static 'main/images/movie.png' %}" alt=""></div>
+                    <div><img style="display: none;" id="hh" src="{% static 'main/images/movie_aktive.png' %}" alt=""></div>
                     <div class="pustota"></div>
-                    <h4><a class="gender_pg" href="{% url 'genres' %}">Жанры</a></h4>
+                    <div class="rec7 th" id="th"><img src="{% static 'main/images/Rectangle 7.png' %}"></div>
+                    <div class="onst th" id="tb"><img src="{% static 'main/images/onst.png' %}" alt=""></div>
+                    <h4><a class="gender_pg" href="{% url 'genres' %}" onmouseover="hoverOnRight()" onmouseout="hoverOffRight()" id="bb">Жанры</a></h4>
                 </div>
 
                 <div class="name_nemenu">
-                    <div><img src="{% static 'main/images/heart.png' %}" alt=""></div>
+                    <div><img id="zz" src="{% static 'main/images/heart.png' %}" alt=""></div>
+                    <div><img style="display: none;" id="mm" src="{% static 'main/images/heart_aktive.png' %}" alt=""></div>
                     <div class="pustota"></div>
-                    <h4><a class="favorite_pg" href="{% url 'favorites' %}">Избранное</a></h4>
+                    <div class="rec7 th" id="vh"><img src="{% static 'main/images/Rectangle 7.png' %}"></div>
+                    <div class="onst th" id="vb"><img src="{% static 'main/images/onst.png' %}" alt=""></div>
+                    <h4><a class="favorite_pg" href="{% url 'favorites' %}" onmouseover="hoverOnLeft()" onmouseout="hoverOffLeft()" id="nn">Избранное</a></h4>
                 </div>
 
                 <div class="name_nemenu">
-                    <div><img src="{% static 'main/images/Group.png' %}" alt=""></div>
+                    <div><img id="di" src="{% static 'main/images/Group.png' %}" alt=""></div>
+                    <div><img style="display: none;" id="id" src="{% static 'main/images/Group_aktive.png' %}" alt=""></div>
                     <div class="pustota"></div>
-                    <h4><a class="premium_page" href="{% url 'premium' %}">Премиум</a></h4>
+                    <div class="rec7 th" id="zt"><img src="{% static 'main/images/Rectangle 7.png' %}"></div>
+                    <div class="onst th" id="oo"><img src="{% static 'main/images/onst.png' %}" alt=""></div>
+                    <h4><a class="premium_page" href="{% url 'premium' %}" onmouseover="hoverOnMid()" onmouseout="hoverOffMid()" id="cc">Премиум</a></h4>
                 </div>
+                <script type="text/javascript">
+                    function hoverOnRight(){
+                        document.getElementById("th").style.opacity="1";
+                        document.getElementById("gh").style.display="none";
+                        document.getElementById("sl").style.display="none";
+                        document.getElementById("tb").style.opacity="1";
+                        document.getElementById("kk").style.color="#FFFFFF";
+                        document.getElementById("bb").style.color="#C3079A";
+                        document.getElementById("jj").style.display="block";
+                        document.getElementById("hh").style.display="block";
+                        document.getElementById("ff").style.display="none";
+                        document.getElementById("aa").style.display="none";
+                    }
+                    function hoverOffRight(){
+                        document.getElementById("th").style.opacity="0";
+                        document.getElementById("gh").style.display="block";
+                        document.getElementById("sl").style.display="block";
+                        document.getElementById("tb").style.opacity="0";
+                        document.getElementById("kk").style.color="#C3079A";
+                        document.getElementById("bb").style.color="#FFFFFF";
+                        document.getElementById("jj").style.display="none";
+                        document.getElementById("hh").style.display="none";
+                        document.getElementById("ff").style.display="block";
+                        document.getElementById("aa").style.display="block";
+                    }
+
+                    function hoverOnLeft(){
+                        document.getElementById("vh").style.opacity="1";
+                        document.getElementById("gh").style.display="none";
+                        document.getElementById("sl").style.display="none";
+                        document.getElementById("vb").style.opacity="1";
+                        document.getElementById("kk").style.color="#FFFFFF";
+                        document.getElementById("nn").style.color="#C3079A";
+                        document.getElementById("jj").style.display="block";
+                        document.getElementById("mm").style.display="block";
+                        document.getElementById("ff").style.display="none";
+                        document.getElementById("zz").style.display="none";
+                    }
+                    function hoverOffLeft(){
+                        document.getElementById("vh").style.opacity="0";
+                        document.getElementById("gh").style.display="block";
+                        document.getElementById("sl").style.display="block";
+                        document.getElementById("vb").style.opacity="0";
+                        document.getElementById("kk").style.color="#C3079A";
+                        document.getElementById("nn").style.color="#FFFFFF";
+                        document.getElementById("jj").style.display="none";
+                        document.getElementById("mm").style.display="none";
+                        document.getElementById("ff").style.display="block";
+                        document.getElementById("zz").style.display="block";
+                    }
+
+                    function hoverOnMid(){
+                        document.getElementById("zt").style.opacity="1";
+                        document.getElementById("gh").style.display="none";
+                        document.getElementById("sl").style.display="none";
+                        document.getElementById("oo").style.opacity="1";
+                        document.getElementById("kk").style.color="#FFFFFF";
+                        document.getElementById("cc").style.color="#C3079A";
+                        document.getElementById("jj").style.display="block";
+                        document.getElementById("id").style.display="block";
+                        document.getElementById("ff").style.display="none";
+                        document.getElementById("di").style.display="none";
+                    }
+                    function hoverOffMid(){
+                        document.getElementById("zt").style.opacity="0";
+                        document.getElementById("gh").style.display="block";
+                        document.getElementById("sl").style.display="block";
+                        document.getElementById("oo").style.opacity="0";
+                        document.getElementById("kk").style.color="#C3079A";
+                        document.getElementById("cc").style.color="#FFFFFF";
+                        document.getElementById("jj").style.display="none";
+                        document.getElementById("id").style.display="none";
+                        document.getElementById("ff").style.display="block";
+                        document.getElementById("di").style.display="block";
+                    }
+                </script>
             </div>
         </div>
         <div class="main_item">
@@ -94,26 +180,29 @@
 
         <div class="osn_cont">
 
-            <img class="main_name_inf" src="{% static 'main/images/sasuke-naruto-uhdpaper.png' %}" alt="">
-            <h4>
-                <nobr>
-                    <div class="Name_mane">Атака титанов</div>
-                </nobr>
-            </h4>
-            <h4>
-                <div class="text_mane">В прошлом столетии человечество страдало из-за нашествия гигантов. Они были очень
-                    похожи внешностью на простых людей, но также имели несколько отличий. Разница состояла в слишком
-                    больших размерах созданий и в их абсолютной глупости. Те, кому повезло остаться в живых, приняли
-                    решение объединиться и приступить к самозащите.</div>
-            </h4>
-            <h4>
-                <nobr>
-                    <div class="seezon">4 сезон</div>
-                </nobr>
-            </h4>
-            <img class="img_play" src="{% static 'main/images/Subtract.png' %}" alt="">
-            <img class="img_clock" src="{% static 'main/images/clock.png' %}" alt="">
-            <img class="img_date" src="{% static 'main/images/calendar-event.png' %}" alt="">
+            <div><a href="">
+                <img class="main_name_inf" src="{% static 'main/images/sasuke-naruto-uhdpaper.png' %}" alt="">
+                <h4>
+                    <nobr>
+                        <div class="Name_mane">Атака титанов</div>
+                    </nobr>
+                </h4>
+                <h4>
+                    <div class="text_mane">В прошлом столетии человечество страдало из-за нашествия гигантов. Они были очень
+                        похожи внешностью на простых людей, но также имели несколько отличий. Разница состояла в слишком
+                        больших размерах созданий и в их абсолютной глупости. Те, кому повезло остаться в живых, приняли
+                        решение объединиться и приступить к самозащите.</div>
+                </h4>
+                <h4>
+                    <nobr>
+                        <div class="seezon">4 сезон</div>
+                    </nobr>
+                </h4>
+                <img class="img_play" src="{% static 'main/images/Subtract.png' %}" alt="">
+                <img class="img_clock" src="{% static 'main/images/clock.png' %}" alt="">
+                <img class="img_date" src="{% static 'main/images/calendar-event.png' %}" alt="">
+            </a>
+            </div>
             <h4>
                 <div class="mini_inf_name">Аниме</div>
             </h4>
@@ -158,7 +247,7 @@
             </div>
         </div>
 
-        <div class="wee_more"><img src="{% static 'main/images/wee_more.png' %}" alt=""></div>
+        <div class="wee_more"><a href=""><img src="{% static 'main/images/wee_more.png' %}" alt=""></a></div>
         <div class="end">
             <img class="endend" src="{% static 'main/images/the_end.png' %}" alt="">
             <h4>
