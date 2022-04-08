@@ -47,7 +47,7 @@
 
     <div class="container">
         <div class="panel">
-            <div><a href=""><img class="logo" src="{% static 'main/images/Igle_logo.png' %}" alt=""></a></div>
+            <div><a href="{% url 'index' %}"><img class="logo" src="{% static 'main/images/Igle_logo.png' %}" alt=""></a></div>
             <div class="otstup">
                 <div class="poloska"></div>
                 <h4>
@@ -55,21 +55,21 @@
                 </h4>
 
                 <div class="name_nemenu">
-                    <div><img style="display: none;"  id="ff" src="{% static 'main/images/home_aktive.png' %}" alt=""></div>
-                    <div><img id="jj" src="{% static 'main/images/home.png' %}" alt=""></div>
-                    <div class="pustota"></div>
-                    <div class="rec7" id="gh"><img src="{% static 'main/images/Rectangle 7.png' %}"></div>
-                    <div class="onst" id="sl"><img src="{% static 'main/images/onst.png' %}" alt=""></div>
-                    <h4><a class="osnpg" href="{% url 'index' %}"  onmouseover="hoverOnRight()" onmouseout="hoverOffRight()" id="kk">Главная</a></h4>
-                </div>
-
-                <div class="name_nemenu">
-                    <div><img style="display: none;" id="aa" src="{% static 'main/images/movie.png' %}" alt=""></div>
-                    <div><img  id="hh" src="{% static 'main/images/movie_aktive.png' %}" alt=""></div>
+                    <div><img style="display: none;" id="hh" src="{% static 'main/images/home_aktive.png' %}" alt=""></div>
+                    <div><img  id="aa" src="{% static 'main/images/home.png' %}" alt=""></div>
                     <div class="pustota"></div>
                     <div class="rec7 th" id="th"><img src="{% static 'main/images/Rectangle 7.png' %}"></div>
                     <div class="onst th" id="tb"><img src="{% static 'main/images/onst.png' %}" alt=""></div>
-                    <h4><a class="gender_pg" href="{% url 'genres' %}" style="color: #C3079A;" id="bb">Жанры</a></h4>
+                    <h4><a class="osnpg" href="{% url 'index' %}" id="bb"onmouseover="hoverOnRight()" onmouseout="hoverOffRight()">Главная</a></h4>
+                </div>
+
+                <div class="name_nemenu">
+                    <div><img style="display: none;" id="jj" src="{% static 'main/images/movie.png' %}" alt=""></div>
+                    <div><img  id="ff" src="{% static 'main/images/movie_aktive.png' %}" alt=""></div>
+                    <div class="pustota"></div>
+                    <div class="rec7" id="gh"><img src="{% static 'main/images/Rectangle 7.png' %}"></div>
+                    <div class="onst" id="sl"><img src="{% static 'main/images/onst.png' %}" alt=""></div>
+                    <h4><a class="gender_pg" href="{% url 'genres' %}"  style="color: #C3079A;" id="kk">Жанры</a></h4>
                 </div>
 
                 <div class="name_nemenu">
@@ -83,7 +83,7 @@
 
                 <div class="name_nemenu">
                     <div><img id="di" src="{% static 'main/images/Group.png' %}" alt=""></div>
-                    <div><img id="id" style="display: none;" src="{% static 'main/images/Group_aktive.png' %}" alt=""></div>
+                    <div><img style="display: none;" id="id" src="{% static 'main/images/Group_aktive.png' %}" alt=""></div>
                     <div class="pustota"></div>
                     <div class="rec7 th" id="zt"><img src="{% static 'main/images/Rectangle 7.png' %}"></div>
                     <div class="onst th" id="oo"><img src="{% static 'main/images/onst.png' %}" alt=""></div>
@@ -91,19 +91,6 @@
                 </div>
                 <script type="text/javascript">
                     function hoverOnRight(){
-                        document.getElementById("th").style.opacity="0";
-                        document.getElementById("gh").style.display="block";
-                        document.getElementById("sl").style.display="block";
-                        document.getElementById("tb").style.opacity="0";
-                        document.getElementById("kk").style.color="#C3079A";
-                        document.getElementById("bb").style.color="#FFFFFF";
-                        document.getElementById("jj").style.display="none";
-                        document.getElementById("hh").style.display="none";
-                        document.getElementById("ff").style.display="block";
-                        document.getElementById("aa").style.display="block";
-                    }
-                    
-                    function hoverOffRight(){
                         document.getElementById("th").style.opacity="1";
                         document.getElementById("gh").style.display="none";
                         document.getElementById("sl").style.display="none";
@@ -115,30 +102,42 @@
                         document.getElementById("ff").style.display="none";
                         document.getElementById("aa").style.display="none";
                     }
+                    function hoverOffRight(){
+                        document.getElementById("th").style.opacity="0";
+                        document.getElementById("gh").style.display="block";
+                        document.getElementById("sl").style.display="block";
+                        document.getElementById("tb").style.opacity="0";
+                        document.getElementById("kk").style.color="#C3079A";
+                        document.getElementById("bb").style.color="#FFFFFF";
+                        document.getElementById("jj").style.display="none";
+                        document.getElementById("hh").style.display="none";
+                        document.getElementById("ff").style.display="block";
+                        document.getElementById("aa").style.display="block";
+                    }
 
                     function hoverOnLeft(){
-                        document.getElementById("th").style.opacity="0";
-                        document.getElementById("vh").style.display="block";
-                        document.getElementById("tb").style.display="none";
+                        document.getElementById("vh").style.opacity="1";
+                        document.getElementById("gh").style.display="none";
+                        document.getElementById("sl").style.display="none";
                         document.getElementById("vb").style.opacity="1";
-                        document.getElementById("bb").style.color="#FFFFFF";
+                        document.getElementById("kk").style.color="#FFFFFF";
                         document.getElementById("nn").style.color="#C3079A";
-                        document.getElementById("aa").style.display="block";
+                        document.getElementById("jj").style.display="block";
                         document.getElementById("mm").style.display="block";
-                        document.getElementById("hh").style.display="none";
+                        document.getElementById("ff").style.display="none";
                         document.getElementById("zz").style.display="none";
                     }
                     function hoverOffLeft(){
-                        document.getElementById("th").style.opacity="1";
-                        document.getElementById("vh").style.display="none";
-                        document.getElementById("tb").style.display="block";
-                        document.getElementById("vb").style.opacity="1";
-                        document.getElementById("bb").style.color="#C3079A";
+                        document.getElementById("vh").style.opacity="0";
+                        document.getElementById("gh").style.display="block";
+                        document.getElementById("sl").style.display="block";
+                        document.getElementById("vb").style.opacity="0";
+                        document.getElementById("kk").style.color="#C3079A";
                         document.getElementById("nn").style.color="#FFFFFF";
-                        document.getElementById("aa").style.display="block";
-                        document.getElementById("mm").style.display="block";
-                        document.getElementById("hh").style.display="none";
-                        document.getElementById("zz").style.display="none";
+                        document.getElementById("jj").style.display="none";
+                        document.getElementById("mm").style.display="none";
+                        document.getElementById("ff").style.display="block";
+                        document.getElementById("zz").style.display="block";
                     }
 
                     function hoverOnMid(){
@@ -172,9 +171,17 @@
         <div class="main_item">
             <div class="headerr">
                 <div class="search">
-                    <img class="img_search" src="{% static 'main/images/search.png' %}" alt="">
-                    <input class="poisk" type="text" placeholder="Поиск">
+                    <div>
+                        <img class="img_search" src="{% static 'main/images/search.png' %}" alt="">
+                        <input class="poisk" type="text" placeholder="Поиск">
+                    </div>
+                    <div class="serch_panel">
+                        <div class="korona"><a href=""><img src="{% static 'main/images/korona.png' %}" alt=""></a></div>
+                        <div class="korona"><a href=""><img src="{% static 'main/images/uvi.png' %}" alt=""></a></div>
+                        <div><a href=""><img class="profil" src="{% static 'main/images/profil.png' %}" alt=""></a></div>
+                    </div>
                 </div>
+
             </div>
         </div>
 
@@ -253,8 +260,8 @@
                 <div class="most_prosm">
                     <div class="haha_popalsya">
                         <div><img src="{% static 'main/images/den_ser.png' %}" alt=""></div>
-                        <div><a href=""><img src="{% static 'main/images/ned_bel.png' %}" alt=""></a></div>
-                        <div><a href=""><img src="{% static 'main/images/mes_bel.png' %}" alt=""></a></div>
+                        <div><a href="{% url 'ganres_week' %}"><img src="{% static 'main/images/ned_bel.png' %}" alt=""></a></div>
+                        <div><a href="{% url 'ganers_month' %}"><img src="{% static 'main/images/mes_bel.png' %}" alt=""></a></div>
                     </div>
                     <div class="kolonka"><img src="{% static 'main/images/kolonka.png' %}" alt="">
                         <div class="stril">

@@ -542,6 +542,70 @@ color: #FFFFFF;
     font-weight: 600;
 }
 
+.search{
+    display: flex;
+    justify-content: space-around;
+}
+
+.serch_panel{
+    margin-top: 30px;
+    display: flex;
+    justify-content:space-between;
+    width: 164px;
+    height: 50px;
+    align-items: center;
+    align-content: center;
+}
+
+.korona{
+    width: 38px;
+height: 38px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.woth_osn{
+    position: absolute;
+width: 218px;
+height: 49px;
+left: 498px;
+top: 689px;
+}
+
+.plus_osn{
+    position: absolute;
+width: 49px;
+height: 49px;
+left: 728px;
+top: 689px;
+
+}
+
+.naviga_osn{
+    position: absolute;
+width: 120px;
+height: 16px;
+left: 1710px;
+top: 729px;
+
+}
+
+.next{
+    display: block;
+    position: absolute;
+width: 68px;
+height: 68px;
+left: 1752px;
+top: 415px;
+}
+
+
+.profil{
+    width: 50px;
+height: 50px;
+}
+
 .osn_cont{
  
 }
