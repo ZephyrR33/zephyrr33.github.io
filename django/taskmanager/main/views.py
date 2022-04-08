@@ -18,11 +18,11 @@ def favorites(request):
 def premium(request):
     return render(request, 'main/premium.html')
 
-def ganres_week(request):
-    return render(request, 'main/ganres_week.html')
+def genres_week(request):
+    return render(request, 'main/genres_week.html')
 
-def ganers_month(request):
-    return render(request, 'main/ganers_month.html')
+def genres_mounth(request):
+    return render(request, 'main/genres_mounth.html')
 
 
 
