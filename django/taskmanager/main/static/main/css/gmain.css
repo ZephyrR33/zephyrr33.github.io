@@ -56,7 +56,7 @@ body {
     width: 100%;
     margin: 0;
     overflow-x:hidden;
-    background: rgba(26, 26, 29, 1);
+    background: rgba(21, 20, 20, 1);
     
 }
 
@@ -223,13 +223,18 @@ a {
     
 }
 
+.sdselect{
+    width: 120px;
+    height: 29px;
+}
+
 .sort_in_poisk{
     display: flex;
     justify-content: space-between;
     align-self:center;
     align-items: center;
     float: right;
-    width: 288px;
+    width: 305px;
     height: 29px;
 }
 
@@ -370,6 +375,84 @@ color: #FFFFFF;
 
 .fv:focus{
     color: #C3079A;
+}
+
+.container_type{
+    display: flex;
+    justify-content: space-between;
+    width: 456px;
+    margin-left: 24px;
+    margin-top: 13px;
+    
+}
+
+.th{
+    display: none;
+    opacity: 0;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+
+
+
+select{
+    outline: none;
+    background-color: #1C1D1D;
+    color: #737171;
+    border: none;
+    border-radius: 5%;
+}
+
+select:active, select:focus{
+    outline:none;
+    border: none;
+  }
+
+.container_container1{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 149px;
+    height: 249px;
+}
+
+.container_container2{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 150px;
+    height: 249px;
+
+}
+
+.container_container3{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 93px;
+    height: 249px;
+
+}
+
+.yhyh{
+    height: 64px;
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 29px;
+color: #FFFFFF;
+}
+
+.gener_type{
+    position:absolute;
+    left:0px;
+    top:0px;
+    z-index: 2;
 }
 
 .ganr{
