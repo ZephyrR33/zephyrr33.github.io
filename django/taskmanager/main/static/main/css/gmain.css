@@ -549,10 +549,11 @@ color: #FFFFFF;
 
 .search{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .serch_panel{
+    margin-right: 50px;
     margin-top: 30px;
     display: flex;
     justify-content:space-between;
