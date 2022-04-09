@@ -13,10 +13,10 @@ class onepunchman(models.Model):
     title = models.CharField('Название', max_length=250)
     sezon = models.CharField('Сезон', max_length=250)
     episode = models.CharField('Эпизод', max_length=250)
-    res1080 = models.CharField('res1080', max_length=250)
-    res720 = models.CharField('res720', max_length=250)
-    res480 = models.CharField('res480', max_length=250)
-    res360 = models.CharField('res360', max_length=250)
+    res1080 = models.URLField('res1080', max_length=250)
+    res720 = models.URLField('res720', max_length=250)
+    res480 = models.URLField('res480', max_length=250)
+    res360 = models.URLField('res360', max_length=250)
 
 
     def __str__(self):

@@ -18,11 +18,34 @@ def favorites(request):
 def premium(request):
     return render(request, 'main/premium.html')
 
-def genres_week(request):
+
+def genres_week(request):   #фильтр на странце 'genres'
     return render(request, 'main/genres_week.html')
 
-def genres_mounth(request):
+
+def genres_mounth(request):  #фильтр на странце 'genres'
     return render(request, 'main/genres_mounth.html')
+    
+
+def dororo_main(request):
+    return render(request, 'main/dororo_main.html')
+
+
+def homeless_god_main(request):
+    return render(request, 'main/homeless_god_main.html')
+
+
+def magic_battle_main(request):
+    return render(request, 'main/magic_battle_main.html')
+
+
+def onepunchman_main(request):
+    return render(request, 'main/onepunchman_main.html')
+
+
+def the_promised_neverland(request):
+    return render(request, 'main/the_promised_neverland.html')
+
 
 
 
