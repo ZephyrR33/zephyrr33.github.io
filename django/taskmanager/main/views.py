@@ -47,5 +47,22 @@ def the_promised_neverland(request):
     return render(request, 'main/the_promised_neverland.html')
 
 
+def tpn1(request):
+    return render(request, 'main/the_promised_neverland/episode-1.html')
 
+
+def hg1(request):
+    return render(request, 'main/homeless_god/episode-1.html')
+
+
+def dor1(request):
+    return render(request, 'main/dororo/episode-1.html')
+
+
+def mb1(request):
+    return render(request, 'main/magic_battle/episode-1.html')
+
+
+def opm1(request):
+    return render(request, 'main/onepunchman/episode-1.html')
 
