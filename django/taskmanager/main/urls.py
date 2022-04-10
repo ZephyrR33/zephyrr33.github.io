@@ -14,6 +14,6 @@ urlpatterns = [
     path('magic-battle', views.magic_battle_main, name='magic_battle_main'),
     path('onepunchman', views.onepunchman_main, name='onepunchman_main'),
     path('the-promised-neverland', views.the_promised_neverland, name='the_promised_neverland'),
-    
+    path('the-promised-neverland/episode-1', views.tpn1, name='the_promised_neverland_episode_1'),
     
 ]
