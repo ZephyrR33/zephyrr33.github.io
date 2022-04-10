@@ -49,7 +49,8 @@
 
     <div class="container">
         <div class="panel">
-            <div><a href="{% url 'index' %}"><img class="logo" src="{% static 'main/images/Igle_logo.png' %}" alt=""></a></div>
+            <div><a href="{% url 'index' %}"><img class="logo" src="{% static 'main/images/Igle_logo.png' %}"
+                        alt=""></a></div>
             <div class="otstup">
                 <div class="poloska"></div>
                 <h4>
@@ -57,114 +58,121 @@
                 </h4>
 
                 <div class="name_nemenu">
-                    <div><img style="display: none;" id="hh" src="{% static 'main/images/home_aktive.png' %}" alt=""></div>
-                    <div><img  id="aa" src="{% static 'main/images/home.png' %}" alt=""></div>
+                    <div><img style="display: none;" id="hh" src="{% static 'main/images/home_aktive.png' %}" alt="">
+                    </div>
+                    <div><img id="aa" src="{% static 'main/images/home.png' %}" alt=""></div>
                     <div class="pustota"></div>
                     <div class="rec7 th" id="th"><img src="{% static 'main/images/Rectangle 7.png' %}"></div>
                     <div class="onst th" id="tb"><img src="{% static 'main/images/onst.png' %}" alt=""></div>
-                    <h4><a class="osnpg" href="{% url 'index' %}" id="bb"onmouseover="hoverOnRight()" onmouseout="hoverOffRight()">Главная</a></h4>
+                    <h4><a class="osnpg" href="{% url 'index' %}" id="bb" onmouseover="hoverOnRight()"
+                            onmouseout="hoverOffRight()">Главная</a></h4>
                 </div>
 
                 <div class="name_nemenu">
-                    <div><img  id="zz" src="{% static 'main/images/movie.png' %}" alt=""></div>
-                    <div><img style="display: none;" id="mm" src="{% static 'main/images/movie_aktive.png' %}" alt=""></div>
+                    <div><img id="zz" src="{% static 'main/images/movie.png' %}" alt=""></div>
+                    <div><img style="display: none;" id="mm" src="{% static 'main/images/movie_aktive.png' %}" alt="">
+                    </div>
                     <div class="pustota"></div>
                     <div class="rec7 th" id="vh"><img src="{% static 'main/images/Rectangle 7.png' %}"></div>
                     <div class="onst th" id="vb"><img src="{% static 'main/images/onst.png' %}" alt=""></div>
-                    <h4><a class="gender_pg" href="{% url 'genres' %}"   id="nn"  onmouseover="hoverOnLeft()" onmouseout="hoverOffLeft()">Жанры</a></h4>
+                    <h4><a class="gender_pg" href="{% url 'genres' %}" id="nn" onmouseover="hoverOnLeft()"
+                            onmouseout="hoverOffLeft()">Жанры</a></h4>
                 </div>
 
                 <div class="name_nemenu">
                     <div><img style="display: none;" id="jj" src="{% static 'main/images/heart.png' %}" alt=""></div>
-                    <div><img  id="ff" src="{% static 'main/images/heart_aktive.png' %}" alt=""></div>
+                    <div><img id="ff" src="{% static 'main/images/heart_aktive.png' %}" alt=""></div>
                     <div class="pustota"></div>
                     <div class="rec7" id="gh"><img src="{% static 'main/images/Rectangle 7.png' %}"></div>
                     <div class="onst" id="sl"><img src="{% static 'main/images/onst.png' %}" alt=""></div>
-                    <h4><a class="favorite_pg" href="{% url 'favorites' %}" style="color: #C3079A;" id="kk">Избранное</a></h4>
+                    <h4><a class="favorite_pg" href="{% url 'favorites' %}" style="color: #C3079A;"
+                            id="kk">Избранное</a></h4>
                 </div>
 
                 <div class="name_nemenu">
                     <div><img id="di" src="{% static 'main/images/Group.png' %}" alt=""></div>
-                    <div><img style="display: none;" id="id" src="{% static 'main/images/Group_aktive.png' %}" alt=""></div>
+                    <div><img style="display: none;" id="id" src="{% static 'main/images/Group_aktive.png' %}" alt="">
+                    </div>
                     <div class="pustota"></div>
                     <div class="rec7 th" id="zt"><img src="{% static 'main/images/Rectangle 7.png' %}"></div>
                     <div class="onst th" id="oo"><img src="{% static 'main/images/onst.png' %}" alt=""></div>
-                    <h4><a class="premium_page" href="{% url 'premium' %}" onmouseover="hoverOnMid()" onmouseout="hoverOffMid()" id="cc">Премиум</a></h4>
+                    <h4><a class="premium_page" href="{% url 'premium' %}" onmouseover="hoverOnMid()"
+                            onmouseout="hoverOffMid()" id="cc">Премиум</a></h4>
                 </div>
                 <script type="text/javascript">
-                    function hoverOnRight(){
-                        document.getElementById("th").style.opacity="1";
-                        document.getElementById("gh").style.display="none";
-                        document.getElementById("sl").style.display="none";
-                        document.getElementById("tb").style.opacity="1";
-                        document.getElementById("kk").style.color="#FFFFFF";
-                        document.getElementById("bb").style.color="#C3079A";
-                        document.getElementById("jj").style.display="block";
-                        document.getElementById("hh").style.display="block";
-                        document.getElementById("ff").style.display="none";
-                        document.getElementById("aa").style.display="none";
+                    function hoverOnRight() {
+                        document.getElementById("th").style.opacity = "1";
+                        document.getElementById("gh").style.display = "none";
+                        document.getElementById("sl").style.display = "none";
+                        document.getElementById("tb").style.opacity = "1";
+                        document.getElementById("kk").style.color = "#FFFFFF";
+                        document.getElementById("bb").style.color = "#C3079A";
+                        document.getElementById("jj").style.display = "block";
+                        document.getElementById("hh").style.display = "block";
+                        document.getElementById("ff").style.display = "none";
+                        document.getElementById("aa").style.display = "none";
                     }
-                    function hoverOffRight(){
-                        document.getElementById("th").style.opacity="0";
-                        document.getElementById("gh").style.display="block";
-                        document.getElementById("sl").style.display="block";
-                        document.getElementById("tb").style.opacity="0";
-                        document.getElementById("kk").style.color="#C3079A";
-                        document.getElementById("bb").style.color="#FFFFFF";
-                        document.getElementById("jj").style.display="none";
-                        document.getElementById("hh").style.display="none";
-                        document.getElementById("ff").style.display="block";
-                        document.getElementById("aa").style.display="block";
-                    }
-
-                    function hoverOnLeft(){
-                        document.getElementById("vh").style.opacity="1";
-                        document.getElementById("gh").style.display="none";
-                        document.getElementById("sl").style.display="none";
-                        document.getElementById("vb").style.opacity="1";
-                        document.getElementById("kk").style.color="#FFFFFF";
-                        document.getElementById("nn").style.color="#C3079A";
-                        document.getElementById("jj").style.display="block";
-                        document.getElementById("mm").style.display="block";
-                        document.getElementById("ff").style.display="none";
-                        document.getElementById("zz").style.display="none";
-                    }
-                    function hoverOffLeft(){
-                        document.getElementById("vh").style.opacity="0";
-                        document.getElementById("gh").style.display="block";
-                        document.getElementById("sl").style.display="block";
-                        document.getElementById("vb").style.opacity="0";
-                        document.getElementById("kk").style.color="#C3079A";
-                        document.getElementById("nn").style.color="#FFFFFF";
-                        document.getElementById("jj").style.display="none";
-                        document.getElementById("mm").style.display="none";
-                        document.getElementById("ff").style.display="block";
-                        document.getElementById("zz").style.display="block";
+                    function hoverOffRight() {
+                        document.getElementById("th").style.opacity = "0";
+                        document.getElementById("gh").style.display = "block";
+                        document.getElementById("sl").style.display = "block";
+                        document.getElementById("tb").style.opacity = "0";
+                        document.getElementById("kk").style.color = "#C3079A";
+                        document.getElementById("bb").style.color = "#FFFFFF";
+                        document.getElementById("jj").style.display = "none";
+                        document.getElementById("hh").style.display = "none";
+                        document.getElementById("ff").style.display = "block";
+                        document.getElementById("aa").style.display = "block";
                     }
 
-                    function hoverOnMid(){
-                        document.getElementById("zt").style.opacity="1";
-                        document.getElementById("gh").style.display="none";
-                        document.getElementById("sl").style.display="none";
-                        document.getElementById("oo").style.opacity="1";
-                        document.getElementById("kk").style.color="#FFFFFF";
-                        document.getElementById("cc").style.color="#C3079A";
-                        document.getElementById("jj").style.display="block";
-                        document.getElementById("id").style.display="block";
-                        document.getElementById("ff").style.display="none";
-                        document.getElementById("di").style.display="none";
+                    function hoverOnLeft() {
+                        document.getElementById("vh").style.opacity = "1";
+                        document.getElementById("gh").style.display = "none";
+                        document.getElementById("sl").style.display = "none";
+                        document.getElementById("vb").style.opacity = "1";
+                        document.getElementById("kk").style.color = "#FFFFFF";
+                        document.getElementById("nn").style.color = "#C3079A";
+                        document.getElementById("jj").style.display = "block";
+                        document.getElementById("mm").style.display = "block";
+                        document.getElementById("ff").style.display = "none";
+                        document.getElementById("zz").style.display = "none";
                     }
-                    function hoverOffMid(){
-                        document.getElementById("zt").style.opacity="0";
-                        document.getElementById("gh").style.display="block";
-                        document.getElementById("sl").style.display="block";
-                        document.getElementById("oo").style.opacity="0";
-                        document.getElementById("kk").style.color="#C3079A";
-                        document.getElementById("cc").style.color="#FFFFFF";
-                        document.getElementById("jj").style.display="none";
-                        document.getElementById("id").style.display="none";
-                        document.getElementById("ff").style.display="block";
-                        document.getElementById("di").style.display="block";
+                    function hoverOffLeft() {
+                        document.getElementById("vh").style.opacity = "0";
+                        document.getElementById("gh").style.display = "block";
+                        document.getElementById("sl").style.display = "block";
+                        document.getElementById("vb").style.opacity = "0";
+                        document.getElementById("kk").style.color = "#C3079A";
+                        document.getElementById("nn").style.color = "#FFFFFF";
+                        document.getElementById("jj").style.display = "none";
+                        document.getElementById("mm").style.display = "none";
+                        document.getElementById("ff").style.display = "block";
+                        document.getElementById("zz").style.display = "block";
+                    }
+
+                    function hoverOnMid() {
+                        document.getElementById("zt").style.opacity = "1";
+                        document.getElementById("gh").style.display = "none";
+                        document.getElementById("sl").style.display = "none";
+                        document.getElementById("oo").style.opacity = "1";
+                        document.getElementById("kk").style.color = "#FFFFFF";
+                        document.getElementById("cc").style.color = "#C3079A";
+                        document.getElementById("jj").style.display = "block";
+                        document.getElementById("id").style.display = "block";
+                        document.getElementById("ff").style.display = "none";
+                        document.getElementById("di").style.display = "none";
+                    }
+                    function hoverOffMid() {
+                        document.getElementById("zt").style.opacity = "0";
+                        document.getElementById("gh").style.display = "block";
+                        document.getElementById("sl").style.display = "block";
+                        document.getElementById("oo").style.opacity = "0";
+                        document.getElementById("kk").style.color = "#C3079A";
+                        document.getElementById("cc").style.color = "#FFFFFF";
+                        document.getElementById("jj").style.display = "none";
+                        document.getElementById("id").style.display = "none";
+                        document.getElementById("ff").style.display = "block";
+                        document.getElementById("di").style.display = "block";
                     }
                 </script>
             </div>
@@ -177,9 +185,11 @@
                         <input class="poisk" type="text" placeholder="Поиск">
                     </div>
                     <div class="serch_panel">
-                        <div class="korona"><a href=""><img src="{% static 'main/images/korona.png' %}" alt=""></a></div>
+                        <div class="korona"><a href=""><img src="{% static 'main/images/korona.png' %}" alt=""></a>
+                        </div>
                         <div class="korona"><a href=""><img src="{% static 'main/images/uvi.png' %}" alt=""></a></div>
-                        <div><a href=""><img class="profil" src="{% static 'main/images/profil.png' %}" alt=""></a></div>
+                        <div><a href=""><img class="profil" src="{% static 'main/images/profil.png' %}" alt=""></a>
+                        </div>
                     </div>
                 </div>
 
@@ -187,43 +197,223 @@
         </div>
 
         <div class="main_smotr">
-            <div><img src="{% static 'main/images/onepunch_main.png' %}" alt=""></div>
-            <div class="serii_sezon">
-                <div>
-                    <div><img src="{% static 'main/images/sezon1.png' %}" alt=""></div>
-                    <div class="serii">
-                        <div><a href=""><img src="{% static 'main/images/rect_ser.png' %}" alt=""></a></div>
-                        <div><a href=""><img src="{% static 'main/images/rect_ser.png' %}" alt=""></a></div>
-                    </div>
-                </div>
-                <div>
-                    <div><img src="{% static 'main/images/sezon2.png' %}" alt=""></div>
-                    <div class="serii">
-                        <div><a href=""><img src="" alt=""></a></div>
-                        <div><a href=""><img src="" alt=""></a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="end">
-            <img class="endend" src="{% static 'main/images/the_end.png' %}" alt="">
+            <div class="yh"><img src="{% static 'main/images/onepunch_main.png' %}" alt=""></div>
             <h4>
-                <div class="end_text">Рыбатекст используется дизайнерами, проектировщиками и фронтендерами, когда нужно
-                    быстро заполнить макеты или прототипы содержимым. Это тестовый контент, который не должен нести
-                    никакого смысла, лишь показать наличие самого текста или продемонстрировать типографику в деле.
-                </div>
+                <div class="name-main-anime">Ванпачмент</div>
             </h4>
-            <div class="socsoc">
-                <div class="soc_seti">
-                    <div class="telegramm"><a href=""><img src="{% static 'main/images/telegram.png' %}" alt=""></a></div>
-                    <div class="twitter"><a href=""><img src="{% static 'main/images/twitter.png' %}" alt=""></a></div>
-                    <div class="vk"><a href=""><img src="{% static 'main/images/vk.png' %}" alt=""></a></div>
-                    <div class="instagramm"><a href=""><img src="{% static 'main/images/instagram.png' %}" alt=""></a></div>
+            <div class="tt">
+                <div class="serii_sezon">
+                    <div><img src="{% static 'main/images/sezon1.png' %}" alt=""></div>
+                    <div class="serii avv">
+                        <div class="oneone_series"><a href=""><img src="{% static 'main/images/rect_ser.png' %}" alt="">
+                                <h4>
+                                    <div class="oneone_text">
+                                        <div class="twotwo_text">1 серия</div>
+                                    </div>
+                                </h4>
+                            </a></div>
+                        <div class="oneone_series"><a href=""><img src="{% static 'main/images/rect_ser.png' %}" alt="">
+                                <h4>
+                                    <div class="oneone_text">
+                                        <div class="twotwo_text">2 серия</div>
+                                    </div>
+                                </h4>
+                            </a></div>
+                        <div class="oneone_series"><a href=""><img src="{% static 'main/images/rect_ser.png' %}" alt="">
+                                <h4>
+                                    <div class="oneone_text">
+                                        <div class="twotwo_text">3 серия</div>
+                                    </div>
+                                </h4>
+                            </a></div>
+                        <div class="oneone_series"><a href=""><img src="{% static 'main/images/rect_ser.png' %}" alt="">
+                                <h4>
+                                    <div class="oneone_text">
+                                        <div class="twotwo_text">4 серия</div>
+                                    </div>
+                                </h4>
+                            </a></div>
+                        <div class="oneone_series"><a href=""><img src="{% static 'main/images/rect_ser.png' %}" alt="">
+                                <h4>
+                                    <div class="oneone_text">
+                                        <div class="twotwo_text">5 серия</div>
+                                    </div>
+                                </h4>
+                            </a></div>
+                        <div class="oneone_series"><a href=""><img src="{% static 'main/images/rect_ser.png' %}" alt="">
+                                <h4>
+                                    <div class="oneone_text">
+                                        <div class="twotwo_text">6 серия</div>
+                                    </div>
+                                </h4>
+                            </a></div>
+                        <div class="oneone_series"><a href=""><img src="{% static 'main/images/rect_ser.png' %}" alt="">
+                                <h4>
+                                    <div class="oneone_text">
+                                        <div class="twotwo_text">7 серия</div>
+                                    </div>
+                                </h4>
+                            </a></div>
+                    </div>
+
+                    <div class="serii zsd">
+                        <div class="oneone_series"><a href=""><img src="{% static 'main/images/rect_ser.png' %}" alt="">
+                                <h4>
+                                    <div class="oneone_text">
+                                        <div class="twotwo_text">8 серия</div>
+                                    </div>
+                                </h4>
+                            </a></div>
+                        <div class="oneone_series"><a href=""><img src="{% static 'main/images/rect_ser.png' %}" alt="">
+                                <h4>
+                                    <div class="oneone_text">
+                                        <div class="twotwo_text">9 серия</div>
+                                    </div>
+                                </h4>
+                            </a></div>
+                        <div class="oneone_series"><a href=""><img src="{% static 'main/images/rect_ser.png' %}" alt="">
+                                <h4>
+                                    <div class="oneone_text">
+                                        <div class="twotwo_text">10 серия</div>
+                                    </div>
+                                </h4>
+                            </a></div>
+                        <div class="oneone_series"><a href=""><img src="{% static 'main/images/rect_ser.png' %}" alt="">
+                                <h4>
+                                    <div class="oneone_text">
+                                        <div class="twotwo_text">11 серия</div>
+                                    </div>
+                                </h4>
+                            </a></div>
+                        <div class="oneone_series"><a href=""><img src="{% static 'main/images/rect_ser.png' %}" alt="">
+                                <h4>
+                                    <div class="oneone_text">
+                                        <div class="twotwo_text">12 серия</div>
+                                    </div>
+                                </h4>
+                            </a></div>
+                    </div>
+
+                </div>
+                <div class="serii_sezon llk">
+                    <div><img src="{% static 'main/images/sezon2.png' %}" alt=""></div>
+                    <div class="serii avv">
+                        <div class="oneone_series"><a href=""><img src="{% static 'main/images/rect_ser.png' %}" alt="">
+                                <h4>
+                                    <div class="oneone_text">
+                                        <div class="twotwo_text">1 серия</div>
+                                    </div>
+                                </h4>
+                            </a></div>
+                        <div class="oneone_series"><a href=""><img src="{% static 'main/images/rect_ser.png' %}" alt="">
+                                <h4>
+                                    <div class="oneone_text">
+                                        <div class="twotwo_text">2 серия</div>
+                                    </div>
+                                </h4>
+                            </a></div>
+                        <div class="oneone_series"><a href=""><img src="{% static 'main/images/rect_ser.png' %}" alt="">
+                                <h4>
+                                    <div class="oneone_text">
+                                        <div class="twotwo_text">3 серия</div>
+                                    </div>
+                                </h4>
+                            </a></div>
+                        <div class="oneone_series"><a href=""><img src="{% static 'main/images/rect_ser.png' %}" alt="">
+                                <h4>
+                                    <div class="oneone_text">
+                                        <div class="twotwo_text">4 серия</div>
+                                    </div>
+                                </h4>
+                            </a></div>
+                        <div class="oneone_series"><a href=""><img src="{% static 'main/images/rect_ser.png' %}" alt="">
+                                <h4>
+                                    <div class="oneone_text">
+                                        <div class="twotwo_text">5 серия</div>
+                                    </div>
+                                </h4>
+                            </a></div>
+                        <div class="oneone_series"><a href=""><img src="{% static 'main/images/rect_ser.png' %}" alt="">
+                                <h4>
+                                    <div class="oneone_text">
+                                        <div class="twotwo_text">6 серия</div>
+                                    </div>
+                                </h4>
+                            </a></div>
+                        <div class="oneone_series"><a href=""><img src="{% static 'main/images/rect_ser.png' %}" alt="">
+                                <h4>
+                                    <div class="oneone_text">
+                                        <div class="twotwo_text">7 серия</div>
+                                    </div>
+                                </h4>
+                            </a></div>
+                    </div>
+
+                    <div class="serii zsd">
+                        <div class="oneone_series"><a href=""><img src="{% static 'main/images/rect_ser.png' %}" alt="">
+                                <h4>
+                                    <div class="oneone_text">
+                                        <div class="twotwo_text">8 серия</div>
+                                    </div>
+                                </h4>
+                            </a></div>
+                        <div class="oneone_series"><a href=""><img src="{% static 'main/images/rect_ser.png' %}" alt="">
+                                <h4>
+                                    <div class="oneone_text">
+                                        <div class="twotwo_text">9 серия</div>
+                                    </div>
+                                </h4>
+                            </a></div>
+                        <div class="oneone_series"><a href=""><img src="{% static 'main/images/rect_ser.png' %}" alt="">
+                                <h4>
+                                    <div class="oneone_text">
+                                        <div class="twotwo_text">10 серия</div>
+                                    </div>
+                                </h4>
+                            </a></div>
+                        <div class="oneone_series"><a href=""><img src="{% static 'main/images/rect_ser.png' %}" alt="">
+                                <h4>
+                                    <div class="oneone_text">
+                                        <div class="twotwo_text">11 серия</div>
+                                    </div>
+                                </h4>
+                            </a></div>
+                        <div class="oneone_series"><a href=""><img src="{% static 'main/images/rect_ser.png' %}" alt="">
+                                <h4>
+                                    <div class="oneone_text">
+                                        <div class="twotwo_text">12 серия</div>
+                                    </div>
+                                </h4>
+                            </a></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+
+    <div class="end">
+        <img class="endend" src="{% static 'main/images/the_end.png' %}" alt="">
+        <h4>
+            <div class="end_text">Рыбатекст используется дизайнерами, проектировщиками и фронтендерами, когда нужно
+                быстро заполнить макеты или прототипы содержимым. Это тестовый контент, который не должен нести
+                никакого смысла, лишь показать наличие самого текста или продемонстрировать типографику в деле.
+            </div>
+        </h4>
+        <div class="socsoc">
+            <div class="soc_seti">
+                <div class="telegramm"><a href=""><img src="{% static 'main/images/telegram.png' %}" alt=""></a>
+                </div>
+                <div class="twitter"><a href=""><img src="{% static 'main/images/twitter.png' %}" alt=""></a></div>
+                <div class="vk"><a href=""><img src="{% static 'main/images/vk.png' %}" alt=""></a></div>
+                <div class="instagramm"><a href=""><img src="{% static 'main/images/instagram.png' %}" alt=""></a>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
 

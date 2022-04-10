@@ -34,6 +34,104 @@ html {
     position: relative;
 }
 
+.yh{
+    margin: 0 auto;
+    width: 1192px;
+}
+
+.name-main-anime{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 96px;
+line-height: 117px;
+/* identical to box height */
+
+text-align: center;
+
+color: #FFFFFF;
+
+}
+
+.main_smotr{
+    width: 1560px;
+    height: 1664px;
+    float: right;
+}
+
+.tt{
+    height: 684px;
+    margin-top: 83px;
+    margin-left: 115px;
+}
+
+.serii{
+    margin-top: 54px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.avv{
+    width: 1396px;
+    margin-top: 48px;
+    
+}
+
+.kmk{
+    margin-top: 28px;
+    width: 580px;
+}
+
+.jjk{
+    width: 1396px;
+    margin-top: 28px;
+}
+
+.llk{
+    margin-top: 118px;
+    
+}
+
+.zsn{
+    width: 1192px;
+    margin-top: 28px;
+    
+}
+
+.zsjj{
+    width: 784px;
+    margin-top: 28px;
+    
+}
+
+.zsd{
+    width: 988px;
+    margin-top: 28px;
+}
+
+.twotwo_text{
+    display: inline-block;
+vertical-align: middle;
+}
+
+.oneone_series{
+    position: relative;
+    width: 172px;
+height: 66px;
+    
+}
+
+.oneone_text{
+    position: absolute;
+    top: 0;
+  left: 0;
+  width: 172px;
+    height: 66px;
+    text-align: center;
+    margin-top: 11px;
+}
+
 .stril_l{
     display: flex;
     align-items: center;
