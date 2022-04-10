@@ -74,10 +74,35 @@ color: #FFFFFF;
 
 .avv{
     width: 1396px;
+    margin-top: 48px;
+    
+}
+
+.kmk{
+    margin-top: 28px;
+    width: 580px;
+}
+
+.jjk{
+    width: 1396px;
+    margin-top: 28px;
 }
 
 .llk{
     margin-top: 118px;
+    
+}
+
+.zsn{
+    width: 1192px;
+    margin-top: 28px;
+    
+}
+
+.zsjj{
+    width: 784px;
+    margin-top: 28px;
+    
 }
 
 .zsd{
@@ -92,6 +117,8 @@ vertical-align: middle;
 
 .oneone_series{
     position: relative;
+    width: 172px;
+height: 66px;
     
 }
 
