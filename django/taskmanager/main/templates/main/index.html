@@ -27,404 +27,423 @@
 
 
 <body>
-    <script>console.log(navigator.userAgent);</script>
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function (m, e, t, r, i, k, a) {
-            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
-            m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-        })
-            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-        ym(86375286, "init", {
-            clickmap: true,
-            trackLinks: true,
-            accurateTrackBounce: true,
-            webvisor: true
-        });
-    </script>
-    <noscript>
-        <div><img src="https://mc.yandex.ru/watch/86375286" style="position:absolute; left:-9999px;" alt="" /></div>
-    </noscript>
-    <!-- /Yandex.Metrika counter -->
-
-    <div class="container">
-        <div class="panel">
-            <div><a href="{% url 'index' %}"><img class="logo" src="{% static 'main/images/Igle_logo.png' %}"
-                        alt=""></a></div>
-            <div class="otstup">
-                <div class="poloska"></div>
-                <h4>
-                    <div class="menu_name">Меню</div>
-                </h4>
-
-                <div class="name_nemenu">
-                    <div><img id="ff" src="{% static 'main/images/home_aktive.png' %}" alt=""></div>
-                    <div><img style="display: none;" id="jj" src="{% static 'main/images/home.png' %}" alt=""></div>
-                    <div class="pustota"></div>
-                    <div class="rec7" id="gh"><img src="{% static 'main/images/Rectangle 7.png' %}"></div>
-                    <div class="onst" id="sl"><img src="{% static 'main/images/onst.png' %}" alt=""></div>
-                    <h4><a class="osnpg" href="{% url 'index' %}" style="color: #C3079A;" id="kk">Главная</a></h4>
-                </div>
-
-                <div class="name_nemenu">
-                    <div><img id="aa" src="{% static 'main/images/movie.png' %}" alt=""></div>
-                    <div><img style="display: none;" id="hh" src="{% static 'main/images/movie_aktive.png' %}" alt="">
-                    </div>
-                    <div class="pustota"></div>
-                    <div class="rec7 th" id="th"><img src="{% static 'main/images/Rectangle 7.png' %}"></div>
-                    <div class="onst th" id="tb"><img src="{% static 'main/images/onst.png' %}" alt=""></div>
-                    <h4><a class="gender_pg" href="{% url 'genres' %}" onmouseover="hoverOnRight()"
-                            onmouseout="hoverOffRight()" id="bb">Жанры</a></h4>
-                </div>
-
-                <div class="name_nemenu">
-                    <div><img id="zz" src="{% static 'main/images/heart.png' %}" alt=""></div>
-                    <div><img style="display: none;" id="mm" src="{% static 'main/images/heart_aktive.png' %}" alt="">
-                    </div>
-                    <div class="pustota"></div>
-                    <div class="rec7 th" id="vh"><img src="{% static 'main/images/Rectangle 7.png' %}"></div>
-                    <div class="onst th" id="vb"><img src="{% static 'main/images/onst.png' %}" alt=""></div>
-                    <h4><a class="favorite_pg" href="{% url 'favorites' %}" onmouseover="hoverOnLeft()"
-                            onmouseout="hoverOffLeft()" id="nn">Избранное</a></h4>
-                </div>
-
-                <div class="name_nemenu">
-                    <div><img id="di" src="{% static 'main/images/Group.png' %}" alt=""></div>
-                    <div><img style="display: none;" id="id" src="{% static 'main/images/Group_aktive.png' %}" alt="">
-                    </div>
-                    <div class="pustota"></div>
-                    <div class="rec7 th" id="zt"><img src="{% static 'main/images/Rectangle 7.png' %}"></div>
-                    <div class="onst th" id="oo"><img src="{% static 'main/images/onst.png' %}" alt=""></div>
-                    <h4><a class="premium_page" href="{% url 'premium' %}" onmouseover="hoverOnMid()"
-                            onmouseout="hoverOffMid()" id="cc">Премиум</a></h4>
-                </div>
+    <div id="ghghjjj" style="display: none;">
+        <script>document.write(navigator.userAgent);</script>
+    </div>
+    <!--Yandex.Metrika counter-- >
                 <script type="text/javascript">
-                    function hoverOnRight() {
-                        document.getElementById("th").style.opacity = "1";
-                        document.getElementById("gh").style.display = "none";
-                        document.getElementById("sl").style.display = "none";
-                        document.getElementById("tb").style.opacity = "1";
-                        document.getElementById("kk").style.color = "#FFFFFF";
-                        document.getElementById("bb").style.color = "#C3079A";
-                        document.getElementById("jj").style.display = "block";
-                        document.getElementById("hh").style.display = "block";
-                        document.getElementById("ff").style.display = "none";
-                        document.getElementById("aa").style.display = "none";
+                    (function (m, e, t, r, i, k, a) {
+                        m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+                    m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+                    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+                    ym(86375286, "init", {
+                        clickmap: true,
+                    trackLinks: true,
+                    accurateTrackBounce: true,
+                    webvisor: true
+        });
+        </>
+        <noscript>
+            <div><img src="https://mc.yandex.ru/watch/86375286" style="position:absolute; left:-9999px;" alt="" /></div>
+        </noscript>
+        <!-- /Yandex.Metrika counter -->
+
+        <div class="container">
+            <div class="panel">
+                <div><a href="{% url 'index' %}"><img class="logo" src="{% static 'main/images/Igle_logo.png' %}"
+                            alt=""></a></div>
+                <div class="otstup">
+                    <div class="poloska"></div>
+                    <h4>
+                        <div class="menu_name">Меню</div>
+                    </h4>
+
+                    <div class="name_nemenu">
+                        <div><img id="ff" src="{% static 'main/images/home_aktive.png' %}" alt=""></div>
+                        <div><img style="display: none;" id="jj" src="{% static 'main/images/home.png' %}" alt=""></div>
+                        <div class="pustota"></div>
+                        <div class="rec7" id="gh"><img src="{% static 'main/images/Rectangle 7.png' %}"></div>
+                        <div class="onst" id="sl"><img src="{% static 'main/images/onst.png' %}" alt=""></div>
+                        <h4><a class="osnpg" href="{% url 'index' %}" style="color: #C3079A;" id="kk">Главная</a></h4>
+                    </div>
+
+                    <div class="name_nemenu">
+                        <div><img id="aa" src="{% static 'main/images/movie.png' %}" alt=""></div>
+                        <div><img style="display: none;" id="hh" src="{% static 'main/images/movie_aktive.png' %}"
+                                alt="">
+                        </div>
+                        <div class="pustota"></div>
+                        <div class="rec7 th" id="th"><img src="{% static 'main/images/Rectangle 7.png' %}"></div>
+                        <div class="onst th" id="tb"><img src="{% static 'main/images/onst.png' %}" alt=""></div>
+                        <h4><a class="gender_pg" href="{% url 'genres' %}" onmouseover="hoverOnRight()"
+                                onmouseout="hoverOffRight()" id="bb">Жанры</a></h4>
+                    </div>
+
+                    <div class="name_nemenu">
+                        <div><img id="zz" src="{% static 'main/images/heart.png' %}" alt=""></div>
+                        <div><img style="display: none;" id="mm" src="{% static 'main/images/heart_aktive.png' %}"
+                                alt="">
+                        </div>
+                        <div class="pustota"></div>
+                        <div class="rec7 th" id="vh"><img src="{% static 'main/images/Rectangle 7.png' %}"></div>
+                        <div class="onst th" id="vb"><img src="{% static 'main/images/onst.png' %}" alt=""></div>
+                        <h4><a class="favorite_pg" href="{% url 'favorites' %}" onmouseover="hoverOnLeft()"
+                                onmouseout="hoverOffLeft()" id="nn">Избранное</a></h4>
+                    </div>
+
+                    <div class="name_nemenu">
+                        <div><img id="di" src="{% static 'main/images/Group.png' %}" alt=""></div>
+                        <div><img style="display: none;" id="id" src="{% static 'main/images/Group_aktive.png' %}"
+                                alt="">
+                        </div>
+                        <div class="pustota"></div>
+                        <div class="rec7 th" id="zt"><img src="{% static 'main/images/Rectangle 7.png' %}"></div>
+                        <div class="onst th" id="oo"><img src="{% static 'main/images/onst.png' %}" alt=""></div>
+                        <h4><a class="premium_page" href="{% url 'premium' %}" onmouseover="hoverOnMid()"
+                                onmouseout="hoverOffMid()" id="cc">Премиум</a></h4>
+                    </div>
+                    <script type="text/javascript">
+            function hoverOnRight() {
+                document.getElementById("th").style.opacity = "1";
+            document.getElementById("gh").style.display = "none";
+            document.getElementById("sl").style.display = "none";
+            document.getElementById("tb").style.opacity = "1";
+            document.getElementById("kk").style.color = "#FFFFFF";
+            document.getElementById("bb").style.color = "#C3079A";
+            document.getElementById("jj").style.display = "block";
+            document.getElementById("hh").style.display = "block";
+            document.getElementById("ff").style.display = "none";
+            document.getElementById("aa").style.display = "none";
                     }
-                    function hoverOffRight() {
-                        document.getElementById("th").style.opacity = "0";
-                        document.getElementById("gh").style.display = "block";
-                        document.getElementById("sl").style.display = "block";
-                        document.getElementById("tb").style.opacity = "0";
-                        document.getElementById("kk").style.color = "#C3079A";
-                        document.getElementById("bb").style.color = "#FFFFFF";
-                        document.getElementById("jj").style.display = "none";
-                        document.getElementById("hh").style.display = "none";
-                        document.getElementById("ff").style.display = "block";
-                        document.getElementById("aa").style.display = "block";
+            function hoverOffRight() {
+                document.getElementById("th").style.opacity = "0";
+            document.getElementById("gh").style.display = "block";
+            document.getElementById("sl").style.display = "block";
+            document.getElementById("tb").style.opacity = "0";
+            document.getElementById("kk").style.color = "#C3079A";
+            document.getElementById("bb").style.color = "#FFFFFF";
+            document.getElementById("jj").style.display = "none";
+            document.getElementById("hh").style.display = "none";
+            document.getElementById("ff").style.display = "block";
+            document.getElementById("aa").style.display = "block";
                     }
 
-                    function hoverOnLeft() {
-                        document.getElementById("vh").style.opacity = "1";
-                        document.getElementById("gh").style.display = "none";
-                        document.getElementById("sl").style.display = "none";
-                        document.getElementById("vb").style.opacity = "1";
-                        document.getElementById("kk").style.color = "#FFFFFF";
-                        document.getElementById("nn").style.color = "#C3079A";
-                        document.getElementById("jj").style.display = "block";
-                        document.getElementById("mm").style.display = "block";
-                        document.getElementById("ff").style.display = "none";
-                        document.getElementById("zz").style.display = "none";
+            function hoverOnLeft() {
+                document.getElementById("vh").style.opacity = "1";
+            document.getElementById("gh").style.display = "none";
+            document.getElementById("sl").style.display = "none";
+            document.getElementById("vb").style.opacity = "1";
+            document.getElementById("kk").style.color = "#FFFFFF";
+            document.getElementById("nn").style.color = "#C3079A";
+            document.getElementById("jj").style.display = "block";
+            document.getElementById("mm").style.display = "block";
+            document.getElementById("ff").style.display = "none";
+            document.getElementById("zz").style.display = "none";
                     }
-                    function hoverOffLeft() {
-                        document.getElementById("vh").style.opacity = "0";
-                        document.getElementById("gh").style.display = "block";
-                        document.getElementById("sl").style.display = "block";
-                        document.getElementById("vb").style.opacity = "0";
-                        document.getElementById("kk").style.color = "#C3079A";
-                        document.getElementById("nn").style.color = "#FFFFFF";
-                        document.getElementById("jj").style.display = "none";
-                        document.getElementById("mm").style.display = "none";
-                        document.getElementById("ff").style.display = "block";
-                        document.getElementById("zz").style.display = "block";
+            function hoverOffLeft() {
+                document.getElementById("vh").style.opacity = "0";
+            document.getElementById("gh").style.display = "block";
+            document.getElementById("sl").style.display = "block";
+            document.getElementById("vb").style.opacity = "0";
+            document.getElementById("kk").style.color = "#C3079A";
+            document.getElementById("nn").style.color = "#FFFFFF";
+            document.getElementById("jj").style.display = "none";
+            document.getElementById("mm").style.display = "none";
+            document.getElementById("ff").style.display = "block";
+            document.getElementById("zz").style.display = "block";
                     }
 
-                    function hoverOnMid() {
-                        document.getElementById("zt").style.opacity = "1";
-                        document.getElementById("gh").style.display = "none";
-                        document.getElementById("sl").style.display = "none";
-                        document.getElementById("oo").style.opacity = "1";
-                        document.getElementById("kk").style.color = "#FFFFFF";
-                        document.getElementById("cc").style.color = "#C3079A";
-                        document.getElementById("jj").style.display = "block";
-                        document.getElementById("id").style.display = "block";
-                        document.getElementById("ff").style.display = "none";
-                        document.getElementById("di").style.display = "none";
+            function hoverOnMid() {
+                document.getElementById("zt").style.opacity = "1";
+            document.getElementById("gh").style.display = "none";
+            document.getElementById("sl").style.display = "none";
+            document.getElementById("oo").style.opacity = "1";
+            document.getElementById("kk").style.color = "#FFFFFF";
+            document.getElementById("cc").style.color = "#C3079A";
+            document.getElementById("jj").style.display = "block";
+            document.getElementById("id").style.display = "block";
+            document.getElementById("ff").style.display = "none";
+            document.getElementById("di").style.display = "none";
                     }
-                    function hoverOffMid() {
-                        document.getElementById("zt").style.opacity = "0";
-                        document.getElementById("gh").style.display = "block";
-                        document.getElementById("sl").style.display = "block";
-                        document.getElementById("oo").style.opacity = "0";
-                        document.getElementById("kk").style.color = "#C3079A";
-                        document.getElementById("cc").style.color = "#FFFFFF";
-                        document.getElementById("jj").style.display = "none";
-                        document.getElementById("id").style.display = "none";
-                        document.getElementById("ff").style.display = "block";
-                        document.getElementById("di").style.display = "block";
+            function hoverOffMid() {
+                document.getElementById("zt").style.opacity = "0";
+            document.getElementById("gh").style.display = "block";
+            document.getElementById("sl").style.display = "block";
+            document.getElementById("oo").style.opacity = "0";
+            document.getElementById("kk").style.color = "#C3079A";
+            document.getElementById("cc").style.color = "#FFFFFF";
+            document.getElementById("jj").style.display = "none";
+            document.getElementById("id").style.display = "none";
+            document.getElementById("ff").style.display = "block";
+            document.getElementById("di").style.display = "block";
                     }
+                    </script>
+                </div>
+            </div>
+            <div class="main_item">
+                <div class="headerr">
+                    <div class="search">
+                        <div>
+                            <img class="img_search" src="{% static 'main/images/search.png' %}" alt="">
+                            <input class="poisk" type="text" placeholder="Поиск">
+                        </div>
+                        <div class="serch_panel">
+                            <div class="korona"><a href=""><img src="{% static 'main/images/korona.png' %}" alt=""></a>
+                            </div>
+                            <div class="korona"><a href=""><img src="{% static 'main/images/uvi.png' %}" alt=""></a>
+                            </div>
+                            <div><a href=""><img class="profil" src="{% static 'main/images/profil.png' %}" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div>
+                <div style="display: block;" class="osn_cont" id="One">
+
+                    <div>
+                        <img class="main_name_inf" src="{% static 'main/images/sasuke-naruto-uhdpaper.png' %}" alt="">
+                        <div class="next" onclick="clickOne()"><img src="{% static 'main/images/next.png' %}" alt="">
+                        </div>
+                        <a href="">
+                            <div class="woth_osn"><img src="{% static 'main/images/watch_osn.png' %}" alt=""></div>
+                        </a>
+                        <div class="plus_osn"><img src="{% static 'main/images/plus_osn.png' %}" alt=""></div>
+                        <h4>
+                            <nobr>
+                                <div class="Name_mane">Атака титанов</div>
+                            </nobr>
+                        </h4>
+                        <h4>
+                            <div class="text_mane">В прошлом столетии человечество страдало из-за нашествия гигантов.
+                                Они
+                                были очень
+                                похожи внешностью на простых людей, но также имели несколько отличий. Разница состояла в
+                                слишком
+                                больших размерах созданий и в их абсолютной глупости. Те, кому повезло остаться в живых,
+                                приняли
+                                решение объединиться и приступить к самозащите.</div>
+                        </h4>
+                        <h4>
+                            <nobr>
+                                <div class="seezon">4 сезон</div>
+                            </nobr>
+                        </h4>
+                        <img class="img_play" src="{% static 'main/images/Subtract.png' %}" alt="">
+                        <img class="img_clock" src="{% static 'main/images/clock.png' %}" alt="">
+                        <img class="img_date" src="{% static 'main/images/calendar-event.png' %}" alt="">
+
+                        <div>
+                            <div class="naviga_osn"><img src="{% static 'main/images/left_osn.png' %}" alt=""></div>
+                        </div>
+
+                    </div>
+                    <h4>
+                        <div class="mini_inf_name">Аниме</div>
+                    </h4>
+                    <h4>
+                        <nobr>
+                            <div class="mini_inf_weight">23 Мин/Эп</div>
+                        </nobr>
+                    </h4>
+                    <h4>
+                        <nobr>
+                            <div class="mini_inf_data">28 марта 2021</div>
+                        </nobr>
+                    </h4>
+                </div>
+
+                <div style="display: none;" class="osn_cont" id="Two">
+
+                    <div>
+                        <img class="main_name_inf" src="{% static 'main/images/zxc.png' %}" alt="">
+                        <div class="next" onclick="clickTwo()"><img src="{% static 'main/images/next.png' %}" alt="">
+                        </div>
+                        <a href="">
+                            <div class="woth_osn"><img src="{% static 'main/images/watch_osn.png' %}" alt=""></div>
+                        </a>
+                        <div class="plus_osn"><img src="{% static 'main/images/plus_osn.png' %}" alt=""></div>
+                        <h4>
+                            <nobr>
+                                <div class="Name_mane">Наруто</div>
+                            </nobr>
+                        </h4>
+                        <h4>
+                            <div class="text_mane">Однажды демон напал на деревню, в которой родился мальчик Наруто.
+                                Чтобы остановить демона, глава поселения запечатал его внутри Наруто, но сам при этом
+                                погиб. Прошли годы. Наруто вырос, став гиперактивным и очень тупым ниндзя. Он всё ещё
+                                живёт в родной деревне, где его не особо любят и стараются избегать.</div>
+                        </h4>
+                        <h4>
+                            <nobr>
+                                <div class="seezon">2 сезон</div>
+                            </nobr>
+                        </h4>
+                        <img class="img_play" src="{% static 'main/images/Subtract.png' %}" alt="">
+                        <img class="img_clock" src="{% static 'main/images/clock.png' %}" alt="">
+                        <img class="img_date" src="{% static 'main/images/calendar-event.png' %}" alt="">
+
+                        <div>
+                            <div class="naviga_osn"><img src="{% static 'main/images/mid_osn.png' %}" alt=""></div>
+                        </div>
+
+                    </div>
+                    <h4>
+                        <div class="mini_inf_name">Аниме</div>
+                    </h4>
+                    <h4>
+                        <nobr>
+                            <div class="mini_inf_weight">23 Мин/Эп</div>
+                        </nobr>
+                    </h4>
+                    <h4>
+                        <nobr>
+                            <div class="mini_inf_data">5 декабря 2021</div>
+                        </nobr>
+                    </h4>
+                </div>
+
+                <div style="display: none;" class="osn_cont" id="Three">
+
+                    <div>
+                        <img class="main_name_inf" src="{% static 'main/images/klin.png' %}" alt="">
+                        <div class="next" onclick="clickThree()"><img src="{% static 'main/images/next.png' %}" alt="">
+                        </div>
+                        <a href="">
+                            <div class="woth_osn"><img src="{% static 'main/images/watch_osn.png' %}" alt=""></div>
+                        </a>
+                        <div class="plus_osn"><img src="{% static 'main/images/plus_osn.png' %}" alt=""></div>
+                        <h4>
+                            <nobr>
+                                <div class="Name_mane">Клинок рассекающий демонов </div>
+                            </nobr>
+                        </h4>
+                        <h4>
+                            <div class="text_mane">Эпоха «Тайсё» была полна неожиданностей. Много легенд нашли свое
+                                логическое подтверждение в те года. Люди давненько стали думать о присутствии демонов в
+                                гущах леса. И эти существа были крайне опасны и кровожадны. В ночное время суток они
+                                вели охоту на людей, убивая невинных граждан, демоны питались их плотью.</div>
+                        </h4>
+                        <h4>
+                            <nobr>
+                                <div class="seezon">3 сезон</div>
+                            </nobr>
+                        </h4>
+                        <img class="img_play" src="{% static 'main/images/Subtract.png' %}" alt="">
+                        <img class="img_clock" src="{% static 'main/images/clock.png' %}" alt="">
+                        <img class="img_date" src="{% static 'main/images/calendar-event.png' %}" alt="">
+
+                        <div>
+                            <div class="naviga_osn"><img src="{% static 'main/images/right_osn.png' %}" alt=""></div>
+                        </div>
+
+                    </div>
+                    <h4>
+                        <div class="mini_inf_name">Аниме</div>
+                    </h4>
+                    <h4>
+                        <nobr>
+                            <div class="mini_inf_weight">23 Мин/Эп</div>
+                        </nobr>
+                    </h4>
+                    <h4>
+                        <nobr>
+                            <div class="mini_inf_data">28 марта 2021</div>
+                        </nobr>
+                    </h4>
+                </div>
+
+                <script type="text/javascript">
+            function clickOne() {
+                document.getElementById("One").style.display = "none";
+            document.getElementById("Two").style.display = "block";
+            document.getElementById("Three").style.display = "none";
+                }
+
+            function clickTwo() {
+                document.getElementById("One").style.display = "none";
+            document.getElementById("Two").style.display = "none";
+            document.getElementById("Three").style.display = "block";
+                }
+
+            function clickThree() {
+                document.getElementById("One").style.display = "block";
+            document.getElementById("Two").style.display = "none";
+            document.getElementById("Three").style.display = "none";
+                }
+
                 </script>
             </div>
-        </div>
-        <div class="main_item">
-            <div class="headerr">
-                <div class="search">
-                    <div>
-                        <img class="img_search" src="{% static 'main/images/search.png' %}" alt="">
-                        <input class="poisk" type="text" placeholder="Поиск">
+
+            <div class="fututure">
+                <h4>
+                    <div class="future">Популярное</div>
+                </h4>
+                <div class="container_future">
+                    <div class="vanpise_future"><a href="{% url 'onepunchman_main'  %}"><img
+                                src="{% static 'main/images/onepunch.png' %}" alt=""></a></div>
+                    <div class="hanterxhanter_future"><a href="{% url 'homeless_god_main'  %}"><img
+                                src="{% static 'main/images/homegod.png' %}" alt=""></a></div>
+                    <div class="mastermech_future"><a href="{% url 'magic_battle_main'  %}"><img
+                                src="{% static 'main/images/magicwar.png' %}" alt=""></a></div>
+                    <div class="myheroes_future"><a href="{% url 'the_promised_neverland'  %}"><img
+                                src="{% static 'main/images/neverlend.png' %}" alt=""></a></div>
+                    <div class="attacktitanov_future"><a href="{% url 'dororo_main'  %}"><img
+                                src="{% static 'main/images/dororo.png' %}" alt=""></a></div>
+                </div>
+            </div>
+
+            <div class="play_pros">
+                <h4>
+                    <div class="play">Продолжить просмотр</div>
+                </h4>
+                <div class="container_play_one">
+                    <div class="attak_proc"><a href=""><img src="{% static 'main/images/play_pros_attak.png' %}"
+                                alt=""></a>
                     </div>
-                    <div class="serch_panel">
-                        <div class="korona"><a href=""><img src="{% static 'main/images/korona.png' %}" alt=""></a>
+                    <div class="attak_proc"><a href=""><img src="{% static 'main/images/play_pros_attak2.png' %}"
+                                alt=""></a></div>
+                    <div class="attak_proc"><a href=""><img src="{% static 'main/images/play_pros_attak3.png' %}"
+                                alt=""></a></div>
+                </div>
+                <div class="container_play_two">
+                    <div class="attak_proc"><a href=""><img src="{% static 'main/images/play_pros_attak4.png' %}"
+                                alt=""></a></div>
+                    <div class="attak_proc"><a href=""><img src="{% static 'main/images/play_pros_attak5.png' %}"
+                                alt=""></a></div>
+                    <div class="attak_proc"><a href=""><img src="{% static 'main/images/play_pros_attak6.png' %}"
+                                alt=""></a></div>
+                </div>
+            </div>
+
+            <div class="wee_more"><a href=""><img src="{% static 'main/images/wee_more.png' %}" alt=""></a></div>
+            <div class="end">
+                <img class="endend" src="{% static 'main/images/the_end.png' %}" alt="">
+                <h4>
+                    <div class="end_text">Рыбатекст используется дизайнерами, проектировщиками и фронтендерами, когда
+                        нужно
+                        быстро заполнить макеты или прототипы содержимым. Это тестовый контент, который не должен нести
+                        никакого смысла, лишь показать наличие самого текста или продемонстрировать типографику в деле.
+                    </div>
+                </h4>
+                <div class="socsoc">
+                    <div class="soc_seti">
+                        <div class="telegramm"><a href=""><img src="{% static 'main/images/telegram.png' %}" alt=""></a>
                         </div>
-                        <div class="korona"><a href=""><img src="{% static 'main/images/uvi.png' %}" alt=""></a></div>
-                        <div><a href=""><img class="profil" src="{% static 'main/images/profil.png' %}" alt=""></a>
+                        <div class="twitter"><a href=""><img src="{% static 'main/images/twitter.png' %}" alt=""></a>
+                        </div>
+                        <div class="vk"><a href=""><img src="{% static 'main/images/vk.png' %}" alt=""></a></div>
+                        <div class="instagramm"><a href=""><img src="{% static 'main/images/instagram.png' %}"
+                                    alt=""></a>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
-
-        <div>
-            <div style="display: block;" class="osn_cont" id="One">
-
-                <div>
-                    <img class="main_name_inf" src="{% static 'main/images/sasuke-naruto-uhdpaper.png' %}" alt="">
-                    <div class="next" onclick="clickOne()"><img src="{% static 'main/images/next.png' %}" alt=""></div>
-                    <a href="">
-                        <div class="woth_osn"><img src="{% static 'main/images/watch_osn.png' %}" alt=""></div>
-                    </a>
-                    <div class="plus_osn"><img src="{% static 'main/images/plus_osn.png' %}" alt=""></div>
-                    <h4>
-                        <nobr>
-                            <div class="Name_mane">Атака титанов</div>
-                        </nobr>
-                    </h4>
-                    <h4>
-                        <div class="text_mane">В прошлом столетии человечество страдало из-за нашествия гигантов. Они
-                            были очень
-                            похожи внешностью на простых людей, но также имели несколько отличий. Разница состояла в
-                            слишком
-                            больших размерах созданий и в их абсолютной глупости. Те, кому повезло остаться в живых,
-                            приняли
-                            решение объединиться и приступить к самозащите.</div>
-                    </h4>
-                    <h4>
-                        <nobr>
-                            <div class="seezon">4 сезон</div>
-                        </nobr>
-                    </h4>
-                    <img class="img_play" src="{% static 'main/images/Subtract.png' %}" alt="">
-                    <img class="img_clock" src="{% static 'main/images/clock.png' %}" alt="">
-                    <img class="img_date" src="{% static 'main/images/calendar-event.png' %}" alt="">
-
-                    <div>
-                        <div class="naviga_osn"><img src="{% static 'main/images/left_osn.png' %}" alt=""></div>
-                    </div>
-
-                </div>
-                <h4>
-                    <div class="mini_inf_name">Аниме</div>
-                </h4>
-                <h4>
-                    <nobr>
-                        <div class="mini_inf_weight">23 Мин/Эп</div>
-                    </nobr>
-                </h4>
-                <h4>
-                    <nobr>
-                        <div class="mini_inf_data">28 марта 2021</div>
-                    </nobr>
-                </h4>
-            </div>
-
-            <div style="display: none;" class="osn_cont" id="Two">
-
-                <div>
-                    <img class="main_name_inf" src="{% static 'main/images/zxc.png' %}" alt="">
-                    <div class="next" onclick="clickTwo()"><img src="{% static 'main/images/next.png' %}" alt=""></div>
-                    <a href="">
-                        <div class="woth_osn"><img src="{% static 'main/images/watch_osn.png' %}" alt=""></div>
-                    </a>
-                    <div class="plus_osn"><img src="{% static 'main/images/plus_osn.png' %}" alt=""></div>
-                    <h4>
-                        <nobr>
-                            <div class="Name_mane">Наруто</div>
-                        </nobr>
-                    </h4>
-                    <h4>
-                        <div class="text_mane">Однажды демон напал на деревню, в которой родился мальчик Наруто. Чтобы остановить демона, глава поселения запечатал его внутри Наруто, но сам при этом погиб. Прошли годы. Наруто вырос, став гиперактивным и очень тупым ниндзя. Он всё ещё живёт в родной деревне, где его не особо любят и стараются избегать.</div>
-                    </h4>
-                    <h4>
-                        <nobr>
-                            <div class="seezon">2 сезон</div>
-                        </nobr>
-                    </h4>
-                    <img class="img_play" src="{% static 'main/images/Subtract.png' %}" alt="">
-                    <img class="img_clock" src="{% static 'main/images/clock.png' %}" alt="">
-                    <img class="img_date" src="{% static 'main/images/calendar-event.png' %}" alt="">
-
-                    <div>
-                        <div class="naviga_osn"><img src="{% static 'main/images/mid_osn.png' %}" alt=""></div>
-                    </div>
-
-                </div>
-                <h4>
-                    <div class="mini_inf_name">Аниме</div>
-                </h4>
-                <h4>
-                    <nobr>
-                        <div class="mini_inf_weight">23 Мин/Эп</div>
-                    </nobr>
-                </h4>
-                <h4>
-                    <nobr>
-                        <div class="mini_inf_data">5 декабря 2021</div>
-                    </nobr>
-                </h4>
-            </div>
-
-            <div style="display: none;" class="osn_cont" id="Three">
-
-                <div>
-                    <img class="main_name_inf" src="{% static 'main/images/klin.png' %}" alt="">
-                    <div class="next" onclick="clickThree()"><img src="{% static 'main/images/next.png' %}" alt="">
-                    </div>
-                    <a href="">
-                        <div class="woth_osn"><img src="{% static 'main/images/watch_osn.png' %}" alt=""></div>
-                    </a>
-                    <div class="plus_osn"><img src="{% static 'main/images/plus_osn.png' %}" alt=""></div>
-                    <h4>
-                        <nobr>
-                            <div class="Name_mane">Клинок рассекающий демонов </div>
-                        </nobr>
-                    </h4>
-                    <h4>
-                        <div class="text_mane">Эпоха «Тайсё» была полна неожиданностей. Много легенд нашли свое логическое подтверждение в те года. Люди давненько стали думать о присутствии демонов в гущах леса. И эти существа были крайне опасны и кровожадны. В ночное время суток они вели охоту на людей, убивая невинных граждан, демоны питались их плотью.</div>
-                    </h4>
-                    <h4>
-                        <nobr>
-                            <div class="seezon">3 сезон</div>
-                        </nobr>
-                    </h4>
-                    <img class="img_play" src="{% static 'main/images/Subtract.png' %}" alt="">
-                    <img class="img_clock" src="{% static 'main/images/clock.png' %}" alt="">
-                    <img class="img_date" src="{% static 'main/images/calendar-event.png' %}" alt="">
-
-                    <div>
-                        <div class="naviga_osn"><img src="{% static 'main/images/right_osn.png' %}" alt=""></div>
-                    </div>
-
-                </div>
-                <h4>
-                    <div class="mini_inf_name">Аниме</div>
-                </h4>
-                <h4>
-                    <nobr>
-                        <div class="mini_inf_weight">23 Мин/Эп</div>
-                    </nobr>
-                </h4>
-                <h4>
-                    <nobr>
-                        <div class="mini_inf_data">28 марта 2021</div>
-                    </nobr>
-                </h4>
-            </div>
-
-            <script type="text/javascript">
-                function clickOne() {
-                    document.getElementById("One").style.display = "none";
-                    document.getElementById("Two").style.display = "block";
-                    document.getElementById("Three").style.display = "none";
-                }
-
-                function clickTwo() {
-                    document.getElementById("One").style.display = "none";
-                    document.getElementById("Two").style.display = "none";
-                    document.getElementById("Three").style.display = "block";
-                }
-
-                function clickThree() {
-                    document.getElementById("One").style.display = "block";
-                    document.getElementById("Two").style.display = "none";
-                    document.getElementById("Three").style.display = "none";
-                }
-                
-            </script>
-        </div>
-
-        <div class="fututure">
-            <h4>
-                <div class="future">Популярное</div>
-            </h4>
-            <div class="container_future">
-                <div class="vanpise_future"><a href="{% url 'onepunchman_main'  %}"><img src="{% static 'main/images/onepunch.png' %}"
-                            alt=""></a></div>
-                <div class="hanterxhanter_future"><a href="{% url 'homeless_god_main'  %}"><img
-                            src="{% static 'main/images/homegod.png' %}" alt=""></a></div>
-                <div class="mastermech_future"><a href="{% url 'magic_battle_main'  %}"><img
-                            src="{% static 'main/images/magicwar.png' %}" alt=""></a></div>
-                <div class="myheroes_future"><a href="{% url 'the_promised_neverland'  %}"><img src="{% static 'main/images/neverlend.png' %}"
-                            alt=""></a></div>
-                <div class="attacktitanov_future"><a href="{% url 'dororo_main'  %}"><img
-                            src="{% static 'main/images/dororo.png' %}" alt=""></a></div>
-            </div>
-        </div>
-
-        <div class="play_pros">
-            <h4>
-                <div class="play">Продолжить просмотр</div>
-            </h4>
-            <div class="container_play_one">
-                <div class="attak_proc"><a href=""><img src="{% static 'main/images/play_pros_attak.png' %}" alt=""></a>
-                </div>
-                <div class="attak_proc"><a href=""><img src="{% static 'main/images/play_pros_attak2.png' %}"
-                            alt=""></a></div>
-                <div class="attak_proc"><a href=""><img src="{% static 'main/images/play_pros_attak3.png' %}"
-                            alt=""></a></div>
-            </div>
-            <div class="container_play_two">
-                <div class="attak_proc"><a href=""><img src="{% static 'main/images/play_pros_attak4.png' %}"
-                            alt=""></a></div>
-                <div class="attak_proc"><a href=""><img src="{% static 'main/images/play_pros_attak5.png' %}"
-                            alt=""></a></div>
-                <div class="attak_proc"><a href=""><img src="{% static 'main/images/play_pros_attak6.png' %}"
-                            alt=""></a></div>
-            </div>
-        </div>
-
-        <div class="wee_more"><a href=""><img src="{% static 'main/images/wee_more.png' %}" alt=""></a></div>
-        <div class="end">
-            <img class="endend" src="{% static 'main/images/the_end.png' %}" alt="">
-            <h4>
-                <div class="end_text">Рыбатекст используется дизайнерами, проектировщиками и фронтендерами, когда нужно
-                    быстро заполнить макеты или прототипы содержимым. Это тестовый контент, который не должен нести
-                    никакого смысла, лишь показать наличие самого текста или продемонстрировать типографику в деле.
-                </div>
-            </h4>
-            <div class="socsoc">
-                <div class="soc_seti">
-                    <div class="telegramm"><a href=""><img src="{% static 'main/images/telegram.png' %}" alt=""></a>
-                    </div>
-                    <div class="twitter"><a href=""><img src="{% static 'main/images/twitter.png' %}" alt=""></a></div>
-                    <div class="vk"><a href=""><img src="{% static 'main/images/vk.png' %}" alt=""></a></div>
-                    <div class="instagramm"><a href=""><img src="{% static 'main/images/instagram.png' %}" alt=""></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 
