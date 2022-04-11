@@ -15,9 +15,14 @@ season = 1
 
 # теперь это ванпанчмен
 
-
+#season-1/
+#nora-gami
+#one-punchman
+#jujutsu-kaisen
+#dororo
+#
 while counter < 13:
-    URL = f'https://jut.su/one-punchman/season-1/episode-{page}.html'
+    URL = f'https://jut.su/dororo/episode-{page}.html'
     
     r = requests.get(URL, headers=HEADERS, params = None)
     soup = bs(r.content, 'html.parser')
