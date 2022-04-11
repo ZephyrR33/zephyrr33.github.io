@@ -99,10 +99,63 @@ color: #FFFFFF;
     
 }
 
+.episide_main_container{
+    float: right;
+    margin-right: 50px;
+    width: 1395px;
+    height: 1311px;
+}
+
 .zsjj{
     width: 784px;
     margin-top: 28px;
     
+}
+
+.name_series_next{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+
+}
+
+.zzxc{
+    width: 1395px;
+    height: 744px;
+}
+
+.series_slydes{
+    width: 557px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.series_slyder_div{
+    position: relative;
+    width: 168px;
+    height: 50px;
+}
+
+.series_slyder_div_name{
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+
+}
+
+.name_one_series{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 49px;
+/* identical to box height */
+
+
+color: #FFFFFF;
+
 }
 
 .zsd{
