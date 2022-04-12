@@ -1,12 +1,12 @@
 import requests
 from bs4 import BeautifulSoup as bs
 
-HEADERS = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36', 
+HEADERS = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36', 
     'accept': '*/*'
 }
 #Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36
 #Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36
-# это ноутбук Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36
+
 page = 1
 counter = 1
 series = []
@@ -15,9 +15,14 @@ season = 1
 
 # теперь это ванпанчмен
 
-
+#season-1/
+#nora-gami
+#one-punchman
+#jujutsu-kaisen
+#dororo
+#
 while counter < 13:
-    URL = f'https://jut.su/one-punchman/season-1/episode-{page}.html'
+    URL = f'https://jut.su/dororo/episode-{page}.html'
     
     r = requests.get(URL, headers=HEADERS, params = None)
     soup = bs(r.content, 'html.parser')
