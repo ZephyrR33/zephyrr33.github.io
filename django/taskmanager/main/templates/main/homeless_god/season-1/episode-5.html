@@ -1,0 +1,15 @@
+{% extends 'main/homeless_god/layout.html' %}
+{% load static %}
+
+
+{% block content1 %}
+Бездомный бог | сезон 1 | серия 5
+{% endblock %}
+{% block content2 %}
+    <div class="series_slyder_div"><a href="{% url 'homeless_god_season_1_episode_4' %}"><img src="{% static 'main/images/pryamoyg_series.png' %}" alt=""><h4><div class="series_slyder_div_name"><div class="hhhnhhh">&lt; 4 серия</div></div></h4></a></div>
+{% endblock %}
+{% block content3 %}
+<div class="series_slyder_div"><a href="{% url 'homeless_god_season_1_episode_6' %}"><img src="{% static 'main/images/pryamoyg_series.png' %}" alt=""><h4><div class="series_slyder_div_name"><div class="hhhnhhh">серия 6 &gt;</div></div></h4></a></div>
+{% endblock %}
+
+

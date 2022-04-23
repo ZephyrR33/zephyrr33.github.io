@@ -1,0 +1,15 @@
+{% extends 'main/tower_of_god/layout.html' %}
+{% load static %}
+
+
+{% block content1 %}
+Башня бога | серия 12
+{% endblock %}
+{% block content2 %}
+    <div class="series_slyder_div"><a href="{% url 'tower_of_god_episode_11' %}"><img src="{% static 'main/images/pryamoyg_series.png' %}" alt=""><h4><div class="series_slyder_div_name"><div class="hhhnhhh">&lt; 11 серия</div></div></h4></a></div>
+{% endblock %}
+{% block content3 %}
+<div class="series_slyder_div"><a href="{% url 'tower_of_god_episode_13' %}"><img src="{% static 'main/images/pryamoyg_series.png' %}" alt=""><h4><div class="series_slyder_div_name"><div class="hhhnhhh">серия 13 &gt;</div></div></h4></a></div>
+{% endblock %}
+
+

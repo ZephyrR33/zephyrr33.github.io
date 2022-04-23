@@ -1,0 +1,258 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Favorite</title>
+    <link href="{% static 'main/css/gmain.css' %}" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'main/images/favicon.ico' %}">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGWYRJ9WHK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-NGWYRJ9WHK');
+    </script>
+
+</head>
+
+
+<body>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(86375286, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/86375286" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    <div class="container">
+        <div class="panel">
+            <div><a href="{% url 'index' %}"><img class="logo" src="{% static 'main/images/Igle_logo.png' %}"
+                        alt=""></a></div>
+            <div class="otstup">
+                <div class="poloska"></div>
+                <h4>
+                    <div class="menu_name">Меню</div>
+                </h4>
+
+                <div class="name_nemenu">
+                    <div><img style="display: none;" id="hh" src="{% static 'main/images/home_aktive.png' %}" alt="">
+                    </div>
+                    <div><img id="aa" src="{% static 'main/images/home.png' %}" alt=""></div>
+                    <div class="pustota"></div>
+                    <div class="rec7 th" id="th"><img src="{% static 'main/images/Rectangle 7.png' %}"></div>
+                    <div class="onst th" id="tb"><img src="{% static 'main/images/onst.png' %}" alt=""></div>
+                    <h4><a class="osnpg" href="{% url 'index' %}" id="bb" onmouseover="hoverOnRight()"
+                            onmouseout="hoverOffRight()">Главная</a></h4>
+                </div>
+
+                <div class="name_nemenu">
+                    <div><img id="zz" src="{% static 'main/images/movie.png' %}" alt=""></div>
+                    <div><img style="display: none;" id="mm" src="{% static 'main/images/movie_aktive.png' %}" alt="">
+                    </div>
+                    <div class="pustota"></div>
+                    <div class="rec7 th" id="vh"><img src="{% static 'main/images/Rectangle 7.png' %}"></div>
+                    <div class="onst th" id="vb"><img src="{% static 'main/images/onst.png' %}" alt=""></div>
+                    <h4><a class="gender_pg" href="{% url 'genres' %}" id="nn" onmouseover="hoverOnLeft()"
+                            onmouseout="hoverOffLeft()">Жанры</a></h4>
+                </div>
+
+                <div class="name_nemenu">
+                    <div><img style="display: none;" id="jj" src="{% static 'main/images/heart.png' %}" alt=""></div>
+                    <div><img id="ff" src="{% static 'main/images/heart_aktive.png' %}" alt=""></div>
+                    <div class="pustota"></div>
+                    <div class="rec7" id="gh"><img src="{% static 'main/images/Rectangle 7.png' %}"></div>
+                    <div class="onst" id="sl"><img src="{% static 'main/images/onst.png' %}" alt=""></div>
+                    <h4><a class="favorite_pg" href="{% url 'favorites' %}" style="color: #C3079A;"
+                            id="kk">Избранное</a></h4>
+                </div>
+
+                <div class="name_nemenu">
+                    <div><img id="di" src="{% static 'main/images/Group.png' %}" alt=""></div>
+                    <div><img style="display: none;" id="id" src="{% static 'main/images/Group_aktive.png' %}" alt="">
+                    </div>
+                    <div class="pustota"></div>
+                    <div class="rec7 th" id="zt"><img src="{% static 'main/images/Rectangle 7.png' %}"></div>
+                    <div class="onst th" id="oo"><img src="{% static 'main/images/onst.png' %}" alt=""></div>
+                    <h4><a class="premium_page" href="{% url 'premium' %}" onmouseover="hoverOnMid()"
+                            onmouseout="hoverOffMid()" id="cc">Премиум</a></h4>
+                </div>
+                <script type="text/javascript">
+                    function hoverOnRight() {
+                        document.getElementById("th").style.opacity = "1";
+                        document.getElementById("gh").style.display = "none";
+                        document.getElementById("sl").style.display = "none";
+                        document.getElementById("tb").style.opacity = "1";
+                        document.getElementById("kk").style.color = "#FFFFFF";
+                        document.getElementById("bb").style.color = "#C3079A";
+                        document.getElementById("jj").style.display = "block";
+                        document.getElementById("hh").style.display = "block";
+                        document.getElementById("ff").style.display = "none";
+                        document.getElementById("aa").style.display = "none";
+                    }
+                    function hoverOffRight() {
+                        document.getElementById("th").style.opacity = "0";
+                        document.getElementById("gh").style.display = "block";
+                        document.getElementById("sl").style.display = "block";
+                        document.getElementById("tb").style.opacity = "0";
+                        document.getElementById("kk").style.color = "#C3079A";
+                        document.getElementById("bb").style.color = "#FFFFFF";
+                        document.getElementById("jj").style.display = "none";
+                        document.getElementById("hh").style.display = "none";
+                        document.getElementById("ff").style.display = "block";
+                        document.getElementById("aa").style.display = "block";
+                    }
+
+                    function hoverOnLeft() {
+                        document.getElementById("vh").style.opacity = "1";
+                        document.getElementById("gh").style.display = "none";
+                        document.getElementById("sl").style.display = "none";
+                        document.getElementById("vb").style.opacity = "1";
+                        document.getElementById("kk").style.color = "#FFFFFF";
+                        document.getElementById("nn").style.color = "#C3079A";
+                        document.getElementById("jj").style.display = "block";
+                        document.getElementById("mm").style.display = "block";
+                        document.getElementById("ff").style.display = "none";
+                        document.getElementById("zz").style.display = "none";
+                    }
+                    function hoverOffLeft() {
+                        document.getElementById("vh").style.opacity = "0";
+                        document.getElementById("gh").style.display = "block";
+                        document.getElementById("sl").style.display = "block";
+                        document.getElementById("vb").style.opacity = "0";
+                        document.getElementById("kk").style.color = "#C3079A";
+                        document.getElementById("nn").style.color = "#FFFFFF";
+                        document.getElementById("jj").style.display = "none";
+                        document.getElementById("mm").style.display = "none";
+                        document.getElementById("ff").style.display = "block";
+                        document.getElementById("zz").style.display = "block";
+                    }
+
+                    function hoverOnMid() {
+                        document.getElementById("zt").style.opacity = "1";
+                        document.getElementById("gh").style.display = "none";
+                        document.getElementById("sl").style.display = "none";
+                        document.getElementById("oo").style.opacity = "1";
+                        document.getElementById("kk").style.color = "#FFFFFF";
+                        document.getElementById("cc").style.color = "#C3079A";
+                        document.getElementById("jj").style.display = "block";
+                        document.getElementById("id").style.display = "block";
+                        document.getElementById("ff").style.display = "none";
+                        document.getElementById("di").style.display = "none";
+                    }
+                    function hoverOffMid() {
+                        document.getElementById("zt").style.opacity = "0";
+                        document.getElementById("gh").style.display = "block";
+                        document.getElementById("sl").style.display = "block";
+                        document.getElementById("oo").style.opacity = "0";
+                        document.getElementById("kk").style.color = "#C3079A";
+                        document.getElementById("cc").style.color = "#FFFFFF";
+                        document.getElementById("jj").style.display = "none";
+                        document.getElementById("id").style.display = "none";
+                        document.getElementById("ff").style.display = "block";
+                        document.getElementById("di").style.display = "block";
+                    }
+                </script>
+            </div>
+        </div>
+        <div class="main_item">
+            <div class="headerr">
+                <div class="search">
+                    <div>
+                        <img class="img_search" src="{% static 'main/images/search.png' %}" alt="">
+                        <input class="poisk" type="text" placeholder="Поиск">
+                    </div>
+                    <div class="serch_panel">
+                        <div class="korona"><a href=""><img src="{% static 'main/images/korona.png' %}" alt=""></a>
+                        </div>
+                        <div class="korona"><a href=""><img src="{% static 'main/images/uvi.png' %}" alt=""></a></div>
+                        <div><a href=""><img class="profil" src="{% static 'main/images/profil.png' %}" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="episide_main_container">
+            <div>
+                <video class="zzxc" id="player" playsinline controls data-poster="/path/to/poster.jpg">
+                    <source
+                        src="{{ url }}"
+                        type="video/mp4" />
+                    <source src="" type="video/webm" />
+                
+                    <!-- Captions are optional -->
+                    <track kind="captions" label="English captions" src="" srclang="en" default />
+                </video>
+            </div>
+            <div>
+                <div class="name_series_next">
+                    <h4><div class="name_one_series">Бездомный бог | сезон 1 | серия 1</div></h4>
+                    <div class="series_slydes_one_serie">
+                        
+                        <div class="series_slyder_div"><a href="{% url 'homeless_god_main' %}"><img src="{% static 'main/images/pryamoyg_series.png' %}" alt=""><h4><div class="series_slyder_div_name"><div class="hhhnhhh">все серии</div></div></h4></a></div>
+                        <div class="series_slyder_div"><a href="{% url 'homeless_god_season_1_episode_1' %}"><img src="{% static 'main/images/pryamoyg_series.png' %}" alt=""><h4><div class="series_slyder_div_name"><div class="hhhnhhh">2 серия &gt;</div></div></h4></a></div>
+                    </div>
+                </div>
+
+                <div class="container_functions">
+                    <div><a href=""><img src="{% static 'main/images/go_izb.png' %}" alt=""></a></div>
+                    <div><a href=""><img src="{% static 'main/images/go_share.png' %}" alt=""></a></div>
+                    <div><a href=""><img src="{% static 'main/images/more-vertical.png' %}" alt=""></a></div>
+                </div>
+
+                <h4><div class="text_series_series">Лишь элементы политического процесса, превозмогая сложившуюся непростую экономическую ситуацию, ограничены исключительно образом мышления. Как принято считать, явные признаки победы институционализации формируют глобальную экономическую сеть и при этом - подвергнуты целой серии независимых исследований. Но экономическая повестка сегодняшнего дня в значительной степени обусловливает важность соответствующих условий активизации.</div></h4>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="end">
+        <img class="endend" src="{% static 'main/images/the_end.png' %}" alt="">
+        <h4>
+            <div class="end_text">Рыбатекст используется дизайнерами, проектировщиками и фронтендерами, когда нужно
+                быстро заполнить макеты или прототипы содержимым. Это тестовый контент, который не должен нести
+                никакого смысла, лишь показать наличие самого текста или продемонстрировать типографику в деле.
+            </div>
+        </h4>
+        <div class="socsoc">
+            <div class="soc_seti">
+                <div class="telegramm"><a href=""><img src="{% static 'main/images/telegram.png' %}" alt=""></a>
+                </div>
+                <div class="twitter"><a href=""><img src="{% static 'main/images/twitter.png' %}" alt=""></a></div>
+                <div class="vk"><a href=""><img src="{% static 'main/images/vk.png' %}" alt=""></a></div>
+                <div class="instagramm"><a href=""><img src="{% static 'main/images/instagram.png' %}" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+</body>
+
+</html>

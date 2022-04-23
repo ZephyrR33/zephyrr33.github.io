@@ -1,10 +1,10 @@
 import requests
 from bs4 import BeautifulSoup as bs
 
-HEADERS = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36', 
+HEADERS = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.88 Safari/537.36', 
     'accept': '*/*'
 }
-#Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36
+#Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.88 Safari/537.366
 #Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36
 
 page = 1
@@ -21,8 +21,9 @@ season = 1
 #jujutsu-kaisen
 #dororo
 #
+
 while counter < 13:
-    URL = f'https://jut.su/dororo/episode-{page}.html'
+    URL = f'https://jut.su/nora-gami/season-1/episode-{page}.html'
     
     r = requests.get(URL, headers=HEADERS, params = None)
     soup = bs(r.content, 'html.parser')
@@ -64,4 +65,12 @@ series.append({
             }
         })           
 print(series)
+'''
+
+
+'''
+r_ = requests.get('http://127.0.0.1:8000/', params=None)
+soup_ = bs(r_.content, 'html.parser')
+items_ = soup_.findAll('div')
+print(items_)
 '''
