@@ -556,13 +556,13 @@ def url_punch_season1_ep_1(request):
     
     usr_ag = str(request.user_agent.browser)
     fusr = usr_ag[usr_ag.rfind('=') + 1:usr_ag.rfind(')')]
-    fusr1 = fusr[1:-1] + '.127'
+    fusr1 = fusr[1:-1] + '.198'
 
     fusr2 = fusr1
     '''
     f'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{fusr1} Safari/537.36'
     '''
-    HEADERS = {'user-agent': f'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{fusr2} Safari/537.36', 
+    HEADERS = {'user-agent': f'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{fusr2} Safari/537.36', 
     'accept': '*/*'
     }
     
