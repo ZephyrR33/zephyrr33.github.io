@@ -69,8 +69,8 @@ def tokyo_avengers_main(request):
 
 #omepunchman 1 season
 def opm1_1(request):
-    return render(request, 'main/onepunchman/season-1/episode-1.html', {'url': url_punch_season1_ep_1(request)[0]['episode1']['res1080'],
-    'usr': my_view(request)})
+    return render(request, 'main/onepunchman/season-1/episode-1.html', {'url': url_punch_season1_ep_1()[0]['episode1']['res1080'],
+    'usr': user_agent()})
 
 
 def opm2_1(request):
@@ -534,17 +534,25 @@ def ta24(request):
 
 
 
-def my_view(request):
-    #user_agent = get_user_agent(request)
-    return  request.user_agent.browser
+def user_agent():
+    HEADERS = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36', 
+    'accept': '*/*'
+}
+    url = 'https://browser-info.ru/'
+    r = requests.get(url, headers=HEADERS)
+    soup = bs(r.content, 'html.parser')
+    block = soup.find('div', id = 'tool_padding')
+    check_user = block.find('div', id = 'user_agent').text
+    
+    return  check_user[12:]
 
 
-
+usr = user_agent()
 
 #parser onepunchman season 1
 
-def url_punch_season1_ep_1(request):
-    
+def url_punch_season1_ep_1(usr = user_agent()):
+    '''
     r_ = requests.get('http://127.0.0.1:8000/', params=None)
     #usrag = my_view(r_)
    # r_ = requests.get('http://127.0.0.1:8000/', params=None)
@@ -560,13 +568,15 @@ def url_punch_season1_ep_1(request):
 
     fusr2 = fusr1
     '''
-    f'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{fusr1} Safari/537.36'
+    #f'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{fusr1} Safari/537.36'
     '''
     HEADERS = {'user-agent': f'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{fusr2} Safari/537.36', 
     'accept': '*/*'
     }
-    
-
+    '''
+    HEADERS = {'user-agent': usr, 
+    'accept': '*/*'
+    }
 
     page = 1
     counter = 1
