@@ -1,8 +1,17 @@
+
+import os
+
+import django
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'taskmanager.settings')
+
+django.setup()
+
 from django.shortcuts import render
 from django.http import HttpResponse
 import requests
 from bs4 import BeautifulSoup as bs
-from fake_useragent import UserAgent
+from django_user_agents.utils import get_user_agent
 
 # Create your views here.
 def index(request):
@@ -60,7 +69,8 @@ def tokyo_avengers_main(request):
 
 #omepunchman 1 season
 def opm1_1(request):
-    return render(request, 'main/onepunchman/season-1/episode-1.html')#, {'url': url_punch_season1_ep_1()[0]['episode1']['res1080']})
+    return render(request, 'main/onepunchman/season-1/episode-1.html', {'url': url_punch_season1_ep_1(request)[0]['episode1']['res1080'],
+    'usr': my_view(request)})
 
 
 def opm2_1(request):
@@ -524,23 +534,40 @@ def ta24(request):
 
 
 
+def my_view(request):
+    #user_agent = get_user_agent(request)
+    return  request.user_agent.browser
+
 
 
 
 #parser onepunchman season 1
-'''
-def url_punch_season1_ep_1():
+
+def url_punch_season1_ep_1(request):
     
+    r_ = requests.get('http://127.0.0.1:8000/', params=None)
+    #usrag = my_view(r_)
    # r_ = requests.get('http://127.0.0.1:8000/', params=None)
    # soup_ = bs(r_.content, 'html.parser')
     #items_ = soup_.findAll('div', id='ghghjjj')
     #print(items_)
     
+#'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36'
     
+    usr_ag = str(request.user_agent.browser)
+    fusr = usr_ag[usr_ag.rfind('=') + 1:usr_ag.rfind(')')]
+    fusr1 = fusr[1:-1] + '.127'
 
-    HEADERS = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.88 Safari/537.36', 
+    fusr2 = fusr1
+    '''
+    f'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{fusr1} Safari/537.36'
+    '''
+    HEADERS = {'user-agent': f'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{fusr2} Safari/537.36', 
     'accept': '*/*'
     }
+    
+
+
     page = 1
     counter = 1
     series = []
@@ -569,7 +596,7 @@ def url_punch_season1_ep_1():
         counter += 1
         page += 1
     return series
-    
+    '''
 #parser onepunchman season 2
 def url_punch_season2_ep_1():
     
