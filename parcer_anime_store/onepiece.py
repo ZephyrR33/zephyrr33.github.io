@@ -1,14 +1,14 @@
 from cProfile import run
 import requests
 from bs4 import BeautifulSoup as bs
-
+'''
 HEADERS = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36', 
     'accept': '*/*'
 }
 #Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.88 Safari/537.366
 #Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36
 
-'''
+
 page = 1
 counter = 1
 series = []
@@ -24,14 +24,14 @@ season = 1
 #dororo
 #url = 'http://127.0.0.1:8000/'
 
-url = 'https://browser-info.ru/'
+#url = 'https://browser-info.ru/'
 
 url = 'http://127.0.0.1:8000/'
-r = requests.get(url, headers=HEADERS)
+r = requests.get(url)
 soup = bs(r.content, 'html.parser')
 block = soup.find('div', id = 'ghghjjj').text
 #check_user = block.find('div', id = 'user_agent').text
-print(block)
+#print(block)
 
 
 
@@ -43,9 +43,9 @@ def user_agent():
     r = requests.get(url, headers=HEADERS)
     soup = bs(r.content, 'html.parser')
     block = soup.find('div', id = 'tool_padding')
-    check_user = block.find('div', id = 'user_agent').text
+    check_user = block.find('div', id = 'user_agent')
     
-    return  check_user[12:]
+    return  check_user
 print(user_agent())
 
 
