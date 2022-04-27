@@ -69,8 +69,7 @@ def tokyo_avengers_main(request):
 
 #omepunchman 1 season
 def opm1_1(request):
-    return render(request, 'main/onepunchman/season-1/episode-1.html', {'url': url_punch_season1_ep_1()[0]['episode1']['res1080'],
-    'usr': user_agent()})
+    return render(request, 'main/onepunchman/season-1/episode-1.html')#, {'url': url_punch_season1_ep_1()[0]['episode1']['res1080']})
 
 
 def opm2_1(request):
@@ -552,7 +551,7 @@ def user_agent():
 
 
 #parser onepunchman season 1
-
+'''
 def url_punch_season1_ep_1():
    
     r_ = requests.get('http://127.0.0.1:8000/', params=None)
@@ -564,24 +563,24 @@ def url_punch_season1_ep_1():
     
 #'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36'
     
-    '''
+    
     usr_ag = str(request.user_agent.browser)
     fusr = usr_ag[usr_ag.rfind('=') + 1:usr_ag.rfind(')')]
     fusr1 = fusr[1:-1] + '.127'
 
     fusr2 = fusr1
-    '''
+    
     
     #f'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{fusr1} Safari/537.36'
     
-    HEADERS = {'user-agent': items_, 
-    'accept': '*/*'
-    }
-    '''
+    #HEADERS = {'user-agent': items_, 
+   # 'accept': '*/*'
+    #}
+    
     HEADERS = {'user-agent': usr, 
     'accept': '*/*'
     }
-    '''
+    
     page = 1
     counter = 1
     series = []
@@ -610,7 +609,7 @@ def url_punch_season1_ep_1():
         counter += 1
         page += 1
     return series
-    '''
+    
 #parser onepunchman season 2
 def url_punch_season2_ep_1():
     
