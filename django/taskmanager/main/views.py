@@ -1,21 +1,22 @@
-
 import os
-
+import re
+from statistics import mode
 import django
-
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'taskmanager.settings')
-
 django.setup()
-
 from django.shortcuts import render
 from django.http import HttpResponse
 import requests
 from bs4 import BeautifulSoup as bs
 from django_user_agents.utils import get_user_agent
+from .models import Anime
+from django.views.generic.base import View
 
 # Create your views here.
+
 def index(request):
-    return render(request, 'main/index.html')
+    anime = Anime.objects.all()
+    return render(request, 'main/index.html', {'popular_anime' : anime})
 
 
 def genres(request):
@@ -58,18 +59,36 @@ def tokyo_avengers_main(request):
     return render(request, 'main/tokyo_avengers_main.html')
 
 
+class AnimeView(View):      #список аниме на главной странице во вкладке популярное
+    pass
 
 
 
 
-    
+
+
+def ta1(request):
+    return render(request, 'main/tokyo_avengers/episode-1.html')#, {'url': url_tokyo_avengers_ep_1()[0]['episode1']['res1080']})
+
+
+def tog1(request):
+    return render(request, 'main/tower_of_god/episode-1.html')#, {'url': url_tower_of_god_ep_1()[0]['episode1']['res1080']})    
+
+
+def dor1(request):
+    return render(request, 'main/dororo/episode-1.html')#, {'url': url_dororo_ep_1()[0]['episode1']['res1080']})
 
 
 
+def hg1_1(request):
+    return render(request, 'main/homeless_god/season-1/episode-1.html')#, {'url': url_noragami_season1_ep_1()[0]['episode1']['res1080']})
 
-#omepunchman 1 season
+
 def opm1_1(request):
     return render(request, 'main/onepunchman/season-1/episode-1.html')#, {'url': url_punch_season1_ep_1()[0]['episode1']['res1080']})
+'''
+#omepunchman 1 season
+
 
 
 def opm2_1(request):
@@ -172,8 +191,7 @@ def opm12_2(request):
 
 
 #homeless god season 1
-def hg1_1(request):
-    return render(request, 'main/homeless_god/season-1/episode-1.html')#, {'url': url_noragami_season1_ep_1()[0]['episode1']['res1080']})
+
 
 
 def hg2_1(request):
@@ -280,8 +298,6 @@ def hg13_2(request):
 
 
 # dororo 
-def dor1(request):
-    return render(request, 'main/dororo/episode-1.html')#, {'url': url_dororo_ep_1()[0]['episode1']['res1080']})
 
 
 def dor2(request):
@@ -379,8 +395,7 @@ def dor24(request):
 
 
 #tower of  god
-def tog1(request):
-    return render(request, 'main/tower_of_god/episode-1.html')#, {'url': url_tower_of_god_ep_1()[0]['episode1']['res1080']})    
+
 
 
 def tog2(request):
@@ -435,8 +450,7 @@ def tog13(request):
 
 
 #tokyo avengers
-def ta1(request):
-    return render(request, 'main/tokyo_avengers/episode-1.html')#, {'url': url_tokyo_avengers_ep_1()[0]['episode1']['res1080']})
+
 
 
 def ta2(request):
@@ -529,7 +543,7 @@ def ta23(request):
 
 def ta24(request):
     return render(request, 'main/tokyo_avengers/episode-24.html')#, {'url': url_tokyo_avengers_ep_1()[23]['episode24']['res1080']})
-
+'''
 
 
 

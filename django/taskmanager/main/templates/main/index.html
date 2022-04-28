@@ -387,16 +387,19 @@
                     <div class="future">Популярное</div>
                 </h4>
                 <div class="container_future">
+                    {% for item in popular_anime %}
                     <div class="vanpise_future"><a href="{% url 'onepunchman_main'  %}"><img
-                                src="{% static 'main/images/onepunch.png' %}" alt=""></a></div>
-                    <div class="hanterxhanter_future"><a href="{% url 'homeless_god_main'  %}"><img
+                                src="{{ item.poster.url }}" alt=""></a></div>
+                    <!-- <div class="hanterxhanter_future"><a href="{% url 'homeless_god_main'  %}"><img
                                 src="{% static 'main/images/homegod.png' %}" alt=""></a></div>
                     <div class="mastermech_future"><a href="{% url 'tower_of_god_main'  %}"><img
                                 src="{% static 'main/images/tower.png' %}" alt=""></a></div>
                     <div class="myheroes_future"><a href="{% url 'tokyo_avengers_main'  %}"><img
                                 src="{% static 'main/images/mstit.png' %}" alt=""></a></div>
                     <div class="attacktitanov_future"><a href="{% url 'dororo_main'  %}"><img
-                                src="{% static 'main/images/dororo.png' %}" alt=""></a></div>
+                                src="{% static 'main/images/dororo.png' %}" alt=""></a></div> -->
+
+                    {% endfor %}
                 </div>
             </div>
 
