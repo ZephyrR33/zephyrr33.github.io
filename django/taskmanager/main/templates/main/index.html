@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>AnimeStore</title>
+    <title>AnimeStock</title>
     <link href="{% static 'main/css/gmain.css' %}" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -96,7 +96,7 @@
                                 onmouseout="hoverOffLeft()" id="nn">Избранное</a></h4>
                     </div>
 
-                    <div class="name_nemenu">
+                    <div class="name_nemenu" style="display: none;">
                         <div><img id="di" src="{% static 'main/images/Group.png' %}" alt=""></div>
                         <div><img style="display: none;" id="id" src="{% static 'main/images/Group_aktive.png' %}"
                                 alt="">
@@ -400,7 +400,7 @@
                 </div>
             </div>
 
-            <div class="play_pros">
+            <div class="play_pros" style="display: none;">
                 <h4>
                     <div class="play">Продолжить просмотр</div>
                 </h4>
@@ -423,7 +423,7 @@
                 </div>
             </div>
 
-            <div class="wee_more"><a href=""><img src="{% static 'main/images/wee_more.png' %}" alt=""></a></div>
+            <div class="wee_more" style="display: none;"><a href=""><img src="{% static 'main/images/wee_more.png' %}" alt=""></a></div>
             <div class="end">
                 <img class="endend" src="{% static 'main/images/the_end.png' %}" alt="">
                 <h4>
