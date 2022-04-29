@@ -1,6 +1,10 @@
 from html.entities import name2codepoint
 from django.urls import path
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
+
+
 urlpatterns = [
     
     path('', views.index, name='index'),
@@ -18,9 +22,24 @@ urlpatterns = [
     path('onepunchman', views.onepunchman_main, name='onepunchman_main'),
     path('tokyo-avengers', views.tokyo_avengers_main, name='tokyo_avengers_main'),
     #
-    #onepunchman season 1
+    #new anime pages
     #
     path('onepunchman/season-1/episode-1', views.opm1_1, name='onepunchman_season_1_episode_1'),
+    path('homeless-god/season-1/episode-1', views.hg1_1, name='homeless_god_season_1_episode_1'),
+    path('dororo/episode-1', views.dor1, name='dororo_episode_1'),
+    path('tower-of-god/episode-1', views.tog1, name='tower_of_god_episode_1'),
+    path('tokyo-avengers/episode-1', views.ta1, name='tokyo_avengers_episode_1'),
+   
+]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+'''
+    #
+    #onepunchman season 1
+    #
+    
     path('onepunchman/season-1/episode-2', views.opm2_1, name='onepunchman_season_1_episode_2'),
     path('onepunchman/season-1/episode-3', views.opm3_1, name='onepunchman_season_1_episode_3'),
     path('onepunchman/season-1/episode-4', views.opm4_1, name='onepunchman_season_1_episode_4'),
@@ -47,10 +66,11 @@ urlpatterns = [
     path('onepunchman/season-2/episode-10', views.opm10_2, name='onepunchman_season_2_episode_10'),
     path('onepunchman/season-2/episode-11', views.opm11_2, name='onepunchman_season_2_episode_11'),
     path('onepunchman/season-2/episode-12', views.opm12_2, name='onepunchman_season_2_episode_12'),
+    
     #
     #homeless god season 1
     #
-    path('homeless-god/season-1/episode-1', views.hg1_1, name='homeless_god_season_1_episode_1'),
+    
     path('homeless-god/season-1/episode-2', views.hg2_1, name='homeless_god_season_1_episode_2'),
     path('homeless-god/season-1/episode-3', views.hg3_1, name='homeless_god_season_1_episode_3'),
     path('homeless-god/season-1/episode-4', views.hg4_1, name='homeless_god_season_1_episode_4'),
@@ -81,7 +101,7 @@ urlpatterns = [
     #
     #dororo
     #
-    path('dororo/episode-1', views.dor1, name='dororo_episode_1'),
+    
     path('dororo/episode-2', views.dor2, name='dororo_episode_2'),
     path('dororo/episode-3', views.dor3, name='dororo_episode_3'),
     path('dororo/episode-4', views.dor4, name='dororo_episode_4'),
@@ -108,7 +128,7 @@ urlpatterns = [
     #
     #tower of god
     #
-    path('tower-of-god/episode-1', views.tog1, name='tower_of_god_episode_1'),
+    
     path('tower-of-god/episode-2', views.tog2, name='tower_of_god_episode_2'),
     path('tower-of-god/episode-3', views.tog3, name='tower_of_god_episode_3'),
     path('tower-of-god/episode-4', views.tog4, name='tower_of_god_episode_4'),
@@ -124,7 +144,7 @@ urlpatterns = [
     #
     #tokyo avengers
     #
-    path('tokyo-avengers/episode-1', views.ta1, name='tokyo_avengers_episode_1'),
+    
     path('tokyo-avengers/episode-2', views.ta2, name='tokyo_avengers_episode_2'),
     path('tokyo-avengers/episode-3', views.ta3, name='tokyo_avengers_episode_3'),
     path('tokyo-avengers/episode-4', views.ta4, name='tokyo_avengers_episode_4'),
@@ -148,5 +168,4 @@ urlpatterns = [
     path('tokyo-avengers/episode-22', views.ta22, name='tokyo_avengers_episode_22'),
     path('tokyo-avengers/episode-23', views.ta23, name='tokyo_avengers_episode_23'),
     path('tokyo-avengers/episode-24', views.ta24, name='tokyo_avengers_episode_24'),
-
-]
+'''
