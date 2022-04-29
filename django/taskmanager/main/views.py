@@ -1,4 +1,9 @@
 
+from django_user_agents.utils import get_user_agent
+from bs4 import BeautifulSoup as bs
+import requests
+from django.http import HttpResponse
+from django.shortcuts import render
 import os
 
 import django
@@ -7,13 +12,9 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'taskmanager.settings')
 
 django.setup()
 
-from django.shortcuts import render
-from django.http import HttpResponse
-import requests
-from bs4 import BeautifulSoup as bs
-from django_user_agents.utils import get_user_agent
 
 # Create your views here.
+
 def index(request):
     return render(request, 'main/index.html')
 
@@ -30,13 +31,13 @@ def premium(request):
     return render(request, 'main/premium.html')
 
 
-def genres_week(request):   #фильтр на странце 'genres'
+def genres_week(request):  # фильтр на странце 'genres'
     return render(request, 'main/genres_week.html')
 
 
-def genres_mounth(request):  #фильтр на странце 'genres'
+def genres_mounth(request):  # фильтр на странце 'genres'
     return render(request, 'main/genres_mounth.html')
-    
+
 
 def dororo_main(request):
     return render(request, 'main/dororo_main.html')
@@ -58,479 +59,561 @@ def tokyo_avengers_main(request):
     return render(request, 'main/tokyo_avengers_main.html')
 
 
-
-
-
-
-    
-
-
-
-
-#omepunchman 1 season
+# omepunchman 1 season
 def opm1_1(request):
-    return render(request, 'main/onepunchman/season-1/episode-1.html')#, {'url': url_punch_season1_ep_1()[0]['episode1']['res1080']})
+    # , {'url': url_punch_season1_ep_1()[0]['episode1']['res1080']})
+    return render(request, 'main/onepunchman/season-1/episode-1.html')
 
 
 def opm2_1(request):
-    return render(request, 'main/onepunchman/season-1/episode-2.html')#, {'url': url_punch_season1_ep_1()[1]['episode2']['res1080']})    
+    # , {'url': url_punch_season1_ep_1()[1]['episode2']['res1080']})
+    return render(request, 'main/onepunchman/season-1/episode-2.html')
 
 
 def opm3_1(request):
-    return render(request, 'main/onepunchman/season-1/episode-3.html')#, {'url': url_punch_season1_ep_1()[2]['episode3']['res1080']})
+    # , {'url': url_punch_season1_ep_1()[2]['episode3']['res1080']})
+    return render(request, 'main/onepunchman/season-1/episode-3.html')
 
 
 def opm4_1(request):
-    return render(request, 'main/onepunchman/season-1/episode-4.html')#, {'url': url_punch_season1_ep_1()[3]['episode4']['res1080']})   
+    # , {'url': url_punch_season1_ep_1()[3]['episode4']['res1080']})
+    return render(request, 'main/onepunchman/season-1/episode-4.html')
 
 
 def opm5_1(request):
-    return render(request, 'main/onepunchman/season-1/episode-5.html')#, {'url': url_punch_season1_ep_1()[4]['episode5']['res1080']})
+    # , {'url': url_punch_season1_ep_1()[4]['episode5']['res1080']})
+    return render(request, 'main/onepunchman/season-1/episode-5.html')
 
 
 def opm6_1(request):
-    return render(request, 'main/onepunchman/season-1/episode-6.html')#, {'url': url_punch_season1_ep_1()[5]['episode6']['res1080']})       
+    # , {'url': url_punch_season1_ep_1()[5]['episode6']['res1080']})
+    return render(request, 'main/onepunchman/season-1/episode-6.html')
 
 
 def opm7_1(request):
-    return render(request, 'main/onepunchman/season-1/episode-7.html')#, {'url': url_punch_season1_ep_1()[6]['episode7']['res1080']})
+    # , {'url': url_punch_season1_ep_1()[6]['episode7']['res1080']})
+    return render(request, 'main/onepunchman/season-1/episode-7.html')
 
 
 def opm8_1(request):
-    return render(request, 'main/onepunchman/season-1/episode-8.html')#, {'url': url_punch_season1_ep_1()[7]['episode8']['res1080']})
+    # , {'url': url_punch_season1_ep_1()[7]['episode8']['res1080']})
+    return render(request, 'main/onepunchman/season-1/episode-8.html')
 
 
 def opm9_1(request):
-    return render(request, 'main/onepunchman/season-1/episode-9.html')#, {'url': url_punch_season1_ep_1()[8]['episode9']['res1080']}) 
+    # , {'url': url_punch_season1_ep_1()[8]['episode9']['res1080']})
+    return render(request, 'main/onepunchman/season-1/episode-9.html')
 
 
 def opm10_1(request):
-    return render(request, 'main/onepunchman/season-1/episode-10.html')#, {'url': url_punch_season1_ep_1()[9]['episode10']['res1080']})
+    # , {'url': url_punch_season1_ep_1()[9]['episode10']['res1080']})
+    return render(request, 'main/onepunchman/season-1/episode-10.html')
 
 
 def opm11_1(request):
-    return render(request, 'main/onepunchman/season-1/episode-11.html')#, {'url': url_punch_season1_ep_1()[10]['episode11']['res1080']}) 
+    # , {'url': url_punch_season1_ep_1()[10]['episode11']['res1080']})
+    return render(request, 'main/onepunchman/season-1/episode-11.html')
 
 
 def opm12_1(request):
-    return render(request, 'main/onepunchman/season-1/episode-12.html')#, {'url': url_punch_season1_ep_1()[11]['episode12']['res1080']})        
+    # , {'url': url_punch_season1_ep_1()[11]['episode12']['res1080']})
+    return render(request, 'main/onepunchman/season-1/episode-12.html')
 
 
-
-
-
-#onepucnhman 2 season                               
+# onepucnhman 2 season
 def opm1_2(request):
-    return render(request, 'main/onepunchman/season-2/episode-1.html')#, {'url': url_punch_season2_ep_1()[0]['episode1']['res1080']})
+    # , {'url': url_punch_season2_ep_1()[0]['episode1']['res1080']})
+    return render(request, 'main/onepunchman/season-2/episode-1.html')
 
 
 def opm2_2(request):
-    return render(request, 'main/onepunchman/season-2/episode-2.html')#, {'url': url_punch_season2_ep_1()[1]['episode2']['res1080']})    
+    # , {'url': url_punch_season2_ep_1()[1]['episode2']['res1080']})
+    return render(request, 'main/onepunchman/season-2/episode-2.html')
 
 
 def opm3_2(request):
-    return render(request, 'main/onepunchman/season-2/episode-3.html')#, {'url': url_punch_season2_ep_1()[2]['episode3']['res1080']})
+    # , {'url': url_punch_season2_ep_1()[2]['episode3']['res1080']})
+    return render(request, 'main/onepunchman/season-2/episode-3.html')
 
 
 def opm4_2(request):
-    return render(request, 'main/onepunchman/season-2/episode-4.html')#, {'url': url_punch_season2_ep_1()[3]['episode4']['res1080']})   
+    # , {'url': url_punch_season2_ep_1()[3]['episode4']['res1080']})
+    return render(request, 'main/onepunchman/season-2/episode-4.html')
 
 
 def opm5_2(request):
-    return render(request, 'main/onepunchman/season-2/episode-5.html')#, {'url': url_punch_season2_ep_1()[4]['episode5']['res1080']})
+    # , {'url': url_punch_season2_ep_1()[4]['episode5']['res1080']})
+    return render(request, 'main/onepunchman/season-2/episode-5.html')
 
 
 def opm6_2(request):
-    return render(request, 'main/onepunchman/season-2/episode-6.html')#, {'url': url_punch_season2_ep_1()[5]['episode6']['res1080']})       
+    # , {'url': url_punch_season2_ep_1()[5]['episode6']['res1080']})
+    return render(request, 'main/onepunchman/season-2/episode-6.html')
 
 
 def opm7_2(request):
-    return render(request, 'main/onepunchman/season-2/episode-7.html')#, {'url': url_punch_season2_ep_1()[6]['episode7']['res1080']})
+    # , {'url': url_punch_season2_ep_1()[6]['episode7']['res1080']})
+    return render(request, 'main/onepunchman/season-2/episode-7.html')
 
 
 def opm8_2(request):
-    return render(request, 'main/onepunchman/season-2/episode-8.html')#, {'url': url_punch_season2_ep_1()[7]['episode8']['res1080']})
+    # , {'url': url_punch_season2_ep_1()[7]['episode8']['res1080']})
+    return render(request, 'main/onepunchman/season-2/episode-8.html')
 
 
 def opm9_2(request):
-    return render(request, 'main/onepunchman/season-2/episode-9.html')#, {'url': url_punch_season2_ep_1()[8]['episode9']['res1080']}) 
+    # , {'url': url_punch_season2_ep_1()[8]['episode9']['res1080']})
+    return render(request, 'main/onepunchman/season-2/episode-9.html')
 
 
 def opm10_2(request):
-    return render(request, 'main/onepunchman/season-2/episode-10.html')#, {'url': url_punch_season2_ep_1()[9]['episode10']['res1080']})
+    # , {'url': url_punch_season2_ep_1()[9]['episode10']['res1080']})
+    return render(request, 'main/onepunchman/season-2/episode-10.html')
 
 
 def opm11_2(request):
-    return render(request, 'main/onepunchman/season-2/episode-11.html')#, {'url': url_punch_season2_ep_1()[10]['episode11']['res1080']}) 
+    # , {'url': url_punch_season2_ep_1()[10]['episode11']['res1080']})
+    return render(request, 'main/onepunchman/season-2/episode-11.html')
 
 
 def opm12_2(request):
-    return render(request, 'main/onepunchman/season-2/episode-12.html')#, {'url': url_punch_season2_ep_1()[11]['episode12']['res1080']})  
+    # , {'url': url_punch_season2_ep_1()[11]['episode12']['res1080']})
+    return render(request, 'main/onepunchman/season-2/episode-12.html')
 
 
-
-
-
-#homeless god season 1
+# homeless god season 1
 def hg1_1(request):
-    return render(request, 'main/homeless_god/season-1/episode-1.html')#, {'url': url_noragami_season1_ep_1()[0]['episode1']['res1080']})
+    # , {'url': url_noragami_season1_ep_1()[0]['episode1']['res1080']})
+    return render(request, 'main/homeless_god/season-1/episode-1.html')
 
 
 def hg2_1(request):
-    return render(request, 'main/homeless_god/season-1/episode-2.html')#, {'url': url_noragami_season1_ep_1()[1]['episode2']['res1080']})    
+    # , {'url': url_noragami_season1_ep_1()[1]['episode2']['res1080']})
+    return render(request, 'main/homeless_god/season-1/episode-2.html')
 
 
 def hg3_1(request):
-    return render(request, 'main/homeless_god/season-1/episode-3.html')#, {'url': url_noragami_season1_ep_1()[2]['episode3']['res1080']})
+    # , {'url': url_noragami_season1_ep_1()[2]['episode3']['res1080']})
+    return render(request, 'main/homeless_god/season-1/episode-3.html')
 
 
 def hg4_1(request):
-    return render(request, 'main/homeless_god/season-1/episode-4.html')#, {'url': url_noragami_season1_ep_1()[3]['episode4']['res1080']})
+    # , {'url': url_noragami_season1_ep_1()[3]['episode4']['res1080']})
+    return render(request, 'main/homeless_god/season-1/episode-4.html')
 
 
 def hg5_1(request):
-    return render(request, 'main/homeless_god/season-1/episode-5.html')#, {'url': url_noragami_season1_ep_1()[4]['episode5']['res1080']})
+    # , {'url': url_noragami_season1_ep_1()[4]['episode5']['res1080']})
+    return render(request, 'main/homeless_god/season-1/episode-5.html')
 
 
 def hg6_1(request):
-    return render(request, 'main/homeless_god/season-1/episode-6.html')#, {'url': url_noragami_season1_ep_1()[5]['episode6']['res1080']})
+    # , {'url': url_noragami_season1_ep_1()[5]['episode6']['res1080']})
+    return render(request, 'main/homeless_god/season-1/episode-6.html')
 
 
 def hg7_1(request):
-    return render(request, 'main/homeless_god/season-1/episode-7.html')#, {'url': url_noragami_season1_ep_1()[6]['episode7']['res1080']})
+    # , {'url': url_noragami_season1_ep_1()[6]['episode7']['res1080']})
+    return render(request, 'main/homeless_god/season-1/episode-7.html')
 
 
 def hg8_1(request):
-    return render(request, 'main/homeless_god/season-1/episode-8.html')#, {'url': url_noragami_season1_ep_1()[7]['episode8']['res1080']})
+    # , {'url': url_noragami_season1_ep_1()[7]['episode8']['res1080']})
+    return render(request, 'main/homeless_god/season-1/episode-8.html')
 
 
 def hg9_1(request):
-    return render(request, 'main/homeless_god/season-1/episode-9.html')#, {'url': url_noragami_season1_ep_1()[8]['episode9']['res1080']})
+    # , {'url': url_noragami_season1_ep_1()[8]['episode9']['res1080']})
+    return render(request, 'main/homeless_god/season-1/episode-9.html')
 
 
 def hg10_1(request):
-    return render(request, 'main/homeless_god/season-1/episode-10.html')#, {'url': url_noragami_season1_ep_1()[9]['episode10']['res1080']})
+    # , {'url': url_noragami_season1_ep_1()[9]['episode10']['res1080']})
+    return render(request, 'main/homeless_god/season-1/episode-10.html')
 
 
 def hg11_1(request):
-    return render(request, 'main/homeless_god/season-1/episode-11.html')#, {'url': url_noragami_season1_ep_1()[10]['episode11']['res1080']})
+    # , {'url': url_noragami_season1_ep_1()[10]['episode11']['res1080']})
+    return render(request, 'main/homeless_god/season-1/episode-11.html')
 
 
 def hg12_1(request):
-    return render(request, 'main/homeless_god/season-1/episode-12.html')#, {'url': url_noragami_season1_ep_1()[11]['episode12']['res1080']})
+    # , {'url': url_noragami_season1_ep_1()[11]['episode12']['res1080']})
+    return render(request, 'main/homeless_god/season-1/episode-12.html')
 
 
-
-
-
-#homeless god season 2
+# homeless god season 2
 def hg1_2(request):
-    return render(request, 'main/homeless_god/season-2/episode-1.html')#, {'url': url_noragami_season2_ep_1()[0]['episode1']['res1080']})
+    # , {'url': url_noragami_season2_ep_1()[0]['episode1']['res1080']})
+    return render(request, 'main/homeless_god/season-2/episode-1.html')
 
 
 def hg2_2(request):
-    return render(request, 'main/homeless_god/season-2/episode-2.html')#, {'url': url_noragami_season2_ep_1()[1]['episode2']['res1080']})    
+    # , {'url': url_noragami_season2_ep_1()[1]['episode2']['res1080']})
+    return render(request, 'main/homeless_god/season-2/episode-2.html')
 
 
 def hg3_2(request):
-    return render(request, 'main/homeless_god/season-2/episode-3.html')#, {'url': url_noragami_season2_ep_1()[2]['episode3']['res1080']})
+    # , {'url': url_noragami_season2_ep_1()[2]['episode3']['res1080']})
+    return render(request, 'main/homeless_god/season-2/episode-3.html')
 
 
 def hg4_2(request):
-    return render(request, 'main/homeless_god/season-2/episode-4.html')#, {'url': url_noragami_season2_ep_1()[3]['episode4']['res1080']})
+    # , {'url': url_noragami_season2_ep_1()[3]['episode4']['res1080']})
+    return render(request, 'main/homeless_god/season-2/episode-4.html')
 
 
 def hg5_2(request):
-    return render(request, 'main/homeless_god/season-2/episode-5.html')#, {'url': url_noragami_season2_ep_1()[4]['episode5']['res1080']})
+    # , {'url': url_noragami_season2_ep_1()[4]['episode5']['res1080']})
+    return render(request, 'main/homeless_god/season-2/episode-5.html')
 
 
 def hg6_2(request):
-    return render(request, 'main/homeless_god/season-2/episode-6.html')#, {'url': url_noragami_season2_ep_1()[5]['episode6']['res1080']})
+    # , {'url': url_noragami_season2_ep_1()[5]['episode6']['res1080']})
+    return render(request, 'main/homeless_god/season-2/episode-6.html')
 
 
 def hg7_2(request):
-    return render(request, 'main/homeless_god/season-2/episode-7.html')#, {'url': url_noragami_season2_ep_1()[6]['episode7']['res1080']})
+    # , {'url': url_noragami_season2_ep_1()[6]['episode7']['res1080']})
+    return render(request, 'main/homeless_god/season-2/episode-7.html')
 
 
 def hg8_2(request):
-    return render(request, 'main/homeless_god/season-2/episode-8.html')#, {'url': url_noragami_season2_ep_1()[7]['episode8']['res1080']})
+    # , {'url': url_noragami_season2_ep_1()[7]['episode8']['res1080']})
+    return render(request, 'main/homeless_god/season-2/episode-8.html')
 
 
 def hg9_2(request):
-    return render(request, 'main/homeless_god/season-2/episode-9.html')#, {'url': url_noragami_season2_ep_1()[8]['episode9']['res1080']})
+    # , {'url': url_noragami_season2_ep_1()[8]['episode9']['res1080']})
+    return render(request, 'main/homeless_god/season-2/episode-9.html')
 
 
 def hg10_2(request):
-    return render(request, 'main/homeless_god/season-2/episode-10.html')#, {'url': url_noragami_season2_ep_1()[9]['episode10']['res1080']})
+    # , {'url': url_noragami_season2_ep_1()[9]['episode10']['res1080']})
+    return render(request, 'main/homeless_god/season-2/episode-10.html')
 
 
 def hg11_2(request):
-    return render(request, 'main/homeless_god/season-2/episode-11.html')#, {'url': url_noragami_season2_ep_1()[10]['episode11']['res1080']})
+    # , {'url': url_noragami_season2_ep_1()[10]['episode11']['res1080']})
+    return render(request, 'main/homeless_god/season-2/episode-11.html')
 
 
 def hg12_2(request):
-    return render(request, 'main/homeless_god/season-2/episode-12.html')#, {'url': url_noragami_season2_ep_1()[11]['episode12']['res1080']})
+    # , {'url': url_noragami_season2_ep_1()[11]['episode12']['res1080']})
+    return render(request, 'main/homeless_god/season-2/episode-12.html')
 
 
 def hg13_2(request):
-    return render(request, 'main/homeless_god/season-2/episode-13.html')#, {'url': url_noragami_season2_ep_1()[12]['episode13']['res1080']})
+    # , {'url': url_noragami_season2_ep_1()[12]['episode13']['res1080']})
+    return render(request, 'main/homeless_god/season-2/episode-13.html')
 
 
-
-
-
-# dororo 
+# dororo
 def dor1(request):
-    return render(request, 'main/dororo/episode-1.html')#, {'url': url_dororo_ep_1()[0]['episode1']['res1080']})
+    # , {'url': url_dororo_ep_1()[0]['episode1']['res1080']})
+    return render(request, 'main/dororo/episode-1.html')
 
 
 def dor2(request):
-    return render(request, 'main/dororo/episode-2.html')#, {'url': url_dororo_ep_1()[1]['episode2']['res1080']})
+    # , {'url': url_dororo_ep_1()[1]['episode2']['res1080']})
+    return render(request, 'main/dororo/episode-2.html')
 
 
 def dor3(request):
-    return render(request, 'main/dororo/episode-3.html')#, {'url': url_dororo_ep_1()[2]['episode3']['res1080']})
+    # , {'url': url_dororo_ep_1()[2]['episode3']['res1080']})
+    return render(request, 'main/dororo/episode-3.html')
 
 
 def dor4(request):
-    return render(request, 'main/dororo/episode-4.html')#, {'url': url_dororo_ep_1()[3]['episode4']['res1080']})
+    # , {'url': url_dororo_ep_1()[3]['episode4']['res1080']})
+    return render(request, 'main/dororo/episode-4.html')
 
 
 def dor5(request):
-    return render(request, 'main/dororo/episode-5.html')#, {'url': url_dororo_ep_1()[4]['episode5']['res1080']})
+    # , {'url': url_dororo_ep_1()[4]['episode5']['res1080']})
+    return render(request, 'main/dororo/episode-5.html')
 
 
 def dor6(request):
-    return render(request, 'main/dororo/episode-6.html')#, {'url': url_dororo_ep_1()[5]['episode6']['res1080']})
+    # , {'url': url_dororo_ep_1()[5]['episode6']['res1080']})
+    return render(request, 'main/dororo/episode-6.html')
 
 
 def dor7(request):
-    return render(request, 'main/dororo/episode-7.html')#, {'url': url_dororo_ep_1()[6]['episode7']['res1080']})
+    # , {'url': url_dororo_ep_1()[6]['episode7']['res1080']})
+    return render(request, 'main/dororo/episode-7.html')
 
 
 def dor8(request):
-    return render(request, 'main/dororo/episode-8.html')#, {'url': url_dororo_ep_1()[7]['episode8']['res1080']})
+    # , {'url': url_dororo_ep_1()[7]['episode8']['res1080']})
+    return render(request, 'main/dororo/episode-8.html')
 
 
 def dor9(request):
-    return render(request, 'main/dororo/episode-9.html')#, {'url': url_dororo_ep_1()[8]['episode9']['res1080']})
+    # , {'url': url_dororo_ep_1()[8]['episode9']['res1080']})
+    return render(request, 'main/dororo/episode-9.html')
 
 
 def dor10(request):
-    return render(request, 'main/dororo/episode-10.html')#, {'url': url_dororo_ep_1()[9]['episode10']['res1080']})
+    # , {'url': url_dororo_ep_1()[9]['episode10']['res1080']})
+    return render(request, 'main/dororo/episode-10.html')
 
 
 def dor11(request):
-    return render(request, 'main/dororo/episode-11.html')#, {'url': url_dororo_ep_1()[10]['episode11']['res1080']})
+    # , {'url': url_dororo_ep_1()[10]['episode11']['res1080']})
+    return render(request, 'main/dororo/episode-11.html')
 
 
 def dor12(request):
-    return render(request, 'main/dororo/episode-12.html')#, {'url': url_dororo_ep_1()[11]['episode12]['res1080']})
+    # , {'url': url_dororo_ep_1()[11]['episode12]['res1080']})
+    return render(request, 'main/dororo/episode-12.html')
 
 
 def dor13(request):
-    return render(request, 'main/dororo/episode-13.html')#, {'url': url_dororo_ep_1()[12]['episode13']['res1080']})
+    # , {'url': url_dororo_ep_1()[12]['episode13']['res1080']})
+    return render(request, 'main/dororo/episode-13.html')
 
 
 def dor14(request):
-    return render(request, 'main/dororo/episode-14.html')#, {'url': url_dororo_ep_1()[13]['episode14']['res1080']})
+    # , {'url': url_dororo_ep_1()[13]['episode14']['res1080']})
+    return render(request, 'main/dororo/episode-14.html')
 
 
 def dor15(request):
-    return render(request, 'main/dororo/episode-15.html')#, {'url': url_dororo_ep_1()[14]['episode15']['res1080']})
+    # , {'url': url_dororo_ep_1()[14]['episode15']['res1080']})
+    return render(request, 'main/dororo/episode-15.html')
 
 
 def dor16(request):
-    return render(request, 'main/dororo/episode-16.html')#, {'url': url_dororo_ep_1()[15]['episode16']['res1080']})
+    # , {'url': url_dororo_ep_1()[15]['episode16']['res1080']})
+    return render(request, 'main/dororo/episode-16.html')
 
 
 def dor17(request):
-    return render(request, 'main/dororo/episode-17.html')#, {'url': url_dororo_ep_1()[16]['episode17']['res1080']})
+    # , {'url': url_dororo_ep_1()[16]['episode17']['res1080']})
+    return render(request, 'main/dororo/episode-17.html')
 
 
 def dor18(request):
-    return render(request, 'main/dororo/episode-18.html')#, {'url': url_dororo_ep_1()[17]['episode18']['res1080']})
+    # , {'url': url_dororo_ep_1()[17]['episode18']['res1080']})
+    return render(request, 'main/dororo/episode-18.html')
 
 
 def dor19(request):
-    return render(request, 'main/dororo/episode-19.html')#, {'url': url_dororo_ep_1()[18]['episode19']['res1080']})
+    # , {'url': url_dororo_ep_1()[18]['episode19']['res1080']})
+    return render(request, 'main/dororo/episode-19.html')
 
 
 def dor20(request):
-    return render(request, 'main/dororo/episode-20.html')#, {'url': url_dororo_ep_1()[19]['episode20']['res1080']})
+    # , {'url': url_dororo_ep_1()[19]['episode20']['res1080']})
+    return render(request, 'main/dororo/episode-20.html')
 
 
 def dor21(request):
-    return render(request, 'main/dororo/episode-21.html')#, {'url': url_dororo_ep_1()[20]['episode21']['res1080']})
+    # , {'url': url_dororo_ep_1()[20]['episode21']['res1080']})
+    return render(request, 'main/dororo/episode-21.html')
 
 
 def dor22(request):
-    return render(request, 'main/dororo/episode-22.html')#, {'url': url_dororo_ep_1()[21]['episode22']['res1080']})
+    # , {'url': url_dororo_ep_1()[21]['episode22']['res1080']})
+    return render(request, 'main/dororo/episode-22.html')
 
 
 def dor23(request):
-    return render(request, 'main/dororo/episode-23.html')#, {'url': url_dororo_ep_1()[22]['episode23']['res1080']})
+    # , {'url': url_dororo_ep_1()[22]['episode23']['res1080']})
+    return render(request, 'main/dororo/episode-23.html')
 
 
 def dor24(request):
-    return render(request, 'main/dororo/episode-24.html')#, {'url': url_dororo_ep_1()[23]['episode24']['res1080']})
+    # , {'url': url_dororo_ep_1()[23]['episode24']['res1080']})
+    return render(request, 'main/dororo/episode-24.html')
 
 
-
-
-#tower of  god
+# tower of  god
 def tog1(request):
-    return render(request, 'main/tower_of_god/episode-1.html')#, {'url': url_tower_of_god_ep_1()[0]['episode1']['res1080']})    
+    # , {'url': url_tower_of_god_ep_1()[0]['episode1']['res1080']})
+    return render(request, 'main/tower_of_god/episode-1.html')
 
 
 def tog2(request):
-    return render(request, 'main/tower_of_god/episode-2.html')#, {'url': url_tower_of_god_ep_1()[1]['episode2']['res1080']})
+    # , {'url': url_tower_of_god_ep_1()[1]['episode2']['res1080']})
+    return render(request, 'main/tower_of_god/episode-2.html')
 
 
 def tog3(request):
-    return render(request, 'main/tower_of_god/episode-3.html')#, {'url': url_tower_of_god_ep_1()[2]['episode3']['res1080']})
+    # , {'url': url_tower_of_god_ep_1()[2]['episode3']['res1080']})
+    return render(request, 'main/tower_of_god/episode-3.html')
 
 
 def tog4(request):
-    return render(request, 'main/tower_of_god/episode-4.html')#, {'url': url_tower_of_god_ep_1()[3]['episode4']['res1080']})
+    # , {'url': url_tower_of_god_ep_1()[3]['episode4']['res1080']})
+    return render(request, 'main/tower_of_god/episode-4.html')
 
 
 def tog5(request):
-    return render(request, 'main/tower_of_god/episode-5.html')#, {'url': url_tower_of_god_ep_1()[4]['episode5']['res1080']})
+    # , {'url': url_tower_of_god_ep_1()[4]['episode5']['res1080']})
+    return render(request, 'main/tower_of_god/episode-5.html')
 
 
 def tog6(request):
-    return render(request, 'main/tower_of_god/episode-6.html')#, {'url': url_tower_of_god_ep_1()[5]['episode6']['res1080']})
+    # , {'url': url_tower_of_god_ep_1()[5]['episode6']['res1080']})
+    return render(request, 'main/tower_of_god/episode-6.html')
 
 
 def tog7(request):
-    return render(request, 'main/tower_of_god/episode-7.html')#, {'url': url_tower_of_god_ep_1()[6]['episode7']['res1080']})
+    # , {'url': url_tower_of_god_ep_1()[6]['episode7']['res1080']})
+    return render(request, 'main/tower_of_god/episode-7.html')
 
 
 def tog8(request):
-    return render(request, 'main/tower_of_god/episode-8.html')#, {'url': url_tower_of_god_ep_1()[7]['episode8']['res1080']})
+    # , {'url': url_tower_of_god_ep_1()[7]['episode8']['res1080']})
+    return render(request, 'main/tower_of_god/episode-8.html')
 
 
 def tog9(request):
-    return render(request, 'main/tower_of_god/episode-9.html')#, {'url': url_tower_of_god_ep_1()[8]['episode9']['res1080']})
+    # , {'url': url_tower_of_god_ep_1()[8]['episode9']['res1080']})
+    return render(request, 'main/tower_of_god/episode-9.html')
 
 
 def tog10(request):
-    return render(request, 'main/tower_of_god/episode-10.html')#, {'url': url_tower_of_god_ep_1()[9]['episode10']['res1080']})
+    # , {'url': url_tower_of_god_ep_1()[9]['episode10']['res1080']})
+    return render(request, 'main/tower_of_god/episode-10.html')
 
 
 def tog11(request):
-    return render(request, 'main/tower_of_god/episode-11.html')#, {'url': url_tower_of_god_ep_1()[10]['episode11']['res1080']})
+    # , {'url': url_tower_of_god_ep_1()[10]['episode11']['res1080']})
+    return render(request, 'main/tower_of_god/episode-11.html')
 
 
 def tog12(request):
-    return render(request, 'main/tower_of_god/episode-12.html')#, {'url': url_tower_of_god_ep_1()[11]['episode12']['res1080']})
+    # , {'url': url_tower_of_god_ep_1()[11]['episode12']['res1080']})
+    return render(request, 'main/tower_of_god/episode-12.html')
 
 
 def tog13(request):
-    return render(request, 'main/tower_of_god/episode-13.html')#, {'url': url_tower_of_god_ep_1()[12]['episode13']['res1080']})
+    # , {'url': url_tower_of_god_ep_1()[12]['episode13']['res1080']})
+    return render(request, 'main/tower_of_god/episode-13.html')
 
 
-
-
-
-#tokyo avengers
+# tokyo avengers
 def ta1(request):
-    return render(request, 'main/tokyo_avengers/episode-1.html')#, {'url': url_tokyo_avengers_ep_1()[0]['episode1']['res1080']})
+    # , {'url': url_tokyo_avengers_ep_1()[0]['episode1']['res1080']})
+    return render(request, 'main/tokyo_avengers/episode-1.html')
 
 
 def ta2(request):
-    return render(request, 'main/tokyo_avengers/episode-2.html')#, {'url': url_tokyo_avengers_ep_1()[1]['episode2']['res1080']})
+    # , {'url': url_tokyo_avengers_ep_1()[1]['episode2']['res1080']})
+    return render(request, 'main/tokyo_avengers/episode-2.html')
 
 
 def ta3(request):
-    return render(request, 'main/tokyo_avengers/episode-3.html')#, {'url': url_tokyo_avengers_ep_1()[2]['episode3']['res1080']})
+    # , {'url': url_tokyo_avengers_ep_1()[2]['episode3']['res1080']})
+    return render(request, 'main/tokyo_avengers/episode-3.html')
 
 
 def ta4(request):
-    return render(request, 'main/tokyo_avengers/episode-4.html')#, {'url': url_tokyo_avengers_ep_1()[3]['episode4']['res1080']})
+    # , {'url': url_tokyo_avengers_ep_1()[3]['episode4']['res1080']})
+    return render(request, 'main/tokyo_avengers/episode-4.html')
 
 
 def ta5(request):
-    return render(request, 'main/tokyo_avengers/episode-5.html')#, {'url': url_tokyo_avengers_ep_1()[4]['episode5']['res1080']})
+    # , {'url': url_tokyo_avengers_ep_1()[4]['episode5']['res1080']})
+    return render(request, 'main/tokyo_avengers/episode-5.html')
 
 
 def ta6(request):
-    return render(request, 'main/tokyo_avengers/episode-6.html')#, {'url': url_tokyo_avengers_ep_1()[5]['episode6']['res1080']})
+    # , {'url': url_tokyo_avengers_ep_1()[5]['episode6']['res1080']})
+    return render(request, 'main/tokyo_avengers/episode-6.html')
 
 
 def ta7(request):
-    return render(request, 'main/tokyo_avengers/episode-7.html')#, {'url': url_tokyo_avengers_ep_1()[6]['episode7']['res1080']})
+    # , {'url': url_tokyo_avengers_ep_1()[6]['episode7']['res1080']})
+    return render(request, 'main/tokyo_avengers/episode-7.html')
 
 
 def ta8(request):
-    return render(request, 'main/tokyo_avengers/episode-8.html')#, {'url': url_tokyo_avengers_ep_1()[7]['episode8']['res1080']})
+    # , {'url': url_tokyo_avengers_ep_1()[7]['episode8']['res1080']})
+    return render(request, 'main/tokyo_avengers/episode-8.html')
 
 
 def ta9(request):
-    return render(request, 'main/tokyo_avengers/episode-9.html')#, {'url': url_tokyo_avengers_ep_1()[8]['episode9']['res1080']})
+    # , {'url': url_tokyo_avengers_ep_1()[8]['episode9']['res1080']})
+    return render(request, 'main/tokyo_avengers/episode-9.html')
 
 
 def ta10(request):
-    return render(request, 'main/tokyo_avengers/episode-10.html')#, {'url': url_tokyo_avengers_ep_1()[9]['episode10']['res1080']})
+    # , {'url': url_tokyo_avengers_ep_1()[9]['episode10']['res1080']})
+    return render(request, 'main/tokyo_avengers/episode-10.html')
 
 
 def ta11(request):
-    return render(request, 'main/tokyo_avengers/episode-11.html')#, {'url': url_tokyo_avengers_ep_1()[10]['episode11']['res1080']})
+    # , {'url': url_tokyo_avengers_ep_1()[10]['episode11']['res1080']})
+    return render(request, 'main/tokyo_avengers/episode-11.html')
 
 
 def ta12(request):
-    return render(request, 'main/tokyo_avengers/episode-12.html')#, {'url': url_tokyo_avengers_ep_1()[11]['episode12']['res1080']})
+    # , {'url': url_tokyo_avengers_ep_1()[11]['episode12']['res1080']})
+    return render(request, 'main/tokyo_avengers/episode-12.html')
 
 
 def ta13(request):
-    return render(request, 'main/tokyo_avengers/episode-13.html')#, {'url': url_tokyo_avengers_ep_1()[12]['episode13']['res1080']})
+    # , {'url': url_tokyo_avengers_ep_1()[12]['episode13']['res1080']})
+    return render(request, 'main/tokyo_avengers/episode-13.html')
 
 
 def ta14(request):
-    return render(request, 'main/tokyo_avengers/episode-14.html')#, {'url': url_tokyo_avengers_ep_1()[13]['episode14']['res1080']})
+    # , {'url': url_tokyo_avengers_ep_1()[13]['episode14']['res1080']})
+    return render(request, 'main/tokyo_avengers/episode-14.html')
 
 
 def ta15(request):
-    return render(request, 'main/tokyo_avengers/episode-15.html')#, {'url': url_tokyo_avengers_ep_1()[14]['episode15']['res1080']})
+    # , {'url': url_tokyo_avengers_ep_1()[14]['episode15']['res1080']})
+    return render(request, 'main/tokyo_avengers/episode-15.html')
 
 
 def ta16(request):
-    return render(request, 'main/tokyo_avengers/episode-16.html')#, {'url': url_tokyo_avengers_ep_1()[15]['episode16']['res1080']})
+    # , {'url': url_tokyo_avengers_ep_1()[15]['episode16']['res1080']})
+    return render(request, 'main/tokyo_avengers/episode-16.html')
 
 
 def ta17(request):
-    return render(request, 'main/tokyo_avengers/episode-17.html')#, {'url': url_tokyo_avengers_ep_1()[16]['episode17']['res1080']})
+    # , {'url': url_tokyo_avengers_ep_1()[16]['episode17']['res1080']})
+    return render(request, 'main/tokyo_avengers/episode-17.html')
 
 
 def ta18(request):
-    return render(request, 'main/tokyo_avengers/episode-18.html')#, {'url': url_tokyo_avengers_ep_1()[17]['episode18']['res1080']})
+    # , {'url': url_tokyo_avengers_ep_1()[17]['episode18']['res1080']})
+    return render(request, 'main/tokyo_avengers/episode-18.html')
 
 
 def ta19(request):
-    return render(request, 'main/tokyo_avengers/episode-19.html')#, {'url': url_tokyo_avengers_ep_1()[18]['episode19']['res1080']})
+    # , {'url': url_tokyo_avengers_ep_1()[18]['episode19']['res1080']})
+    return render(request, 'main/tokyo_avengers/episode-19.html')
 
 
 def ta20(request):
-    return render(request, 'main/tokyo_avengers/episode-20.html')#, {'url': url_tokyo_avengers_ep_1()[19]['episode20']['res1080']})
+    # , {'url': url_tokyo_avengers_ep_1()[19]['episode20']['res1080']})
+    return render(request, 'main/tokyo_avengers/episode-20.html')
 
 
 def ta21(request):
-    return render(request, 'main/tokyo_avengers/episode-21.html')#, {'url': url_tokyo_avengers_ep_1()[20]['episode21']['res1080']})
+    # , {'url': url_tokyo_avengers_ep_1()[20]['episode21']['res1080']})
+    return render(request, 'main/tokyo_avengers/episode-21.html')
 
 
 def ta22(request):
-    return render(request, 'main/tokyo_avengers/episode-22.html')#, {'url': url_tokyo_avengers_ep_1()[21]['episode22']['res1080']})
+    # , {'url': url_tokyo_avengers_ep_1()[21]['episode22']['res1080']})
+    return render(request, 'main/tokyo_avengers/episode-22.html')
 
 
 def ta23(request):
-    return render(request, 'main/tokyo_avengers/episode-23.html')#, {'url': url_tokyo_avengers_ep_1()[22]['episode23']['res1080']})
+    # , {'url': url_tokyo_avengers_ep_1()[22]['episode23']['res1080']})
+    return render(request, 'main/tokyo_avengers/episode-23.html')
 
 
 def ta24(request):
-    return render(request, 'main/tokyo_avengers/episode-24.html')#, {'url': url_tokyo_avengers_ep_1()[23]['episode24']['res1080']})
-
-
+    # , {'url': url_tokyo_avengers_ep_1()[23]['episode24']['res1080']})
+    return render(request, 'main/tokyo_avengers/episode-24.html')
 
 
 '''
@@ -548,9 +631,7 @@ def user_agent():
 '''
 
 
-
-
-#parser onepunchman season 1
+# parser onepunchman season 1
 '''
 def url_punch_season1_ep_1():
    
