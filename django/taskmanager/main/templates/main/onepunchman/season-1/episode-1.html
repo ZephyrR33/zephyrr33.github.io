@@ -58,38 +58,37 @@
                 </h4>
 
                 <div class="name_nemenu">
-                    <div><img style="display: none;" id="hh" src="{% static 'main/images/home_aktive.png' %}" alt="">
-                    </div>
-                    <div><img id="aa" src="{% static 'main/images/home.png' %}" alt=""></div>
+                    <div><img id="ff" src="{% static 'main/images/home_aktive.png' %}" alt=""></div>
+                    <div><img style="display: none;" id="jj" src="{% static 'main/images/home.png' %}" alt=""></div>
                     <div class="pustota"></div>
-                    <div class="rec7 th" id="th"><img src="{% static 'main/images/Rectangle 7.png' %}"></div>
-                    <div class="onst th" id="tb"><img src="{% static 'main/images/onst.png' %}" alt=""></div>
-                    <h4><a class="osnpg" href="{% url 'index' %}" id="bb" onmouseover="hoverOnRight()"
-                            onmouseout="hoverOffRight()">Главная</a></h4>
+                    <div class="rec7" id="gh"><img src="{% static 'main/images/Rectangle 7.png' %}"></div>
+                    <div class="onst" id="sl"><img src="{% static 'main/images/onst.png' %}" alt=""></div>
+                    <h4><a class="osnpg" href="{% url 'index' %}" style="color: #C3079A;" id="kk">Главная</a></h4>
                 </div>
 
                 <div class="name_nemenu">
-                    <div><img id="zz" src="{% static 'main/images/movie.png' %}" alt=""></div>
-                    <div><img style="display: none;" id="mm" src="{% static 'main/images/movie_aktive.png' %}" alt="">
+                    <div><img id="aa" src="{% static 'main/images/movie.png' %}" alt=""></div>
+                    <div><img style="display: none;" id="hh" src="{% static 'main/images/movie_aktive.png' %}" alt="">
+                    </div>
+                    <div class="pustota"></div>
+                    <div class="rec7 th" id="th"><img src="{% static 'main/images/Rectangle 7.png' %}"></div>
+                    <div class="onst th" id="tb"><img src="{% static 'main/images/onst.png' %}" alt=""></div>
+                    <h4><a class="gender_pg" href="{% url 'genres' %}" onmouseover="hoverOnRight()"
+                            onmouseout="hoverOffRight()" id="bb">Жанры</a></h4>
+                </div>
+
+                <div class="name_nemenu">
+                    <div><img id="zz" src="{% static 'main/images/heart.png' %}" alt=""></div>
+                    <div><img style="display: none;" id="mm" src="{% static 'main/images/heart_aktive.png' %}" alt="">
                     </div>
                     <div class="pustota"></div>
                     <div class="rec7 th" id="vh"><img src="{% static 'main/images/Rectangle 7.png' %}"></div>
                     <div class="onst th" id="vb"><img src="{% static 'main/images/onst.png' %}" alt=""></div>
-                    <h4><a class="gender_pg" href="{% url 'genres' %}" id="nn" onmouseover="hoverOnLeft()"
-                            onmouseout="hoverOffLeft()">Жанры</a></h4>
+                    <h4><a class="favorite_pg" href="{% url 'favorites' %}" onmouseover="hoverOnLeft()"
+                            onmouseout="hoverOffLeft()" id="nn">Избранное</a></h4>
                 </div>
 
-                <div class="name_nemenu">
-                    <div><img style="display: none;" id="jj" src="{% static 'main/images/heart.png' %}" alt=""></div>
-                    <div><img id="ff" src="{% static 'main/images/heart_aktive.png' %}" alt=""></div>
-                    <div class="pustota"></div>
-                    <div class="rec7" id="gh"><img src="{% static 'main/images/Rectangle 7.png' %}"></div>
-                    <div class="onst" id="sl"><img src="{% static 'main/images/onst.png' %}" alt=""></div>
-                    <h4><a class="favorite_pg" href="{% url 'favorites' %}" style="color: #C3079A;"
-                            id="kk">Избранное</a></h4>
-                </div>
-
-                <div class="name_nemenu">
+                <div class="name_nemenu" style="display: none;">
                     <div><img id="di" src="{% static 'main/images/Group.png' %}" alt=""></div>
                     <div><img style="display: none;" id="id" src="{% static 'main/images/Group_aktive.png' %}" alt="">
                     </div>
@@ -201,45 +200,28 @@
                 <iframe frameborder="0" allowfullscreen="allowfullscreen"
                     src="https://api.synchroncode.com/embed/movie/2269" class="zzxc"></iframe>
             </div>
-            <div>
-                <div class="name_series_next">
-                    <h4>
-                        <div class="name_one_series">"{{ usr }}"</div>
-                    </h4>
-                    <div class="series_slydes_one_serie">
 
-                        <div class="series_slyder_div"><a href="{% url 'onepunchman_main' %}"><img
-                                    src="{% static 'main/images/pryamoyg_series.png' %}" alt="">
-                                <h4>
-                                    <div class="series_slyder_div_name">
-                                        <div class="hhhnhhh">все серии</div>
-                                    </div>
-                                </h4>
-                            </a></div>
-                        <div class="series_slyder_div"><a href=""><img
-                                    src="{% static 'main/images/pryamoyg_series.png' %}" alt="">
-                                <h4>
-                                    <div class="series_slyder_div_name">
-                                        <div class="hhhnhhh">2 серия &gt;</div>
-                                    </div>
-                                </h4>
-                            </a></div>
-                    </div>
-                </div>
+            <div class="series_information">
+               <div class="foto_information">
+                <div><img  class="fotofoto" src="{% static 'main/images/onepunch27.png' %}" alt=""></div>
+
+               
 
                 <div class="container_functions">
-                    <div><a href=""><img src="{% static 'main/images/go_izb.png' %}" alt=""></a></div>
-                    <div><a href=""><img src="{% static 'main/images/go_share.png' %}" alt=""></a></div>
-                    <div><a href=""><img src="{% static 'main/images/more-vertical.png' %}" alt=""></a></div>
+                    <div class="PPLL">Ванпачмент</div>
+                    <div class="PPL">Эпизодов: 24</div>
+                    <div class="PPL">Сезон: осень 2015</div>
+                    <div class="PPL">Тип: TV сериал</div>
+                    <div><a href=""><img src="{% static 'main/images/heart27.png' %}" alt=""></a></div>
                 </div>
-
-                <h4>
-                    <div class="text_series_series">Лишь элементы политического процесса, превозмогая сложившуюся
-                        непростую экономическую ситуацию, ограничены исключительно образом мышления. Как принято
-                        считать, явные признаки победы институционализации формируют глобальную экономическую сеть и при
-                        этом - подвергнуты целой серии независимых исследований. Но экономическая повестка сегодняшнего
-                        дня в значительной степени обусловливает важность соответствующих условий активизации.</div>
-                </h4>
+            </div>
+                <div class="text_series_informations">
+                    <h4>
+                        <div class="text_series_series">События разворачиваются на территории вымышленного городка Z. Главным героем является Сайтама. Он супергерой, владеющий несокрушимой силой, способной вынести любого врага с одного удара. Однако в последнее время скучные и однообразные бои надоели пареньку, и он стал разыскивать подходящего соперника. Благо для защитника государства, что наступило время, когда появилось много монстров, желающих разрушить планету.
+                            <br><br>
+                            Если верить легендам, то через 6 месяцев человечество будет в большой опасности. Назревает катаклизм, и появится вселенское зло, уничтожить которое не представляется возможным. «Ассоциация супергероев» идет на все, чтобы предотвратить пророчество и решается на серьезный шаг, призывает в свои ряды отъявленных суперзлодеев. Необходимы любые силы для схватки с монстрами. Но среди злодеев оказывается тот кому все равно на человечество и провозглашает себя сильнейшим, а значит он нарекает себя на схватку с Сайтамой и его верным учеником Геносом.</div>
+                    </h4>
+                </div class="text_series_informations">
             </div>
         </div>
 

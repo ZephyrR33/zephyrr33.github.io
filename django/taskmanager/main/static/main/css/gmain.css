@@ -20,7 +20,64 @@
 html {
     height: 100%; 
 }
+.foto_information{
+    display: flex;
+    justify-content: space-between;
+    width: 793px;
+    height: 510px;
+}
 
+.fotofoto{
+    width: 429px;
+    height: 510px;
+}
+
+.container_functions{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 329px;
+    height: 510px;
+    align-items: left;
+    
+}
+
+.PPL{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 44px;
+width:341px;
+
+
+/* identical to box height */
+
+
+
+color: #FFFFFF;
+}
+
+.PPLL{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 59px;
+/* identical to box height */
+
+
+
+color: #FFFFFF
+}
+
+.series_information{
+    padding-top: 116px;
+}
+
+.text_series_informations{
+
+}
 
 ::-webkit-scrollbar {
     width: 0;
@@ -154,13 +211,7 @@ color: #FFFFFF;
 
 }
 
-.container_functions{
-    display: flex;
-    justify-content: space-between;
-    float: right;
-    width: 695px;
-    height: 54px;
-}
+
 
 .text_series_series{
     font-family: 'Montserrat';
@@ -176,7 +227,7 @@ margin-top: 100px;
 .hhhnhhh{
     display: inline-block;
     vertical-align: middle;
-    margin-top: 10px;
+    margin-top: 53px;
 }
 
 .name_one_series{
