@@ -16,19 +16,21 @@ urlpatterns = [
     #
     #anime main pages
     #
-    path('dororo', views.dororo_main, name='dororo_main'),
-    path('homeless-god', views.homeless_god_main, name='homeless_god_main'),
-    path('tower-of-god', views.tower_of_god_main, name='tower_of_god_main'),
-    path('onepunchman', views.onepunchman_main, name='onepunchman_main'),
-    path('tokyo-avengers', views.tokyo_avengers_main, name='tokyo_avengers_main'),
+    # path('dororo', views.dororo_main, name='dororo_main'),
+    # path('homeless-god', views.homeless_god_main, name='homeless_god_main'),
+    # path('tower-of-god', views.tower_of_god_main, name='tower_of_god_main'),
+    # path('onepunchman', views.onepunchman_main, name='onepunchman_main'),
+    # path('tokyo-avengers', views.tokyo_avengers_main, name='tokyo_avengers_main'),
     #
     #new anime pages
     #
-    path('onepunchman/season-1/episode-1', views.opm1_1, name='onepunchman_season_1_episode_1'),
-    path('homeless-god/season-1/episode-1', views.hg1_1, name='homeless_god_season_1_episode_1'),
-    path('dororo/episode-1', views.dor1, name='dororo_episode_1'),
-    path('tower-of-god/episode-1', views.tog1, name='tower_of_god_episode_1'),
-    path('tokyo-avengers/episode-1', views.ta1, name='tokyo_avengers_episode_1'),
+    path('onepunchman', views.opm1_1, name='onepunchman'),
+    path('homeless-god', views.hg1_1, name='homeless_god'),
+    path('dororo', views.dor1, name='dororo'),
+    # path('tower-of-god', views.tog1, name='tower_of_god'),
+    path('tokyo-avengers', views.ta1, name='tokyo_avengers'),
+
+    path('<slug:slug>/', views.AnimeDetail.as_view(), name='page_anime'),
    
 ]
 
