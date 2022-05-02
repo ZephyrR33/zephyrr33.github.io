@@ -173,8 +173,11 @@
             <div class="headerr">
                 <div class="search">
                     <div>
-                        <img class="img_search" src="{% static 'main/images/search.png' %}" alt="">
-                        <input class="poisk" type="text" placeholder="Поиск">
+                        <form action="{% url 'genres' %}" method="get">
+                            <img class="img_search" src="{% static 'main/images/search.png' %}" alt="">
+                            <input class="poisk" type="text" placeholder="Поиск">
+                            <button type="submit"></button>
+                        </form>
                     </div>
                     <div class="serch_panel">
                         <div class="korona"><a href=""><img src="{% static 'main/images/korona.png' %}" alt=""></a></div>
@@ -210,46 +213,50 @@
                 </div>
 
                 <div class="block_generes">
+                    
                     <div class="selve_generes">
+                        
+                        <div class=""><a href="{% url 'page_anime' on.url %}"><img src="{% static 'main/images/onepunch.png' %}" alt=""></a> 
+                        </div>
+                        
+                        <div class=""><a href="{% url 'page_anime' hg.url %}"><img src="{% static 'main/images/homegod.png' %}"
+                                    alt=""></a></div>
+                        <div class=""><a href="{% url 'page_anime' tg.url %}"><img src="{% static 'main/images/tower.png' %}"
+                                    alt=""></a></div>
+                    </div>
+                    
+                    <div class="selve_generes">
+                        <div class=""><a href="{% url 'page_anime' tok.url %}"><img src="{% static 'main/images/mstit.png' %}" alt=""></a>
+                        </div>
+                        <div class=""><a href="{% url 'page_anime' dor.url %}"><img src="{% static 'main/images/dororo.png' %}"
+                                    alt=""></a></div>
+                        <div class=""><a href="{% url 'page_anime' at.url %}"><img src="{% static 'main/images/ataka_titanov.png' %}"
+                                    alt=""></a></div>
+                    </div>
+                    <div class="selve_generes">
+                        <div class=""><a href="{% url 'page_anime' klin.url %}"><img src="{% static 'main/images/klinok_demons.png' %}" alt=""></a>
+                        </div>
+                        <div class=""><a href="{% url 'page_anime' nar.url %}"><img src="{% static 'main/images/naruto.png' %}"
+                                    alt=""></a></div>
+                        <div class=""><a href="{% url 'page_anime' nev.url %}"><img src="{% static 'main/images/neverlend.png' %}"
+                                    alt=""></a></div>
+                    </div>
+                    <div class="selve_generes">
+                        <div class=""><a href="{% url 'page_anime' mha.url %}"><img src="{% static 'main/images/my_heroes_academy.png' %}" 
+                                    alt=""></a></div>
+                        <div class=""><a href="{% url 'page_anime' mso.url %}"><img src="{% static 'main/images/master_mec.png' %}"
+                                    alt=""></a></div>
+                        <div class=""><a href="{% url 'page_anime' mw.url %}"><img src="{% static 'main/images/magicwar.png' %}"
+                                    alt=""></a></div>
+                    </div>
+                    <!-- <div class="selve_generes">
                         <div class=""><a href=""><img src="{% static 'main/images/vanpise_future.png' %}" alt=""></a>
                         </div>
                         <div class=""><a href=""><img src="{% static 'main/images/myheroaccademy_future.png' %}"
                                     alt=""></a></div>
                         <div class=""><a href=""><img src="{% static 'main/images/swordmasteronline_future.png' %}"
                                     alt=""></a></div>
-                    </div>
-                    <div class="selve_generes">
-                        <div class=""><a href=""><img src="{% static 'main/images/vanpise_future.png' %}" alt=""></a>
-                        </div>
-                        <div class=""><a href=""><img src="{% static 'main/images/myheroaccademy_future.png' %}"
-                                    alt=""></a></div>
-                        <div class=""><a href=""><img src="{% static 'main/images/swordmasteronline_future.png' %}"
-                                    alt=""></a></div>
-                    </div>
-                    <div class="selve_generes">
-                        <div class=""><a href=""><img src="{% static 'main/images/vanpise_future.png' %}" alt=""></a>
-                        </div>
-                        <div class=""><a href=""><img src="{% static 'main/images/myheroaccademy_future.png' %}"
-                                    alt=""></a></div>
-                        <div class=""><a href=""><img src="{% static 'main/images/swordmasteronline_future.png' %}"
-                                    alt=""></a></div>
-                    </div>
-                    <div class="selve_generes">
-                        <div class=""><a href=""><img src="{% static 'main/images/vanpise_future.png' %}" alt=""></a>
-                        </div>
-                        <div class=""><a href=""><img src="{% static 'main/images/myheroaccademy_future.png' %}"
-                                    alt=""></a></div>
-                        <div class=""><a href=""><img src="{% static 'main/images/swordmasteronline_future.png' %}"
-                                    alt=""></a></div>
-                    </div>
-                    <div class="selve_generes">
-                        <div class=""><a href=""><img src="{% static 'main/images/vanpise_future.png' %}" alt=""></a>
-                        </div>
-                        <div class=""><a href=""><img src="{% static 'main/images/myheroaccademy_future.png' %}"
-                                    alt=""></a></div>
-                        <div class=""><a href=""><img src="{% static 'main/images/swordmasteronline_future.png' %}"
-                                    alt=""></a></div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
@@ -268,6 +275,11 @@
                         <div class="stril">
                             <div class="stril_ll">
                                 <div class="stril_l">
+                                    <div><a href=""><img src="" alt="">  <h1>Здесь пока ничего нет, но скоро будет!</h1> </a>
+                                    </div>
+                                    <div><a href=""><img src="" alt=""></a></div>
+                                </div>
+                                <!-- <div class="stril_l">
                                     <div><a href=""><img src="{% static 'main/images/most_prosm.png' %}" alt=""></a>
                                     </div>
                                     <div><a href=""><img src="{% static 'main/images/plus.png' %}" alt=""></a></div>
@@ -311,12 +323,7 @@
                                     <div><a href=""><img src="{% static 'main/images/most_prosm.png' %}" alt=""></a>
                                     </div>
                                     <div><a href=""><img src="{% static 'main/images/plus.png' %}" alt=""></a></div>
-                                </div>
-                                <div class="stril_l">
-                                    <div><a href=""><img src="{% static 'main/images/most_prosm.png' %}" alt=""></a>
-                                    </div>
-                                    <div><a href=""><img src="{% static 'main/images/plus.png' %}" alt=""></a></div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -332,8 +339,8 @@
                                 <div class="container_type">
 
                                     <div class="container_container1">
-                                        <button class="ganr fv">Детектив</button>
-                                        <button class="ganr fv">Драмма</button>
+                                        <button class="ganr fv">Детектив</button> 
+                                        <button class="ganr fv">Драма</button>
                                         <button class="ganr fv">Игры</button>
                                         <button class="ganr fv">Комедия</button>
                                         <button class="ganr fv">Приключения</button>
@@ -351,7 +358,7 @@
                                     
                                     <div class="container_container3">
                                         <button class="ganr fv">Экшен</button>
-                                        <button class="ganr fv">Фентази</button>
+                                        <button class="ganr fv">Фэнтeзи</button>
                                         <button class="ganr fv">Ужасы</button>
                                         <button class="ganr fv">Магия</button>
                                         <button class="ganr fv">Музыка</button>

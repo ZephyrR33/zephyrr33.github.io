@@ -31,7 +31,7 @@ urlpatterns = [
     path('tokyo-avengers', views.ta1, name='tokyo_avengers'),
 
     path('<slug:slug>/', views.AnimeDetail.as_view(), name='page_anime'),
-   
+    path('search/', views.Search.as_view(), name='search'),
 ]
 
 if settings.DEBUG:

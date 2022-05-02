@@ -1,4 +1,7 @@
 
+
+from django.views.generic import ListView
+from turtle import title
 from django.views.generic import DetailView
 from django_user_agents.utils import get_user_agent
 from bs4 import BeautifulSoup as bs
@@ -18,12 +21,44 @@ django.setup()
 # Create your views here.
 
 def index(request):
-    anime = Anime.objects.all()
-    return render(request, 'main/index.html', {'posters_anime' : anime})
+    anime = Anime.objects.all().order_by('id')[:5]
+
+
+
+    at = Anime.objects.get(url='ataka-titanov')
+    nar = Anime.objects.get(url='naruto')
+    klin = Anime.objects.get(url='kimetsu-no-yaiba')
+
+
+
+    return render(request, 'main/index.html', {'posters_anime' : anime, 'at' : at, 'nar' : nar, 'klin' : klin})
 
 
 def genres(request):
-    return render(request, 'main/genres.html')
+    anime = Anime.objects.all().order_by('id')
+
+    search_query = request.GET.get('q', '')
+    if search_query:
+        anime_info = Anime.objects.filter(url__icontains=search_query)
+    else:
+        anime_info = Anime.objects.all()
+
+
+    on = Anime.objects.get(url='onepunchman')
+    hg = Anime.objects.get(url='homeless-god')
+    tg = Anime.objects.get(url='tower-of-god')
+    tok = Anime.objects.get(url='tokyo-avengers')
+    dor = Anime.objects.get(url='dororo')
+    at = Anime.objects.get(url='ataka-titanov')
+    nar = Anime.objects.get(url='naruto')
+    klin = Anime.objects.get(url='kimetsu-no-yaiba')
+    nev = Anime.objects.get(url='yakusoku-no-neverland')
+    mha = Anime.objects.get(url='my-heroes-academy')
+    mso = Anime.objects.get(url='sword-art-online')
+    mw = Anime.objects.get(url='magic-war')
+
+
+    return render(request, 'main/genres.html', {'anime_info' : anime, 'on' : on, 'hg' : hg, 'tg' : tg, 'tok' : tok, 'dor' : dor, 'at' : at, 'klin' : klin, 'nar' : nar, 'nev' : nev, 'mha' : mha, 'mso' : mso, 'mw' : mw})
 
 
 def favorites(request):
@@ -80,6 +115,20 @@ class AnimeDetail(DetailView):
 
 
 
+class Search(ListView):
+
+    template_name = 'main/genres.html'
+
+    paginate_by = 8
+
+    def get_queryset(self):
+        return Anime.objects.filter(title__icontains=self.request.GET.get('q'))
+
+    
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context['q'] = self.request.GET.get('q')
+        return context
 
 
 

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Favorite</title>
+    <title>{{ anime_page.title }}</title>
     <link href="{% static 'main/css/gmain.css' %}" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -210,6 +210,7 @@
                 <div class="container_functions">
                     <div class="PPLL">{{ anime_page.title }}</div>
                     <div class="PPL">Эпизодов: {{ anime_page.episodes }}</div>
+                    <div class="PPL">Жанры: {% for i in anime_page.genre.all %} {{ i.name }} {% endfor %} </div>
                     <div class="PPL">Дата выхода: {{ anime_page.pubdate }}</div>
                     <div class="PPL">Тип: TV сериал</div>
                     <div><a href=""><img src="{% static 'main/images/heart27.png' %}" alt=""></a></div>

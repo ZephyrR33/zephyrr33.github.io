@@ -186,8 +186,11 @@
             <div class="headerr">
                 <div class="search">
                     <div>
-                        <img class="img_search" src="{% static 'main/images/search.png' %}" alt="">
-                        <input class="poisk" type="text" placeholder="Поиск">
+                        <form action="{% url 'index' %}" method="get">
+                            <img class="img_search" src="{% static 'main/images/search.png' %}" alt="">
+                            <input class="poisk" type="text" placeholder="Поиск" name="q">
+                            <!-- <button type="submit"></button> -->
+                        </form>
                     </div>
                     <div class="serch_panel">
                         <div class="korona"><a href=""><img src="{% static 'main/images/korona.png' %}" alt=""></a>
@@ -209,7 +212,7 @@
                     <img class="main_name_inf" src="{% static 'main/images/sasuke-naruto-uhdpaper.png' %}" alt="">
                     <div class="next" onclick="clickOne()"><img src="{% static 'main/images/next.png' %}" alt="">
                     </div>
-                    <a href="">
+                    <a href="{% url 'page_anime' at.url %}">
                         <div class="woth_osn"><img src="{% static 'main/images/watch_osn.png' %}" alt=""></div>
                     </a>
                     <div class="plus_osn"><img src="{% static 'main/images/plus_osn.png' %}" alt=""></div>
@@ -263,7 +266,7 @@
                     <img class="main_name_inf" src="{% static 'main/images/zxc.png' %}" alt="">
                     <div class="next" onclick="clickTwo()"><img src="{% static 'main/images/next.png' %}" alt="">
                     </div>
-                    <a href="">
+                    <a href="{% url 'page_anime' nar.url %}">
                         <div class="woth_osn"><img src="{% static 'main/images/watch_osn.png' %}" alt=""></div>
                     </a>
                     <div class="plus_osn"><img src="{% static 'main/images/plus_osn.png' %}" alt=""></div>
@@ -313,9 +316,11 @@
                     <img class="main_name_inf" src="{% static 'main/images/klin.png' %}" alt="">
                     <div class="next" onclick="clickThree()"><img src="{% static 'main/images/next.png' %}" alt="">
                     </div>
-                    <a href="">
-                        <div class="woth_osn"><img src="{% static 'main/images/watch_osn.png' %}" alt=""></div>
-                    </a>
+  
+                            <a href="{% url 'page_anime' klin.url %}">
+                                <div class="woth_osn"><img src="{% static 'main/images/watch_osn.png' %}" alt=""></div>
+                            </a>
+
                     <div class="plus_osn"><img src="{% static 'main/images/plus_osn.png' %}" alt=""></div>
                     <h4>
                         <nobr>
