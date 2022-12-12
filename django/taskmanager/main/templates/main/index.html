@@ -101,7 +101,7 @@
                     <div class="pustota"></div>
                     <div class="rec7 th" id="zt"><img src="{% static 'main/images/Rectangle 7.png' %}"></div>
                     <div class="onst th" id="oo"><img src="{% static 'main/images/onst.png' %}" alt=""></div>
-                    <h4><a class="premium_page" href="{% url 'premium' %}" onmouseover="hoverOnMid()"
+                    <h4><a class="premium_page" href="{% url 'register' %}" onmouseover="hoverOnMid()"
                             onmouseout="hoverOffMid()" id="cc">Премиум</a></h4>
                 </div>
                 <script type="text/javascript">
@@ -189,7 +189,7 @@
                         <form action="{% url 'genres' %}" method="get">
                             <img class="img_search" src="{% static 'main/images/search.png' %}" alt="">
                             <input class="poisk"  type="text" placeholder="Поиск" name="q">
-                            <button type="submit"></button>
+                            <!-- <button type="submit"></button> -->
                         </form>
                     </div>
                     <div class="serch_panel">
@@ -197,7 +197,7 @@
                         </div>
                         <div class="korona"><a href=""><img src="{% static 'main/images/uvi.png' %}" alt=""></a>
                         </div>
-                        <div><a href="{% url 'premium' %}"><img class="profil" src="{% static 'main/images/profil.png' %}" alt=""></a>
+                        <div><a href="{% url 'register' %}"><img class="profil" src="{% static 'main/images/profil.png' %}" alt=""></a>
                         </div>
                     </div>
                 </div>
