@@ -9,7 +9,7 @@ import requests
 from django.http import HttpResponse
 from django.shortcuts import render
 import os
-from .models import Anime
+from .models import Anime, Genre
 
 import django
 
@@ -21,7 +21,7 @@ django.setup()
 # Create your views here.
 
 def index(request):
-    anime = Anime.objects.all().order_by('id')[:5]
+    anime = Anime.objects.all().order_by('id')[7:]
 
 
 
@@ -34,31 +34,62 @@ def index(request):
     return render(request, 'main/index.html', {'posters_anime' : anime, 'at' : at, 'nar' : nar, 'klin' : klin})
 
 
-def genres(request):
-    anime = Anime.objects.all().order_by('id')
-
-    search_query = request.GET.get('q', '')
-    if search_query:
-        anime_info = Anime.objects.filter(url__icontains=search_query)
-    else:
-        anime_info = Anime.objects.all()
+class GenreYear:
+    def get_genre(self):
+        return Genre.objects.all()
 
 
-    on = Anime.objects.get(url='onepunchman')
-    hg = Anime.objects.get(url='homeless-god')
-    tg = Anime.objects.get(url='tower-of-god')
-    tok = Anime.objects.get(url='tokyo-avengers')
-    dor = Anime.objects.get(url='dororo')
-    at = Anime.objects.get(url='ataka-titanov')
-    nar = Anime.objects.get(url='naruto')
-    klin = Anime.objects.get(url='kimetsu-no-yaiba')
-    nev = Anime.objects.get(url='yakusoku-no-neverland')
-    mha = Anime.objects.get(url='my-heroes-academy')
-    mso = Anime.objects.get(url='sword-art-online')
-    mw = Anime.objects.get(url='magic-war')
+    def get_year(self): 
+        return Anime.objects.all()
 
 
-    return render(request, 'main/genres.html', {'anime_info' : anime, 'on' : on, 'hg' : hg, 'tg' : tg, 'tok' : tok, 'dor' : dor, 'at' : at, 'klin' : klin, 'nar' : nar, 'nev' : nev, 'mha' : mha, 'mso' : mso, 'mw' : mw})
+
+class Genre(GenreYear):
+    def genres(request):
+
+        # q = request.GET.get('q', '')
+        # if q:
+        #     anime_result = Anime.objects.filter(title__icontains = q)
+        # else:
+        #     anime_result = Anime.objects.all()
+
+        anime = Anime.objects.all().order_by('id')
+
+        search_query = request.GET.get('q', '')
+        if search_query:
+            anime_info = Anime.objects.filter(url__icontains=search_query)
+        else:
+            anime_info = Anime.objects.all()
+
+
+        on = Anime.objects.get(url='onepunchman')
+        hg = Anime.objects.get(url='homeless-god')
+        tg = Anime.objects.get(url='tower-of-god')
+        tok = Anime.objects.get(url='tokyo-avengers')
+        dor = Anime.objects.get(url='dororo')
+        at = Anime.objects.get(url='ataka-titanov')
+        nar = Anime.objects.get(url='naruto')
+        klin = Anime.objects.get(url='kimetsu-no-yaiba')
+        nev = Anime.objects.get(url='yakusoku-no-neverland')
+        mha = Anime.objects.get(url='my-heroes-academy')
+        mso = Anime.objects.get(url='sword-art-online')
+        mw = Anime.objects.get(url='magic-war')
+
+
+        return render(request, 'main/genres.html', {'anime_info' : anime, 'on' : on, 'hg' : hg, 'tg' : tg, 'tok' : tok, 'dor' : dor, 'at' : at, 'klin' : klin, 'nar' : nar, 'nev' : nev, 'mha' : mha, 'mso' : mso, 'mw' : mw})
+
+
+
+
+
+class AnimeDetail(GenreYear, DetailView):
+    model = Anime
+    template_name = 'main/layout_for_anime.html'
+    context_object_name = 'anime_page'
+    def get(self, request, slug):
+        anime = Anime.objects.get(url=slug)
+        return render(request, 'main/layout_for_anime.html', {'anime_page' : anime})
+
 
 
 def favorites(request):
@@ -105,30 +136,21 @@ def ta1(request):
     # , {'url': url_tokyo_avengers_ep_1()[0]['episode1']['res1080']})
     return render(request, 'main/tokyo_avengers/episode-1.html')
 
-class AnimeDetail(DetailView):
-    model = Anime
-    template_name = 'main/layout_for_anime.html'
-    context_object_name = 'anime_page'
-    def get(self, request, slug):
-        anime = Anime.objects.get(url=slug)
-        return render(request, 'main/layout_for_anime.html', {'anime_page' : anime})
 
+# class Search(ListView):
 
+#     template_name = 'main/genres.html'
 
-class Search(ListView):
+#     paginate_by = 8
 
-    template_name = 'main/genres.html'
-
-    paginate_by = 8
-
-    def get_queryset(self):
-        return Anime.objects.filter(title__icontains=self.request.GET.get("q"))
+#     def get_queryset(self):
+#         return Anime.objects.filter(title__icontains=self.request.GET.get("q"))
 
     
-    def get_context_data(self, *args, **kwargs):
-        context = super().get_context_data(*args, **kwargs)
-        context["q"] = self.request.GET.get("q")
-        return context
+#     def get_context_data(self, *args, **kwargs):
+#         context = super().get_context_data(*args, **kwargs)
+#         context["q"] = self.request.GET.get("q")
+#         return context
 
 
 
