@@ -765,8 +765,9 @@ color: #FFFFFF;
 }
 
 .register_container{
-    width: 1026px;
-    height: 1376px;
+    
+    width: 50%;
+    height: 100%;
     margin: 0 auto;
 }
 
