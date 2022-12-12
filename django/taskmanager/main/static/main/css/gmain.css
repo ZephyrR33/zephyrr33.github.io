@@ -20,6 +20,16 @@
 html {
     height: 100%; 
 }
+.container{
+    display: block;
+    width: 100%;
+    height: 170vh;
+}
+
+.grip_main_content{
+    
+}
+
 .foto_information{
     display: flex;
     justify-content: space-between;
@@ -354,7 +364,7 @@ top: 2111px;
 
 .end{
     position: absolute;
-width: 1560px;
+width: 100%;
 height: 344px;
 left: 360px;
 top: 2356px;
