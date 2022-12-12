@@ -48,6 +48,7 @@
   <!-- /Yandex.Metrika counter -->
   
     <div class="container">
+
         <div class="panel">
             <div><img class="logo" src="{% static 'main/images/Igle_logo.png' %}" alt=""></div>
             <div class="otstup">
@@ -83,6 +84,8 @@
                 </div>
             </div>
         </div>
+
+
         <div class="main_item">
             <div class="headerr">
                 <div class="search">
@@ -90,6 +93,62 @@
                     <input class="poisk" type="text" placeholder="Поиск">
                 </div>
             </div>
+            <form action="" method="POST"            >
+            <div class="register_container">
+                  
+              <div class="container_place_registr">
+                    <h4>
+                      <div class="text_registr">Имя</div>
+                    </h4>
+                    
+                    <div>
+                      <input type="text" placeholder="">
+                    </div>
+              </div>
+              
+              
+              <div class="container_place_registr">
+                    <h4>
+                      <div class="text_registr">Email</div>
+                    </h4>
+                    
+                    <div>
+                      <input type="text" placeholder="">
+                    </div>
+              </div>
+              
+              
+              <div class="container_place_registr">
+                  <h4>
+                      <div class="text_registr">Пароль</div>
+                  </h4>
+                    
+                  <div>
+                      <img src="{% static 'main/images/eye_close.png' %}" alt="">
+                      <img src="{% static 'main/images/eye_close.png' %}" alt="">
+                      <input type="text" placeholder="">
+                  </div>
+              </div>
+              
+              
+                <div class="container_place_registr">
+                    <h4>
+                      <div class="text_registr">Подтвердите пароль</div>
+                    </h4>
+                    
+                  <div>
+                      <img src="{% static 'main/images/eye_close.png' %}" alt="">
+                      <img src="{% static 'main/images/eye_close.png' %}" alt="">
+                      <input type="text" placeholder="">
+                    </div>
+                </div>
+              
+                <div class="checkbox_parol">
+                    <input type="checkbox">
+                    <h4><div class="text_registr_dva">образом, убеждённость некоторых стробразом, убеждённость некоторых </div></h4>
+                </div>
+            </div>
+          </form>
         </div>
 
 
@@ -113,61 +172,7 @@
       </div>
     </div>
   
-  <div class="register_container">
-    <div class="images_registr"><a href="{% url 'index' %}"><img class="logo_registr" src="{% static 'main/images/Igle_logo.png' %}" alt=""></a></div>
 
-    <div class="container_place_registr">
-      <h4>
-        <div class="text_registr">Имя</div>
-      </h4>
-      
-      <div>
-        <input type="text" placeholder="">
-      </div>
-    </div>
-
-
-    <div class="container_place_registr">
-      <h4>
-        <div class="text_registr">Email</div>
-      </h4>
-      
-      <div>
-        <input type="text" placeholder="">
-      </div>
-    </div>
-
-
-    <div class="container_place_registr">
-      <h4>
-        <div class="text_registr">Пароль</div>
-      </h4>
-      
-      <div>
-        <img src="{% static 'main/images/eye_close.png' %}" alt="">
-        <img src="{% static 'main/images/eye_close.png' %}" alt="">
-        <input type="text" placeholder="">
-      </div>
-    </div>
-
-
-    <div class="container_place_registr">
-      <h4>
-        <div class="text_registr">Подтвердите пароль</div>
-      </h4>
-      
-      <div>
-        <img src="{% static 'main/images/eye_close.png' %}" alt="">
-        <img src="{% static 'main/images/eye_close.png' %}" alt="">
-        <input type="text" placeholder="">
-      </div>
-    </div>
-
-    <div class="checkbox_parol">
-      <input type="checkbox">
-      <h4><div class="text_registr_dva">образом, убеждённость некоторых стробразом, убеждённость некоторых </div></h4>
-    </div>
-  </div>
 
 </body>
 
