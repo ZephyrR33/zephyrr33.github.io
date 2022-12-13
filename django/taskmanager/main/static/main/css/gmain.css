@@ -17,6 +17,11 @@
   
 
 }
+
+.container{
+    height: 150vh;
+}
+
 html {
     height: 100%; 
 }
@@ -746,6 +751,16 @@ color: #FFFFFF;
 
 }
 
+.phots_profil{
+    position: absolute;
+    width: 246px;
+    height: 246px;
+    left: 931px;
+    top: 127px;
+
+
+}
+
 .container_place_registr{
     width: 1026px;
     height: 161px;
@@ -765,11 +780,42 @@ color: #FFFFFF;
 }
 
 .register_container{
-    width: 50%;
-    height: 100%;
-    margin: 0 auto;
+    
+    
 }
 
+.btn_registration{
+    background-color: #C3079A;
+  color: #C3079A;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+
+}
+
+.nj{
+    position: absolute;
+width: 29.99px;
+height: 27.77px;
+left: 461px;
+top: 516px;
+}
+
+.nj2{
+    position: absolute;
+width: 29.99px;
+height: 27.77px;
+left: 461px;
+top: 705px;
+
+}
+.tytyh{
+    position: absolute;
+    width: 500px;
+    height: 67px;
+    left: 804px;
+    top: 432px;
+}
 .onst{
     position: fixed;
     left: 360px;

@@ -93,62 +93,74 @@
                     <input class="poisk" type="text" placeholder="Поиск">
                 </div>
             </div>
-            <form action="" method="POST">
+            
             <div class="register_container">
-                  
-              <div class="container_place_registr">
-                    <h4>
-                      <div class="text_registr">Имя</div>
-                    </h4>
-                    
-                    <div>
-                      <input type="text" placeholder="">
-                    </div>
-              </div>
-              
-              
-              <div class="container_place_registr">
-                    <h4>
-                      <div class="text_registr">Email</div>
-                    </h4>
-                    
-                    <div>
-                      <input type="text" placeholder="">
-                    </div>
-              </div>
-              
-              
-              <div class="container_place_registr">
-                  <h4>
-                      <div class="text_registr">Пароль</div>
-                  </h4>
-                    
-                  <div>
-                      <img src="{% static 'main/images/eye_close.png' %}" alt="">
-                      <img src="{% static 'main/images/eye_close.png' %}" alt="">
-                      <input type="text" placeholder="">
-                  </div>
-              </div>
-              
-              
+              <form action="" method="POST">
+                <div>
+                  <img  class="phots_profil" src="{% static 'main/images/phots profile.png' %}" alt="">
+                </div>
+
+                <div class="tytyh">
+
+                <div class="container_place_registr">
+                      <h4>
+                        <div class="text_registr">Имя</div>
+                      </h4>
+                      
+                      <div>
+                        <input style="width: 500px; height: 67px;" type="text" placeholder="Enter Name" name="name" required>
+                      </div>
+                </div>
+                
+                
+                <div class="container_place_registr">
+                      <h4>
+                        <div class="text_registr">Email</div>
+                      </h4>
+                      
+                      <div>
+                        <input style="width: 500px; height: 67px;" type="text" placeholder="Enter Email" name="email" required>
+                      </div>
+                </div>
+                
+                
                 <div class="container_place_registr">
                     <h4>
-                      <div class="text_registr">Подтвердите пароль</div>
+                        <div for="psw" class="text_registr">Пароль</div>
                     </h4>
-                    
-                  <div>
-                      <img src="{% static 'main/images/eye_close.png' %}" alt="">
-                      <img src="{% static 'main/images/eye_close.png' %}" alt="">
-                      <input type="text" placeholder="">
+                      
+                    <div>
+                        <img class="nj" src="{% static 'main/images/eye_close.png' %}" alt="">
+                        <!-- <img src="{% static 'main/images/eye_close.png' %}" alt=""> -->
+                        <input style="width: 500px; height: 67px;" type="password" placeholder="Enter Password" name="psw" required>
                     </div>
                 </div>
-              
-                <div class="checkbox_parol">
-                    <input type="checkbox">
-                    <h4><div class="text_registr_dva">образом, убеждённость некоторых стробразом, убеждённость некоторых </div></h4>
+                
+                
+                  <div class="container_place_registr">
+                      <h4>
+                        <div for="psw-repeat" class="text_registr">Подтвердите пароль</div>
+                      </h4>
+                      
+                    <div>
+                        <img  class="nj2" src="{% static 'main/images/eye_close.png' %}" alt="">
+                        <!-- <img src="{% static 'main/images/eye_close.png' %}" alt=""> -->
+                        <input style="width: 500px; height: 67px;" type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                      </div>
+                  </div>
+                
+                  <div class="checkbox_parol">
+                      
+                      <h4><div class="text_registr_dva">У тебя есть аккаунт,  <a href="">вход</a></div></h4>
+                  </div>
+                  <div >
+                    <button class="btn_registration" type="submit"><img src="{% static 'main/images/btn_register.png' %}" alt=""></button>
+
+                  </div>
                 </div>
+                </form>
             </div>
-          </form>
+          
         </div>
 
 
