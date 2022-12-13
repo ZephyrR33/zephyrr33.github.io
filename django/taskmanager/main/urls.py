@@ -32,6 +32,7 @@ urlpatterns = [
 
     path('<slug:slug>/', views.AnimeDetail.as_view(), name='page_anime'),
     # path('search/', views.Search.as_view(), name='search'),
+    path('register', views.registerPage, name='register')
 ]
 
 if settings.DEBUG:

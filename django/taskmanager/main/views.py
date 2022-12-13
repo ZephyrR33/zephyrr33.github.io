@@ -10,7 +10,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 import os
 from .models import Anime, Genre
-
+from django.contrib.auth.forms import UserCreationForm
 import django
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'taskmanager.settings')
@@ -32,6 +32,18 @@ def index(request):
 
 
     return render(request, 'main/index.html', {'posters_anime' : anime, 'at' : at, 'nar' : nar, 'klin' : klin})
+
+
+def registerPage(request):
+    form = UserCreationForm()
+
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+    context = {'form' : form}
+    return render(request, 'main/premium.html', context)
 
 
 class GenreYear:
