@@ -1,5 +1,5 @@
 
-
+from .forms import CreateUserForm
 from django.views.generic import ListView
 from turtle import title
 from django.views.generic import DetailView
@@ -7,10 +7,13 @@ from django_user_agents.utils import get_user_agent
 from bs4 import BeautifulSoup as bs
 import requests
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 import os
 from .models import Anime, Genre
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib import messages
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 import django
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'taskmanager.settings')
@@ -23,28 +26,55 @@ django.setup()
 def index(request):
     anime = Anime.objects.all().order_by('id')[7:]
 
-
-
     at = Anime.objects.get(url='ataka-titanov')
     nar = Anime.objects.get(url='naruto')
     klin = Anime.objects.get(url='kimetsu-no-yaiba')
 
-
-
     return render(request, 'main/index.html', {'posters_anime' : anime, 'at' : at, 'nar' : nar, 'klin' : klin})
 
-
+#reg/login/logout
 def registerPage(request):
-    form = UserCreationForm()
+    if request.user.is_authenticated:
+        return redirect('/')
+    else:
+        form = CreateUserForm()
 
-    if request.method == 'POST':
-        form = UserCreationForm(request.POST)
-        if form.is_valid():
-            form.save()
+        if request.method == 'POST':
+            form = CreateUserForm(request.POST)
+            if form.is_valid():
+                form.save()
 
-    context = {'form' : form}
-    return render(request, 'main/premium.html', context)
+                messages.success(request, 'Успешно!')
 
+                return redirect('login')
+
+        context = {'form' : form}
+        return render(request, 'main/premium.html', context)
+    
+
+
+def loginPage(request):
+    if request.user.is_authenticated:
+        return redirect('/')
+    else:
+        if request.method == 'POST':
+            username = request.POST.get('username')
+            password = request.POST.get('password')
+
+            user = authenticate(request, username='username', password='password')
+
+            if user is not None:
+                login(request, user)
+                return redirect('/')
+            else:
+                messages.info(request, 'Имя или Пароль неверны')
+
+        return render(request, 'main/login.html')
+
+
+def logoutUser(request):
+    logout(request)
+    return redirect('login')
 
 class GenreYear:
     def get_genre(self):
@@ -103,7 +133,7 @@ class AnimeDetail(GenreYear, DetailView):
         return render(request, 'main/layout_for_anime.html', {'anime_page' : anime})
 
 
-
+# @login_required(login_url='login')
 def favorites(request):
     return render(request, 'main/favorites.html')
 
