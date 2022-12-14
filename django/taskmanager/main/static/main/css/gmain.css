@@ -784,6 +784,11 @@ color: #FFFFFF;
     
 }
 
+.mk{
+    width: 500px; 
+    height: 67px;
+}
+
 .btn_registration{
     background-color: #C3079A;
   color: #C3079A;

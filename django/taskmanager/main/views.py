@@ -180,6 +180,8 @@ def ta1(request):
     # , {'url': url_tokyo_avengers_ep_1()[0]['episode1']['res1080']})
     return render(request, 'main/tokyo_avengers/episode-1.html')
 
+def indextwicee(request):
+    return render(request, 'main/indextwice.html')
 
 # class Search(ListView):
 

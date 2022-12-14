@@ -33,7 +33,8 @@ urlpatterns = [
     # path('search/', views.Search.as_view(), name='search'),
     path('register', views.registerPage, name='register'),
     path('login', views.loginPage, name='login'),
-    path('logout', views.logoutUser, name='logout')
+    path('logout', views.logoutUser, name='logout'),
+    path('index-twice', views.indextwicee, name='qwe')
 ]
 
 if settings.DEBUG:
