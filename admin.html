@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Админ-панель | Система тестирования Академии Водного транспорта</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img class="logo" src="logo.svg" alt="Логотип Академии Водного транспорта" />
+      <div>
+        <p class="brand__kicker">Академия Водного транспорта</p>
+        <h1>Админ-панель</h1>
+      </div>
+    </div>
+    <a class="nav-link" href="index.html">К тестам</a>
+  </header>
+
+  <main>
+    <section class="admin-lock" id="admin-lock">
+      <div class="lock-card">
+        <p class="eyebrow">Доступ преподавателя</p>
+        <h2>Вход в админ-панель</h2>
+        <p class="muted">Создавать и редактировать тесты можно только после ввода логина и пароля.</p>
+        <label>
+          Логин
+          <input id="admin-login" type="text" autocomplete="username" placeholder="Введите логин" />
+        </label>
+        <label>
+          Пароль
+          <input id="admin-password" type="password" autocomplete="current-password" placeholder="Введите пароль" />
+        </label>
+        <button class="primary-button" type="button" id="login-button">Войти</button>
+
+      </div>
+    </section>
+
+    <section class="admin-panel" id="admin-panel" hidden>
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Панель управления</p>
+          <h2>Создание теста</h2>
+        </div>
+        <button class="secondary-button" type="button" id="logout-button">Выйти</button>
+      </div>
+
+      <form class="builder" id="test-form">
+        <input type="hidden" id="test-id" />
+        <div class="form-row">
+          <label>
+            Название теста
+            <input id="test-title" type="text" required placeholder="Например: Основы судовождения" />
+          </label>
+          <label>
+            Тема
+            <input id="test-topic" type="text" required placeholder="Например: Навигация, безопасность, право" />
+          </label>
+        </div>
+        <label>
+          Описание
+          <textarea id="test-description" rows="3" placeholder="Коротко опишите, что проверяет тест"></textarea>
+        </label>
+
+        <div class="builder-head">
+          <h3>Вопросы</h3>
+          <button class="secondary-button" type="button" id="add-question">+ Добавить вопрос</button>
+        </div>
+        <div id="questions"></div>
+
+        <div class="form-actions">
+          <button class="primary-button" type="submit">Сохранить тест</button>
+          <button class="ghost-button" type="button" id="reset-form">Очистить форму</button>
+        </div>
+      </form>
+
+      <div class="admin-list">
+        <h3>Готовые тесты</h3>
+        <div id="admin-tests"></div>
+      </div>
+    </section>
+  </main>
+
+  <template id="question-template">
+    <article class="question-editor">
+      <div class="question-editor__top">
+        <h4></h4>
+        <button class="icon-button remove-question" type="button" title="Удалить вопрос">×</button>
+      </div>
+      <label>
+        Текст вопроса
+        <input class="question-text" type="text" required placeholder="Введите вопрос" />
+      </label>
+      <div class="answers"></div>
+      <button class="ghost-button add-answer" type="button">+ Добавить вариант</button>
+    </article>
+  </template>
+
+  <script src="admin.js"></script>
+</body>
+
+</html>

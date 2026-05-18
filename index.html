@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Система тестирования Академии Водного транспорта</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <img class="logo" src="logo.svg" alt="Логотип Академии Водного транспорта" />
+        <div>
+          <p class="brand__kicker">Академия Водного транспорта</p>
+          <h1>Система тестирования</h1>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="screen is-visible" id="catalog-screen">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Без регистрации</p>
+            <h2>Выберите тест для прохождения</h2>
+          </div>
+          <div class="search">
+            <input id="search-input" type="search" placeholder="Поиск по теме или названию" />
+          </div>
+        </div>
+        <div class="test-grid" id="test-list"></div>
+      </section>
+
+      <section class="screen" id="runner-screen" aria-live="polite">
+        <button class="ghost-button" type="button" id="back-to-catalog">Назад к списку тестов</button>
+        <div id="runner"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
