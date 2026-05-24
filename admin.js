@@ -17,7 +17,10 @@ document.querySelector('#login-button').addEventListener('click', login);
 document.querySelector('#logout-button').addEventListener('click', logout);
 document.querySelector('#add-question').addEventListener('click', () => addQuestionEditor());
 document.querySelector('#reset-form').addEventListener('click', resetForm);
-document.querySelector('#export-tests').addEventListener('click', exportTestsJson);
+const exportButton = document.querySelector('#export-tests');
+if (exportButton) {
+  exportButton.addEventListener('click', exportTestsJson);
+}
 form.addEventListener('submit', saveFromForm);
 
 init();
@@ -81,17 +84,21 @@ async function persist() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(tests));
   if (!API_BASE_URL) return true;
 
-  const response = await fetch(`${API_BASE_URL}/api/tests`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'X-Admin-Login': ADMIN_LOGIN,
-      'X-Admin-Password': ADMIN_PASSWORD,
-    },
-    body: JSON.stringify(tests),
-  });
+  try {
+    const response = await fetch(`${API_BASE_URL}/api/tests`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Admin-Login': ADMIN_LOGIN,
+        'X-Admin-Password': ADMIN_PASSWORD,
+      },
+      body: JSON.stringify(tests),
+    });
 
-  return response.ok;
+    return response.ok;
+  } catch {
+    return false;
+  }
 }
 
 function login() {
