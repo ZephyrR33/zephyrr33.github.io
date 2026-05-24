@@ -238,8 +238,14 @@ textarea {
 
 .muted,
 .hint,
-.empty {
+.empty,
+.status-line {
   color: var(--muted);
+}
+
+.status-line {
+  margin: -10px 0 16px;
+  font-weight: 700;
 }
 
 .admin-lock {

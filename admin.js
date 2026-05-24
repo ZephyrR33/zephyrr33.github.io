@@ -21,6 +21,10 @@ const exportButton = document.querySelector('#export-tests');
 if (exportButton) {
   exportButton.addEventListener('click', exportTestsJson);
 }
+const checkServerButton = document.querySelector('#check-server');
+if (checkServerButton) {
+  checkServerButton.addEventListener('click', checkServer);
+}
 form.addEventListener('submit', saveFromForm);
 
 init();
@@ -98,6 +102,30 @@ async function persist() {
     return response.ok;
   } catch {
     return false;
+  }
+}
+
+async function checkServer() {
+  const status = document.querySelector('#server-status');
+  if (!status) return;
+
+  if (!API_BASE_URL) {
+    status.textContent = 'Сервер ПК не указан в config.js.';
+    return;
+  }
+
+  status.textContent = 'Проверяем сервер...';
+
+  try {
+    const response = await fetch(`${API_BASE_URL}/api/health`, { cache: 'no-store' });
+    if (!response.ok) {
+      status.textContent = `Сервер ответил ошибкой: ${response.status}.`;
+      return;
+    }
+
+    status.textContent = `Сервер подключен: ${API_BASE_URL}`;
+  } catch {
+    status.textContent = `Сервер не отвечает: ${API_BASE_URL}. Проверьте backend и окно туннеля.`;
   }
 }
 
