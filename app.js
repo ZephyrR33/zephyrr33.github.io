@@ -12,6 +12,11 @@ let currentQuestion = 0;
 let userAnswers = [];
 
 function resolveApiBaseUrl() {
+  if (CONFIG.FIREBASE_DB_URL) {
+    localStorage.removeItem(API_URL_STORAGE_KEY);
+    return '';
+  }
+
   const params = new URLSearchParams(window.location.search);
   const apiFromUrl = params.get('api');
   if (apiFromUrl) {
@@ -40,8 +45,8 @@ async function init() {
 }
 
 async function loadTests() {
-  const firebaseTests = await loadFirebaseTests();
-  if (firebaseTests.length) {
+  if (FIREBASE_DB_URL) {
+    const firebaseTests = await loadFirebaseTests();
     localStorage.setItem(STORAGE_KEY, JSON.stringify(firebaseTests));
     return firebaseTests;
   }
