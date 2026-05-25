@@ -1,13 +1,27 @@
 const STORAGE_KEY = 'water-academy-tests';
 const LEGACY_STORAGE_KEY = 'rut-miit-tests';
+const API_URL_STORAGE_KEY = 'water-academy-api-url';
 const CONFIG = window.APP_CONFIG || {};
-const API_BASE_URL = (CONFIG.API_BASE_URL || '').replace(/\/$/, '');
+const API_BASE_URL = resolveApiBaseUrl();
+const FIREBASE_DB_URL = (CONFIG.FIREBASE_DB_URL || '').replace(/\/$/, '');
 const RESULT_EMAIL = CONFIG.RESULT_EMAIL || 'teacher@example.com';
 
 let tests = [];
 let currentTest = null;
 let currentQuestion = 0;
 let userAnswers = [];
+
+function resolveApiBaseUrl() {
+  const params = new URLSearchParams(window.location.search);
+  const apiFromUrl = params.get('api');
+  if (apiFromUrl) {
+    const normalized = apiFromUrl.replace(/\/$/, '');
+    localStorage.setItem(API_URL_STORAGE_KEY, normalized);
+    return normalized;
+  }
+
+  return (localStorage.getItem(API_URL_STORAGE_KEY) || CONFIG.API_BASE_URL || '').replace(/\/$/, '');
+}
 
 const catalogScreen = document.querySelector('#catalog-screen');
 const runnerScreen = document.querySelector('#runner-screen');
@@ -26,6 +40,12 @@ async function init() {
 }
 
 async function loadTests() {
+  const firebaseTests = await loadFirebaseTests();
+  if (firebaseTests.length) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(firebaseTests));
+    return firebaseTests;
+  }
+
   const apiTests = await loadApiTests();
   if (apiTests.length) {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(apiTests));
@@ -43,6 +63,19 @@ async function loadTests() {
 
   try {
     const parsed = JSON.parse(stored);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
+async function loadFirebaseTests() {
+  if (!FIREBASE_DB_URL) return [];
+
+  try {
+    const response = await fetch(`${FIREBASE_DB_URL}/tests.json`, { cache: 'no-store' });
+    if (!response.ok) return [];
+    const parsed = await response.json();
     return Array.isArray(parsed) ? parsed : [];
   } catch {
     return [];
@@ -269,6 +302,23 @@ async function submitResult(correctCount, percent, resultText) {
 
       if (response.ok) {
         alert('Результат отправлен и сохранен.');
+        return;
+      }
+    } catch {
+      // Fallback to email client below.
+    }
+  }
+
+  if (FIREBASE_DB_URL) {
+    try {
+      const response = await fetch(`${FIREBASE_DB_URL}/results.json`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...payload, createdAt: new Date().toISOString() }),
+      });
+
+      if (response.ok) {
+        alert('Результат сохранен.');
         return;
       }
     } catch {

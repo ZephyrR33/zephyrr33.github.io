@@ -1,11 +1,25 @@
 const STORAGE_KEY = 'water-academy-tests';
 const LEGACY_STORAGE_KEY = 'rut-miit-tests';
+const API_URL_STORAGE_KEY = 'water-academy-api-url';
 const ADMIN_LOGIN = 'rut123';
 const ADMIN_PASSWORD = 'miit2026';
 const CONFIG = window.APP_CONFIG || {};
-const API_BASE_URL = (CONFIG.API_BASE_URL || '').replace(/\/$/, '');
+const API_BASE_URL = resolveApiBaseUrl();
+const FIREBASE_DB_URL = (CONFIG.FIREBASE_DB_URL || '').replace(/\/$/, '');
 
 let tests = [];
+
+function resolveApiBaseUrl() {
+  const params = new URLSearchParams(window.location.search);
+  const apiFromUrl = params.get('api');
+  if (apiFromUrl) {
+    const normalized = apiFromUrl.replace(/\/$/, '');
+    localStorage.setItem(API_URL_STORAGE_KEY, normalized);
+    return normalized;
+  }
+
+  return (localStorage.getItem(API_URL_STORAGE_KEY) || CONFIG.API_BASE_URL || '').replace(/\/$/, '');
+}
 
 const adminLock = document.querySelector('#admin-lock');
 const adminPanel = document.querySelector('#admin-panel');
@@ -37,6 +51,12 @@ async function init() {
 }
 
 async function loadTests() {
+  const firebaseTests = await loadFirebaseTests();
+  if (firebaseTests.length) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(firebaseTests));
+    return firebaseTests;
+  }
+
   const apiTests = await loadApiTests();
   if (apiTests.length) {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(apiTests));
@@ -86,6 +106,20 @@ async function loadSharedTests() {
 
 async function persist() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(tests));
+  if (FIREBASE_DB_URL) {
+    try {
+      const response = await fetch(`${FIREBASE_DB_URL}/tests.json`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(tests),
+      });
+
+      return response.ok;
+    } catch {
+      return false;
+    }
+  }
+
   if (!API_BASE_URL) return true;
 
   try {
@@ -105,12 +139,36 @@ async function persist() {
   }
 }
 
+async function loadFirebaseTests() {
+  if (!FIREBASE_DB_URL) return [];
+
+  try {
+    const response = await fetch(`${FIREBASE_DB_URL}/tests.json`, { cache: 'no-store' });
+    if (!response.ok) return [];
+    const parsed = await response.json();
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
 async function checkServer() {
   const status = document.querySelector('#server-status');
   if (!status) return;
 
   if (!API_BASE_URL) {
-    status.textContent = 'Сервер ПК не указан в config.js.';
+    if (FIREBASE_DB_URL) {
+      status.textContent = 'Проверяем Firebase...';
+      try {
+        const response = await fetch(`${FIREBASE_DB_URL}/tests.json`, { cache: 'no-store' });
+        status.textContent = response.ok ? `Firebase подключен: ${FIREBASE_DB_URL}` : `Firebase ответил ошибкой: ${response.status}.`;
+      } catch {
+        status.textContent = `Firebase не отвечает: ${FIREBASE_DB_URL}`;
+      }
+      return;
+    }
+
+    status.textContent = 'Backend не указан в config.js.';
     return;
   }
 
@@ -232,6 +290,11 @@ async function saveFromForm(event) {
   const saved = await persist();
   renderAdminList();
   resetForm();
+
+  if (saved && FIREBASE_DB_URL) {
+    alert('Тест сохранен в Firebase. Его увидят все студенты.');
+    return;
+  }
 
   if (saved && API_BASE_URL) {
     alert('Тест сохранен на сервере ПК. Его увидят все, пока сервер и туннель работают.');
